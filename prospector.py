@@ -8,7 +8,10 @@ import os
 import json
 import time
 import re
+import smtplib
+import socket
 import requests
+import dns.resolver
 from datetime import datetime
 
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
@@ -16,6 +19,12 @@ GMAPS_API_KEY  = os.environ["GMAPS_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL", "aquilesgbi@gmail.com")
 SENT_FILE      = "sent_emails.json"
 MAX_PER_RUN    = 200
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
 # Rotación diaria de ciudades — cada día busca en una ciudad diferente
 CIUDADES = [
@@ -64,7 +73,12 @@ DOMINIOS_INVALIDOS = {
     "1and1.es", "jimdo.com",
 }
 
+_verify_cache = {}
 
+
+# ══════════════════════════════════════════════════════════
+# PERSISTENCIA
+# ══════════════════════════════════════════════════════════
 def load_sent():
     if os.path.exists(SENT_FILE):
         with open(SENT_FILE) as f:
@@ -77,44 +91,160 @@ def save_sent(sent):
         json.dump(list(sent), f)
 
 
+# ══════════════════════════════════════════════════════════
+# VALIDACIÓN DE DOMINIO
+# ══════════════════════════════════════════════════════════
 def dominio_valido(domain):
     if not domain or len(domain) < 4 or "." not in domain:
         return False
     if domain in DOMINIOS_INVALIDOS:
         return False
-    # Filtrar IPs
     if re.match(r"^\d+\.\d+\.\d+\.\d+$", domain):
         return False
-    # Filtrar dominios con solo números
-    partes = domain.split(".")[0]
-    if partes.isdigit():
+    if domain.split(".")[0].isdigit():
         return False
     return True
 
 
+# ══════════════════════════════════════════════════════════
+# EXTRAER EMAIL REAL DE LA WEB
+# ══════════════════════════════════════════════════════════
+_EMAIL_SKIP = {"noreply", "no-reply", "donotreply", "webmaster", "bounce", "mailer"}
+
+def _parse_emails_from_html(html):
+    """Extrae emails de HTML — prioriza mailto:, luego regex general."""
+    emails = []
+    # 1. mailto: links (más fiables — el propio negocio los puso)
+    mailtos = re.findall(r'href=["\']mailto:([^"\'?&\s>]+)', html, re.IGNORECASE)
+    for m in mailtos:
+        m = m.strip().lower()
+        if "@" in m and "." in m.split("@")[-1]:
+            if not any(s in m for s in _EMAIL_SKIP):
+                emails.append(m)
+    if emails:
+        return emails
+
+    # 2. Regex sobre texto plano (fallback)
+    found = re.findall(r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}', html)
+    for f in found:
+        f = f.lower()
+        if not any(s in f for s in _EMAIL_SKIP | {"example", "sentry", "schema", "pixel"}):
+            emails.append(f)
+    return emails
+
+
+def get_real_email(website):
+    """
+    Visita la web del negocio (homepage + /contacto + /contact)
+    y devuelve el primer email real que encuentre.
+    Devuelve None si no encuentra nada.
+    """
+    paths = ["", "/contacto", "/contact", "/sobre-nosotros", "/about"]
+    for path in paths[:3]:
+        url = website.rstrip("/") + path
+        try:
+            r = requests.get(url, timeout=5, headers=HEADERS, allow_redirects=True)
+            if r.status_code != 200:
+                continue
+            emails = _parse_emails_from_html(r.text)
+            if emails:
+                return emails[0]
+        except Exception:
+            pass
+    return None
+
+
+# ══════════════════════════════════════════════════════════
+# VERIFICACIÓN DNS + SMTP
+# ══════════════════════════════════════════════════════════
+def verify_email(email):
+    """
+    Verifica que el email probablemente existe.
+    Paso 1 — DNS: el dominio tiene registros MX (servidor de correo).
+    Paso 2 — SMTP: conectar y preguntar si el buzón existe.
+    Si el puerto 25 está bloqueado (común en cloud), confía en el DNS.
+    """
+    if email in _verify_cache:
+        return _verify_cache[email]
+
+    domain = email.split("@")[-1]
+
+    # Paso 1 — DNS
+    try:
+        mx_records = dns.resolver.resolve(domain, "MX", lifetime=3)
+        mx_hosts = sorted([(r.preference, str(r.exchange).rstrip(".")) for r in mx_records])
+    except dns.resolver.NXDOMAIN:
+        _verify_cache[email] = False
+        return False
+    except dns.resolver.NoAnswer:
+        _verify_cache[email] = False
+        return False
+    except Exception:
+        # Timeout de DNS — aceptamos el email
+        _verify_cache[email] = True
+        return True
+
+    # Paso 2 — SMTP
+    for _, mx_host in mx_hosts[:2]:
+        try:
+            with smtplib.SMTP(timeout=5) as smtp:
+                smtp.connect(mx_host, 25)
+                smtp.ehlo("leadforge.es")
+                smtp.mail("")
+                code, _ = smtp.rcpt(email)
+                smtp.quit()
+                result = code == 250 or (250 <= code < 500)
+                _verify_cache[email] = result
+                return result
+        except (socket.timeout, socket.error, smtplib.SMTPConnectError):
+            continue  # puerto 25 bloqueado — prueba siguiente MX
+        except Exception:
+            continue
+
+    # SMTP inalcanzable — el dominio tiene MX, confiamos en eso
+    _verify_cache[email] = True
+    return True
+
+
+# ══════════════════════════════════════════════════════════
+# GOOGLE MAPS
+# ══════════════════════════════════════════════════════════
 def search_gmaps(query, ciudad):
     leads = []
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
     params = {"query": f"{query} en {ciudad}", "key": GMAPS_API_KEY, "language": "es"}
     while True:
         r = requests.get(url, params=params, timeout=10).json()
+        if r.get("status") in ("OVER_QUERY_LIMIT", "REQUEST_DENIED"):
+            print(f"  [Maps] ⚠️  API error: {r.get('status')} — deteniendo búsqueda")
+            break
         for p in r.get("results", []):
             place_id = p.get("place_id")
             if not place_id:
                 continue
-            detail = requests.get(
-                "https://maps.googleapis.com/maps/api/place/details/json",
-                params={"place_id": place_id, "fields": "name,website", "key": GMAPS_API_KEY},
-                timeout=10,
-            ).json().get("result", {})
+            try:
+                detail = requests.get(
+                    "https://maps.googleapis.com/maps/api/place/details/json",
+                    params={"place_id": place_id, "fields": "name,website", "key": GMAPS_API_KEY},
+                    timeout=10,
+                ).json().get("result", {})
+            except Exception:
+                continue
             website = detail.get("website", "")
             if not website:
                 continue
-            domain = website.replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0].lower()
+            domain = (
+                website.replace("https://", "").replace("http://", "")
+                .replace("www.", "").split("/")[0].lower()
+            )
             if not dominio_valido(domain):
                 continue
-            email = f"info@{domain}"
-            leads.append({"nombre": p.get("name", ""), "email": email, "web": website})
+            leads.append({
+                "nombre":  p.get("name", ""),
+                "web":     website,
+                "domain":  domain,
+                "email":   f"info@{domain}",  # fallback — se enriquece después
+            })
             time.sleep(0.2)
         next_token = r.get("next_page_token")
         if not next_token:
@@ -124,6 +254,9 @@ def search_gmaps(query, ciudad):
     return leads
 
 
+# ══════════════════════════════════════════════════════════
+# EMAIL HTML
+# ══════════════════════════════════════════════════════════
 def build_email(nombre_empresa):
     return f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"></head>
@@ -175,6 +308,9 @@ def build_email(nombre_empresa):
 </body></html>"""
 
 
+# ══════════════════════════════════════════════════════════
+# ENVÍO
+# ══════════════════════════════════════════════════════════
 def send_email(to_email, nombre_empresa):
     payload = {
         "sender":      {"name": "Aquiles — LeadForge", "email": "hola@leadforge.es"},
@@ -193,8 +329,10 @@ def send_email(to_email, nombre_empresa):
     return r.status_code in (200, 201)
 
 
+# ══════════════════════════════════════════════════════════
+# MAIN
+# ══════════════════════════════════════════════════════════
 def main():
-    # Rotación diaria de ciudad
     dia = datetime.now().timetuple().tm_yday
     ciudad = CIUDADES[dia % len(CIUDADES)]
     print(f"[prospector] Ciudad de hoy: {ciudad}")
@@ -202,6 +340,7 @@ def main():
     sent = load_sent()
     print(f"[prospector] {len(sent)} emails ya enviados anteriormente")
 
+    # 1. Recoger candidatos de Google Maps
     all_leads = []
     for target in TARGETS:
         print(f"[prospector] Buscando: {target} en {ciudad}")
@@ -209,44 +348,85 @@ def main():
         all_leads.extend(leads)
         time.sleep(1)
 
-    # Dedup por email
-    seen = set()
+    # Dedup por dominio (no por email adivinado, porque el email real puede variar)
+    seen_domains = set()
     unique_leads = []
     for l in all_leads:
-        if l["email"] not in seen:
-            seen.add(l["email"])
+        if l["domain"] not in seen_domains:
+            seen_domains.add(l["domain"])
             unique_leads.append(l)
 
-    # Filtrar ya enviados
-    nuevos = [l for l in unique_leads if l["email"] not in sent]
-    print(f"[prospector] {len(nuevos)} leads nuevos encontrados")
+    # Filtrar ya enviados (por dominio — evita reenviar aunque cambie el alias)
+    nuevos = [
+        l for l in unique_leads
+        if l["domain"] not in {e.split("@")[-1] for e in sent}
+    ]
+    print(f"[prospector] {len(nuevos)} candidatos nuevos")
 
-    enviados = 0
-    for lead in nuevos[:MAX_PER_RUN]:
-        ok = send_email(lead["email"], lead["nombre"])
+    # 2. Enriquecer + verificar + enviar
+    enviados       = 0
+    rechazados_dns = 0
+    emails_reales  = 0
+
+    for lead in nuevos:
+        if enviados >= MAX_PER_RUN:
+            break
+
+        nombre  = lead["nombre"]
+        website = lead["web"]
+
+        # Intentar obtener email real de la web
+        real = get_real_email(website)
+        if real:
+            lead["email"] = real
+            emails_reales += 1
+            print(f"  📧 Email real: {real} ({nombre})")
+        else:
+            print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
+
+        # Verificar que el email existe (DNS + SMTP si disponible)
+        if not verify_email(lead["email"]):
+            rechazados_dns += 1
+            print(f"  ⛔ {lead['email']} — no existe, descartado")
+            continue
+
+        # Evitar reenvío si el email real ya estaba en sent
+        if lead["email"] in sent:
+            continue
+
+        ok = send_email(lead["email"], nombre)
         if ok:
             sent.add(lead["email"])
             enviados += 1
-            print(f"  ✅ {lead['email']} ({lead['nombre']})")
+            print(f"  ✅ {lead['email']} ({nombre})")
         else:
-            print(f"  ❌ {lead['email']} — error")
+            print(f"  ❌ {lead['email']} — error Brevo")
         time.sleep(0.5)
 
     save_sent(sent)
-    print(f"[prospector] Fin — {enviados} emails enviados hoy")
+    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS")
 
-    # Resumen a ti mismo
-    resumen = {
-        "sender":      {"name": "LeadForge Prospector", "email": "hola@leadforge.es"},
-        "replyTo":     {"email": MY_EMAIL},
-        "to":          [{"email": MY_EMAIL}],
-        "subject":     f"[Prospector] {enviados} emails enviados hoy — {ciudad}",
-        "htmlContent": f"<p>Hoy el prospector buscó en <b>{ciudad}</b> y envió <b>{enviados} emails</b> a potenciales clientes de LeadForge.</p><p>Total acumulado contactados: {len(sent)}</p>",
-    }
+    # Resumen por email
+    resumen_html = f"""
+    <p>Hoy el prospector buscó en <b>{ciudad}</b>.</p>
+    <ul>
+      <li>✅ Enviados: <b>{enviados}</b></li>
+      <li>📧 Emails reales encontrados en web: <b>{emails_reales}</b></li>
+      <li>⛔ Descartados por DNS/SMTP: <b>{rechazados_dns}</b></li>
+      <li>📬 Total acumulado contactados: <b>{len(sent)}</b></li>
+    </ul>
+    """
     requests.post(
         "https://api.brevo.com/v3/smtp/email",
         headers={"api-key": BREVO_API_KEY, "Content-Type": "application/json"},
-        json=resumen, timeout=10,
+        json={
+            "sender":      {"name": "LeadForge Prospector", "email": "hola@leadforge.es"},
+            "replyTo":     {"email": MY_EMAIL},
+            "to":          [{"email": MY_EMAIL}],
+            "subject":     f"[Prospector] {enviados} emails enviados — {ciudad}",
+            "htmlContent": resumen_html,
+        },
+        timeout=10,
     )
 
 

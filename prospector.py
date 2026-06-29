@@ -313,12 +313,13 @@ def build_email(nombre_empresa, ciudad, sector_label):
       de cada empresa que podría contratarte — y los tiene listos en 30 segundos.
     </p>
 
-    <p style="margin:0 0 28px;font-size:15px;color:#374151;line-height:1.8;">
-      Aquí tienes <strong>20 leads de {ciudad_corta} gratis</strong> para que lo compruebes tú mismo:
+    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
+      Si quieres verlo funcionar, aquí tienes una prueba gratuita con 20 leads reales de {ciudad_corta}:
+      <a href="https://cobraflow0.github.io/leadforge-app/app.html?demo=true" style="color:#0066FF;font-weight:600;">prueba LeadForge gratis</a>
     </p>
 
     <!-- CTA -->
-    <table cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
+    <table cellpadding="0" cellspacing="0" style="margin:0 0 28px;">
       <tr><td style="background:linear-gradient(135deg,#0066FF,#0052cc);border-radius:8px;box-shadow:0 4px 16px rgba(0,102,255,0.3);">
         <a href="https://cobraflow0.github.io/leadforge-app/app.html?demo=true"
            style="display:inline-block;padding:15px 36px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.2px;">
@@ -327,15 +328,9 @@ def build_email(nombre_empresa, ciudad, sector_label):
       </td></tr>
     </table>
 
-    <!-- PRUEBA SOCIAL -->
-    <table cellpadding="0" cellspacing="0" width="100%" style="margin:0 0 28px;background:#f0f7ff;border-left:3px solid #0066FF;border-radius:0 6px 6px 0;">
-      <tr><td style="padding:14px 18px;">
-        <p style="margin:0;font-size:13px;color:#1e40af;line-height:1.7;">
-          <strong>Resultado real:</strong> Un cliente consiguió 3 presupuestos nuevos
-          el primer día de uso — sin llamadas en frío, sin publicidad, sin agencias.
-        </p>
-      </td></tr>
-    </table>
+    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
+      Un cliente consiguió 3 presupuestos nuevos el primer día de uso, sin llamadas en frío ni publicidad.
+    </p>
 
     <p style="margin:0 0 6px;font-size:14px;color:#6b7280;line-height:1.7;">
       Planes desde <strong>19€/mes</strong>. Sin permanencia.

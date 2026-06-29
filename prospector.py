@@ -17,9 +17,10 @@ from datetime import datetime
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
 GMAPS_API_KEY  = os.environ["GMAPS_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL", "aquilesgbi@gmail.com")
+SENDER_NAME    = os.environ.get("SENDER_NAME", "Aquiles — LeadForge")
 SENT_FILE      = "sent_emails.json"
 CRM_FILE       = "crm_data.json"
-MAX_PER_RUN    = 200
+MAX_PER_RUN    = 300
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -368,7 +369,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
         ciudad=ciudad_corta,
     )
     payload = {
-        "sender":      {"name": "Aquiles — LeadForge", "email": "hola@leadforge.es"},
+        "sender":      {"name": SENDER_NAME, "email": "hola@leadforge.es"},
         "replyTo":     {"email": MY_EMAIL},
         "to":          [{"email": to_email}],
         "subject":     subject,
@@ -493,7 +494,7 @@ def main():
         "https://api.brevo.com/v3/smtp/email",
         headers={"api-key": BREVO_API_KEY, "Content-Type": "application/json"},
         json={
-            "sender":      {"name": "LeadForge Prospector", "email": "hola@leadforge.es"},
+            "sender":      {"name": SENDER_NAME, "email": "hola@leadforge.es"},
             "replyTo":     {"email": MY_EMAIL},
             "to":          [{"email": MY_EMAIL}],
             "subject":     f"[Prospector] {enviados} emails enviados — {ciudad_str}",

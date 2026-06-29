@@ -48,8 +48,6 @@ CIUDADES = [
     "Toledo, España",
     "Burgos, España",
     "Vigo, España",
-    "Lisboa, Portugal",
-    "Porto, Portugal",
 ]
 
 TARGETS = [

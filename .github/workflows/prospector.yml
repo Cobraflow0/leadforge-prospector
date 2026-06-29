@@ -1,0 +1,37 @@
+name: LeadForge Prospector
+
+on:
+  schedule:
+    - cron: '0 9 * * 2'  # Cada martes a las 9:00 UTC
+  workflow_dispatch:      # También permite lanzarlo manualmente
+
+jobs:
+  prospect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Ejecutar prospector
+        env:
+          BREVO_API_KEY:  ${{ secrets.BREVO_API_KEY }}
+          GMAPS_API_KEY:  ${{ secrets.GMAPS_API_KEY }}
+          MY_EMAIL:       ${{ secrets.MY_EMAIL }}
+          SENDER_EMAIL:   ${{ secrets.SENDER_EMAIL }}
+        run: python prospector.py
+
+      - name: Guardar emails enviados
+        run: |
+          git config user.name "prospector-bot"
+          git config user.email "bot@leadforge.es"
+          git add sent_emails.json
+          git diff --staged --quiet || git commit -m "chore: actualizar sent_emails"
+          git push

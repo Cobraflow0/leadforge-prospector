@@ -12,9 +12,9 @@ import requests
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
 GMAPS_API_KEY  = os.environ["GMAPS_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL", "aquilesgbi@gmail.com")
-SENDER_EMAIL   = os.environ.get("SENDER_EMAIL", "hola@leadforge.es")
+SENDER_EMAIL   = os.environ.get("SENDER_EMAIL", "aquilesgbi@gmail.com")
 SENT_FILE      = "sent_emails.json"
-MAX_PER_RUN    = 40
+MAX_PER_RUN    = 200
 CIUDAD         = "Madrid, España"
 
 # Sectores con alta probabilidad de querer LeadForge
@@ -184,14 +184,14 @@ def main():
         time.sleep(0.5)
 
     save_sent(sent)
-    print(f"[prospector] Fin — {enviados} emails enviados esta semana")
+    print(f"[prospector] Fin — {enviados} emails enviados hoy")
 
     # Resumen a ti mismo
     resumen = {
         "sender": {"name": "LeadForge Prospector", "email": SENDER_EMAIL},
         "to":     [{"email": MY_EMAIL}],
-        "subject": f"[Prospector] {enviados} emails enviados esta semana",
-        "htmlContent": f"<p>Esta semana el prospector envió <b>{enviados} emails</b> a potenciales clientes de LeadForge en Madrid.</p><p>Total acumulado contactados: {len(sent)}</p>",
+        "subject": f"[Prospector] {enviados} emails enviados hoy",
+        "htmlContent": f"<p>Hoy el prospector envió <b>{enviados} emails</b> a potenciales clientes de LeadForge en Madrid.</p><p>Total acumulado contactados: {len(sent)}</p>",
     }
     requests.post(
         "https://api.brevo.com/v3/smtp/email",

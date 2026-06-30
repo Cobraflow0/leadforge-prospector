@@ -25,7 +25,7 @@ jobs:
           BREVO_API_KEY:  ${{ secrets.BREVO_API_KEY }}
           GMAPS_API_KEY:  ${{ secrets.GMAPS_API_KEY }}
           MY_EMAIL:       ${{ secrets.MY_EMAIL }}
-          SENDER_EMAIL:   ${{ secrets.SENDER_EMAIL }}
+          SENDER_NAME:    ${{ secrets.SENDER_NAME }}
         run: python prospector.py
 
       - name: Guardar emails enviados y CRM

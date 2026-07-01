@@ -30,6 +30,6 @@ jobs:
         run: |
           git config user.name "prospector-bot"
           git config user.email "bot@leadforge.es"
-          git add sent_emails.json crm_data.json
+          git add sent_emails.json crm_data.json warmup_state.json
           git diff --staged --quiet || git commit -m "chore: actualizar sent_emails y crm"
           git push

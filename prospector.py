@@ -20,7 +20,47 @@ MY_EMAIL       = os.environ.get("MY_EMAIL", "aquilesgbi@gmail.com")
 SENDER_NAME    = os.environ.get("SENDER_NAME", "Aquiles — LeadForge")
 SENT_FILE      = "sent_emails.json"
 CRM_FILE       = "crm_data.json"
-MAX_PER_RUN    = 300
+WARMUP_FILE    = "warmup_state.json"
+
+# ══════════════════════════════════════════════════════════
+# RAMPA DE ENVÍO — protege la reputación del dominio hola@leadforge.es
+# (compartido con los emails transaccionales de los clientes de pago).
+# Sube el volumen diario poco a poco en vez de saltar directo al objetivo.
+# Para forzar un número fijo (saltarse la rampa), define la env var
+# MAX_PER_RUN_OVERRIDE (p.ej. 500) como secret en GitHub Actions.
+# ══════════════════════════════════════════════════════════
+RAMP_SCHEDULE = [
+    (0,  50),
+    (3,  100),
+    (6,  150),
+    (9,  250),
+    (12, 350),
+    (15, 500),
+]
+
+
+def _load_or_init_warmup_start():
+    if os.path.exists(WARMUP_FILE):
+        with open(WARMUP_FILE) as f:
+            data = json.load(f)
+        return datetime.strptime(data["start_date"], "%Y-%m-%d").date()
+    today = datetime.now().date()
+    with open(WARMUP_FILE, "w") as f:
+        json.dump({"start_date": today.strftime("%Y-%m-%d")}, f)
+    return today
+
+
+def get_max_per_run():
+    override = os.environ.get("MAX_PER_RUN_OVERRIDE")
+    if override:
+        return int(override)
+    start = _load_or_init_warmup_start()
+    dias_transcurridos = (datetime.now().date() - start).days
+    objetivo = RAMP_SCHEDULE[0][1]
+    for dia_umbral, valor in RAMP_SCHEDULE:
+        if dias_transcurridos >= dia_umbral:
+            objetivo = valor
+    return objetivo
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -425,13 +465,16 @@ def main():
     ]
     print(f"[prospector] {len(nuevos)} candidatos nuevos")
 
+    max_per_run = get_max_per_run()
+    print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override)")
+
     # 2. Enriquecer + verificar + enviar
     enviados       = 0
     rechazados_dns = 0
     emails_reales  = 0
 
     for lead in nuevos:
-        if enviados >= MAX_PER_RUN:
+        if enviados >= max_per_run:
             break
 
         nombre  = lead["nombre"]
@@ -484,6 +527,7 @@ def main():
     resumen_html = f"""
     <p>Hoy el prospector buscó en <b>{ciudad_str}</b>.</p>
     <ul>
+      <li>🎯 Objetivo del día (rampa/override): <b>{max_per_run}</b></li>
       <li>✅ Enviados: <b>{enviados}</b></li>
       <li>📧 Emails reales encontrados en web: <b>{emails_reales}</b></li>
       <li>⛔ Descartados por DNS/SMTP: <b>{rechazados_dns}</b></li>

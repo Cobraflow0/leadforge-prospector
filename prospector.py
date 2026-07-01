@@ -425,6 +425,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
     if r.status_code in (200, 201):
         message_id = r.json().get("messageId", "")
         return True, message_id
+    print(f"    [Brevo error] status={r.status_code} body={r.text[:200]}")
     return False, None
 
 

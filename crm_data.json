@@ -1,1 +1,502 @@
-[]
+[
+  {
+    "email": "info@vorticemarketingdigital.es",
+    "nombre": "Vórtice Marketing Digital - Agencia de Marketing Digital en Madrid",
+    "web": "https://vorticemarketingdigital.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.57323817175@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@eskimoz.es",
+    "nombre": "Eskimoz | Agencia de Marketing Digital Internacional",
+    "web": "https://www.eskimoz.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.24516899896@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ivoryhomes.es",
+    "nombre": "Ivory Homes - Inmobiliaria de lujo en Madrid",
+    "web": "https://www.ivoryhomes.es/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.96373246244@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "holabarcelona@homehunter.es",
+    "nombre": "The Home Hunter | Inmobiliaria Madrid",
+    "web": "https://homehunter.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.28490105451@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cksegur.com",
+    "nombre": "CK SEGUR",
+    "web": "https://www.cksegur.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.21853322327@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clientes@segurosnogal.es",
+    "nombre": "Correduría Seguros Nogal",
+    "web": "https://www.segurosnogal.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011556.28301457748@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "segucar@segucar.com",
+    "nombre": "Segucar Correduría de Seguros",
+    "web": "https://www.segucar.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.78178568273@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clientes@puntoseguro.com",
+    "nombre": "PuntoSeguro - Seguros de vida",
+    "web": "https://www.puntoseguro.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.90095463471@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@unocorreduria.com",
+    "nombre": "Uno Correduría De Seguros",
+    "web": "http://www.unocorreduria.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.85221333399@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "correduria@peris.es",
+    "nombre": "Peris Correduría de Seguros",
+    "web": "https://www.peris.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.64414556408@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@seguroscea.es",
+    "nombre": "SEGUROS CEA",
+    "web": "https://www.seguroscea.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.54005648572@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "jmmoldes@jmmoldes.com",
+    "nombre": "J.M. Moldes | Correduría de Seguros en Madrid",
+    "web": "https://www.jmmoldes.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.90665074862@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@redondoseguros.com",
+    "nombre": "Correduria De Seguros Manuel Redondo S.L",
+    "web": "https://www.redondoseguros.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.95712159890@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "angel@buendiamediacion.es",
+    "nombre": "Buendía Correduría de Seguros",
+    "web": "https://buendiamediacion.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.64123139276@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "administracion@amfseguros.com",
+    "nombre": "AMF, S.L. Correduría de Seguros",
+    "web": "https://amfseguros.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.67020274060@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "sercofutura@sercofutura.es",
+    "nombre": "Correduría de seguros en Madrid / Sercofutura Correduría de Seguros",
+    "web": "https://sercofutura.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011557.58133006635@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@oficinamadridseis.es",
+    "nombre": "Oficina Madrid Seis Correduría De Seguros",
+    "web": "http://www.oficinamadridseis.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.66081097513@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "accorreduria@gmail.com",
+    "nombre": "ATICAST LARA CORREDURIA DE SEGUROS, S.L.",
+    "web": "https://www.accorreduria.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.17108546984@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@caveromartin.es",
+    "nombre": "Cavero Martín Correduría de Seguros",
+    "web": "http://www.caveromartinseguros.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.84985867498@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "soporte@acierto.com",
+    "nombre": "Acierto.com",
+    "web": "https://www.acierto.com/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.23050527959@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@improven.com",
+    "nombre": "Improven - Consultora de negocio Madrid",
+    "web": "https://improven.com/consultoria-madrid/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.34566104623@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@leialta.com",
+    "nombre": "LEIALTA Consultoría Empresarial y Social",
+    "web": "https://www.leialta.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.13753349936@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@creacionempresamadrid.com",
+    "nombre": "Creación Empresa Madrid",
+    "web": "http://www.creacionempresamadrid.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.62216834493@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@convinze.es",
+    "nombre": "convinze",
+    "web": "http://www.convinze.es/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.65361230036@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "direccion@citriconsultores.com",
+    "nombre": "Citric Consultores- Empresa Consultora y Asesoramiento Integral para Nuevos Negocios, Franquicias y Restauración",
+    "web": "https://www.citriconsultores.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011558.37880678221@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "web@cedec.be",
+    "nombre": "CEDEC, Consultoría de Organización Estratégica",
+    "web": "https://www.cedec-group.com/es",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.24254405261@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "nuevoshorizontesasesoria@gmail.com",
+    "nombre": "Nuevos Horizontes Asesoría de Empresas",
+    "web": "https://nuevoshorizontesasesoria.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.59460369223@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@asesora10.com",
+    "nombre": "Asesoria de Empresas Madrid Asesora10",
+    "web": "https://asesora10.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.10862231052@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@yolk.es",
+    "nombre": "Yolk Consulting",
+    "web": "https://www.yolk.es/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.68881964362@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@t4franquicias.com",
+    "nombre": "T4 Franquicias - Consultores y asesores de Franquicia",
+    "web": "http://www.t4franquicias.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.83617041961@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "somos@tildeconsultora.es",
+    "nombre": "Tilde Consultora",
+    "web": "http://www.tildeconsultora.es/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.43064175804@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "informacion@peoplematters.com",
+    "nombre": "People Matters SL - Consultoría de Capital Humano",
+    "web": "https://www.peoplematters.com/es",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.98489111285@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@versari.es",
+    "nombre": "Versari Centro de Negocios",
+    "web": "https://www.versari.es/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.79946932270@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@creativinnova.com",
+    "nombre": "Creativ Innova",
+    "web": "https://creativinnova.com/agencia-de-marketing-en-madrid/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011559.53451508298@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cronuts.digital",
+    "nombre": "CRONUTS.DIGITAL - Consultora de negocio digital e IA",
+    "web": "https://cronuts.digital/?utm_source=google&utm_medium=maps&utm_campaign=Google+maps&utm_content=madrid",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.25519858889@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@thedigitalsalad.com",
+    "nombre": "The Digital Salad | Consultoría Marketing Digital Madrid | Ecommerce & IA",
+    "web": "http://www.thedigitalsalad.com/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.83149620665@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@inverpoint.es",
+    "nombre": "Consultoría Compraventa de Empresas Madrid | Inverpoint",
+    "web": "https://www.inverpoint.com/compraventa-de-empresas-madrid/",
+    "ciudad": "Madrid",
+    "sector": "consultoras de negocio",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.20369012936@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@asesorus.es",
+    "nombre": "ASESORUS, Asesoría empresas y autonomos",
+    "web": "https://www.asesorus.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.26594265074@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "despacho@afgsl.es",
+    "nombre": "Asesoría Fiscal y de Gestión",
+    "web": "http://www.afgsl.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.25054266297@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gestifis.com",
+    "nombre": "GESTIFIS | Gestoría y Asesoría Fiscal, Laboral y Contable",
+    "web": "https://gestifis.com/google",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.47420271500@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@talenom.com",
+    "nombre": "Talenom Asesoría - Madrid",
+    "web": "https://talenom.com/es-es/oficinas/asesoria-madrid/?utm_source=googlemybusiness&utm_medium=organic",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.86983420508@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@legatik.es",
+    "nombre": "LEGATIK | Gestoria Fiscal para Autónomos y Pymes en Madrid",
+    "web": "https://legatik.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.11575224163@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@lanubefiscal.es",
+    "nombre": "Asesoría La Nube Fiscal",
+    "web": "https://www.lanubefiscal.es/?utm_source=google&utm_medium=maps&utm_campaign=gmb-web",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.27893112615@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@anantaasesores.es",
+    "nombre": "Ananta Asesores - Asesoría Contable, Fiscal y Laboral",
+    "web": "http://www.anantaasesores.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.25578899758@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@asesoriadelicias.es",
+    "nombre": "Asesoría Delicias",
+    "web": "http://asesoriadelicias.com/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.20833955990@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@asesoria-madrid.org",
+    "nombre": "Asesoría Madrid",
+    "web": "http://www.asesoria-madrid.org/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011600.92673849960@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sabidoasesores.es",
+    "nombre": "ASESORIA - GESTORIA - Fiscal, Contable y Jurídica en Madrid - Sabido Asesores",
+    "web": "http://sabidoasesores.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011601.36949334749@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gasparasesores.es",
+    "nombre": "Gaspar Asesores",
+    "web": "https://gasparasesores.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011601.23001272778@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ksasesores.com",
+    "nombre": "KS Asesores - Gestoría Autónomos y Empresas",
+    "web": "https://ksasesores.com/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011601.82418257660@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "admsl@admsl.com",
+    "nombre": "Asesoria Fiscal Madrid ADM S.L.",
+    "web": "http://admsl.com/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-01",
+    "messageId": "<202607011601.44827671418@smtp-relay.mailin.fr>",
+    "status": "sent"
+  }
+]

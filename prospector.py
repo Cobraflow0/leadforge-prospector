@@ -269,11 +269,15 @@ def verify_email(email):
 # ══════════════════════════════════════════════════════════
 # GOOGLE MAPS
 # ══════════════════════════════════════════════════════════
+MAX_PAGINAS_GMAPS = 1  # cada página cuesta hasta 20 llamadas a Place Details — limitar protege la cuota gratuita
+
 def search_gmaps(query, ciudad):
     leads = []
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
     params = {"query": f"{query} en {ciudad}", "key": GMAPS_API_KEY, "language": "es"}
+    pagina = 0
     while True:
+        pagina += 1
         r = requests.get(url, params=params, timeout=10).json()
         if r.get("status") in ("OVER_QUERY_LIMIT", "REQUEST_DENIED"):
             print(f"  [Maps] ⚠️  API error: {r.get('status')} — deteniendo búsqueda")
@@ -309,7 +313,7 @@ def search_gmaps(query, ciudad):
             })
             time.sleep(0.2)
         next_token = r.get("next_page_token")
-        if not next_token:
+        if not next_token or pagina >= MAX_PAGINAS_GMAPS:
             break
         params = {"pagetoken": next_token, "key": GMAPS_API_KEY}
         time.sleep(2)

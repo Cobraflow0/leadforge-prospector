@@ -16,8 +16,8 @@ from datetime import datetime
 
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
 GMAPS_API_KEY  = os.environ["GMAPS_API_KEY"]
-MY_EMAIL       = os.environ.get("MY_EMAIL", "aquilesgbi@gmail.com")
-SENDER_NAME    = os.environ.get("SENDER_NAME", "Aquiles — LeadForge")
+MY_EMAIL       = os.environ.get("MY_EMAIL") or "aquilesgbi@gmail.com"
+SENDER_NAME    = os.environ.get("SENDER_NAME") or "Aquiles — LeadForge"
 SENT_FILE      = "sent_emails.json"
 CRM_FILE       = "crm_data.json"
 WARMUP_FILE    = "warmup_state.json"

@@ -498,5 +498,485 @@
     "fecha": "2026-07-01",
     "messageId": "<202607011601.44827671418@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "hola@distritoagencia.com",
+    "nombre": "Distrito",
+    "web": "https://distritoagencia.com/",
+    "ciudad": "Madrid",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.28531491846@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@ramonborras.com",
+    "nombre": "Ramón Borrás | Consultor SEO Local & Ecommerce Madrid",
+    "web": "https://ramonborras.com/seo-local-madrid/",
+    "ciudad": "Madrid",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.29147097983@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gruporein.com",
+    "nombre": "Grupo Rein",
+    "web": "http://www.gruporein.com/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.70554869877@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gifsaibergroup.com",
+    "nombre": "Gifsa",
+    "web": "https://www.gifsaibergroup.com",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.53472442596@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pisosinquilinos.com",
+    "nombre": "Renta Antigua López-Brea",
+    "web": "http://www.pisosinquilinos.com/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.38487214680@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@axa.es",
+    "nombre": "AXA",
+    "web": "https://www.axa.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.65215360109@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@mgs.es",
+    "nombre": "MGS Seguros",
+    "web": "https://www.mgs.es/wps/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.87441035502@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "arcolopd@santalucia.es",
+    "nombre": "Santalucía",
+    "web": "http://www.santalucia.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.56725401844@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ocaso@ocaso.es",
+    "nombre": "Ocaso S.A.",
+    "web": "https://www.ocaso.es",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.75195626727@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sanitas.es",
+    "nombre": "Sanitas",
+    "web": "https://www.sanitas.es",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.47679936067@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@nuevamutuasanitaria.es",
+    "nombre": "Nueva Mutua Sanitaria",
+    "web": "https://www.nuevamutuasanitaria.es/",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041340.82766374473@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "fogade@fgd.es",
+    "nombre": "Fondo de Garantía de Depósitos",
+    "web": "https://fgd.es",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041341.75051204389@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@grupohablemos.com",
+    "nombre": "Grupo Hablemos",
+    "web": "https://www.grupohablemos.com/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041341.31820913490@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gruponj.es",
+    "nombre": "N & J Asesores",
+    "web": "https://www.gruponj.es/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041341.91793195991@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@informatico-madrid.com",
+    "nombre": "Diseño web Joao",
+    "web": "https://www.informatico-madrid.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041342.92568444452@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@flossystems.com",
+    "nombre": "FLOSSystems",
+    "web": "https://flossystems.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041342.11091966264@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hello@kaleidos.com",
+    "nombre": "Kaleidos INC sucursal España",
+    "web": "https://kaleidos.net/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041342.77743108465@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "abuse@ovh.net",
+    "nombre": "OVHcloud",
+    "web": "https://www.ovh.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041342.23568087728@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@todobravo.es",
+    "nombre": "TodoBravo Diseño Web y Marketing Digital",
+    "web": "https://www.todobravo.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041342.10218273562@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pix4d.com",
+    "nombre": "Pix4D",
+    "web": "https://www.pix4d.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.84621128147@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@nvotes.com",
+    "nombre": "Nvotes",
+    "web": "https://nvotes.com",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.10336723062@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@liberux.net",
+    "nombre": "Liberux Labs, S. L.",
+    "web": "https://liberux.net",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.17813888710@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@btcconsulting360.com",
+    "nombre": "BTC Consulting 360",
+    "web": "https://btcconsulting360.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.43736620624@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "atnaxpe@axpe.com",
+    "nombre": "AXPE Consulting",
+    "web": "https://www.axpe.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.29622569864@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@alfainmo.com",
+    "nombre": "Alfa Inmobiliaria",
+    "web": "https://www.alfaplayas.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041343.68244687835@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "casasdelnorte59@gmail.com",
+    "nombre": "Casas del Norte",
+    "web": "https://www.casasdelnorte.es/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.71574222355@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@lfcantabria.com",
+    "nombre": "LFCantabria",
+    "web": "https://www.lfcantabria.com",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.90267063604@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "davila@pisos-santander.com",
+    "nombre": "Bahía Home",
+    "web": "https://bahiahome.es",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.41616426429@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "falex@fincasfalex.com",
+    "nombre": "Fincas Falex",
+    "web": "http://inmo.fincasfalex.com",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.83903968190@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "anna@inmobiliarialapereda.es",
+    "nombre": "Inmobiliaria La Pereda",
+    "web": "http://www.inmobiliarialapereda.es",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.13299897288@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "terrenos@cuatrocanos.com",
+    "nombre": "Cuatro Caños",
+    "web": "https://www.cuatrocanos.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.72418756207@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ayjinmobiliaria.com",
+    "nombre": "AJ Gestión inmobiliaria",
+    "web": "https://www.ayjinmobiliaria.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041344.27269762249@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@idepisos.com",
+    "nombre": "idepisos",
+    "web": "https://www.idepisos.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.88538785233@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@altamira21.com",
+    "nombre": "Altamira21",
+    "web": "https://altamira21.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.45963767990@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@terradonia.com",
+    "nombre": "Terradonia",
+    "web": "https://www.terradonia.com/",
+    "ciudad": "Santander",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.88626569124@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fraileyblanco.com",
+    "nombre": "Fraile & Blanco",
+    "web": "https://www.fraileyblanco.com",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.16647698985@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gruposio.es",
+    "nombre": "Grupo SIO",
+    "web": "https://www.gruposio.es",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.58560994286@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "empresas@carlos-herrera.com",
+    "nombre": "Carlos Herrera Consulting",
+    "web": "https://carlos-herrera.com",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.52247493541@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "zitelia@zitelia.com",
+    "nombre": "Zitelia",
+    "web": "https://www.zitelia.com/",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.80721046717@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ejemplo@mail.com",
+    "nombre": "Hiberus",
+    "web": "https://www.hiberus.com",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.44373256764@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@incentro.com",
+    "nombre": "Incentro España",
+    "web": "https://www.incentro.com",
+    "ciudad": "Santander",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.70642536386@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@benayas.es",
+    "nombre": "Inmobiliaria Benayas",
+    "web": "https://www.benayas.es/inicio",
+    "ciudad": "Salamanca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.25791885264@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@coapisalamancayavila.com",
+    "nombre": "Colegio Oficial de Agentes de la Propiedad de Salamanca y Ávila",
+    "web": "https://www.coapisalamancayavila.com/",
+    "ciudad": "Salamanca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041345.49357807144@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "inmobiliariacadisa@hotmail.com",
+    "nombre": "Cadisa",
+    "web": "https://www.inmobiliariacadisa.com/",
+    "ciudad": "Salamanca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041346.85125785905@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gruporesan.es",
+    "nombre": "Resan",
+    "web": "https://www.gruporesan.es/",
+    "ciudad": "Salamanca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041346.57442965929@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pedrohermosa.com",
+    "nombre": "Pedro Hermosa",
+    "web": "https://www.pedrohermosa.com/",
+    "ciudad": "Salamanca",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041346.25639421445@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@allianz.es",
+    "nombre": "Allianz Seguros",
+    "web": "https://www.allianz.es/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041346.54300660492@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "asesorsrojas@gmail.com",
+    "nombre": "Asesoría Sánchez de Rojas",
+    "web": "https://www.sanchezderojas.es/",
+    "ciudad": "Toledo",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-04",
+    "messageId": "<202607041347.40768401702@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

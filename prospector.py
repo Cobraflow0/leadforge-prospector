@@ -181,15 +181,17 @@ def _osm_area_id(ciudad):
     return area_id
 
 
-def search_osm(target, ciudad):
-    tags = OSM_TAGS_MAP.get(target)
-    if not tags:
-        print(f"  [OSM] Saltando '{target}' — sin categoría OSM equivalente")
-        return []
+_osm_elements_cache = {}
 
-    area_id = _osm_area_id(ciudad)
-    if not area_id:
-        return []
+
+def _osm_elements(area_id, tags):
+    """Cachea los elementos crudos de Overpass por (área, tags) — varios
+    TARGETS distintos (p.ej. 'agencia de marketing digital' y 'agencia de
+    publicidad') comparten el mismo tag OSM, y sin este cache se lanzaba la
+    misma consulta dos veces por ciudad al servidor público."""
+    key = (area_id, tags)
+    if key in _osm_elements_cache:
+        return _osm_elements_cache[key]
 
     time.sleep(1.5)  # margen entre llamadas al servidor público de Overpass — evita 429/respuesta vacía
 
@@ -202,16 +204,32 @@ def search_osm(target, ciudad):
             data={"data": query}, headers=OSM_HEADERS, timeout=55,
         )
         if r.status_code != 200:
-            print(f"  [OSM] Error HTTP {r.status_code} query={target!r} ciudad={ciudad!r}")
+            print(f"  [OSM] Error HTTP {r.status_code} tags={tags!r} area={area_id}")
+            _osm_elements_cache[key] = []
             return []
-        data = r.json()
+        elements = r.json().get("elements", [])
     except Exception as e:
-        print(f"  [OSM] Error: {e} query={target!r} ciudad={ciudad!r}")
+        print(f"  [OSM] Error: {e} tags={tags!r} area={area_id}")
+        _osm_elements_cache[key] = []
+        return []
+
+    _osm_elements_cache[key] = elements
+    return elements
+
+
+def search_osm(target, ciudad):
+    tags = OSM_TAGS_MAP.get(target)
+    if not tags:
+        print(f"  [OSM] Saltando '{target}' — sin categoría OSM equivalente")
+        return []
+
+    area_id = _osm_area_id(ciudad)
+    if not area_id:
         return []
 
     leads = []
     vistos = set()
-    for el in data.get("elements", []):
+    for el in _osm_elements(area_id, tuple(tags)):
         t = el.get("tags", {}) or {}
         nombre = t.get("name", "").strip()
         if not nombre or nombre in vistos:
@@ -229,7 +247,7 @@ def search_osm(target, ciudad):
         if not dominio_valido(domain):
             continue
 
-        email_tag = t.get("email") or t.get("contact:email") or ""
+        email_tag = _clean_email((t.get("email") or t.get("contact:email") or "").lower())
 
         leads.append({
             "nombre":  nombre,
@@ -314,28 +332,37 @@ def dominio_valido(domain):
 # EXTRAER EMAIL REAL DE LA WEB
 # ══════════════════════════════════════════════════════════
 _EMAIL_SKIP = {"noreply", "no-reply", "donotreply", "webmaster", "bounce", "mailer"}
+_EMAIL_RE   = re.compile(r'^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$')
+
+
+def _clean_email(raw):
+    """Quita BOM/espacios invisibles y exige un formato de email válido —
+    Brevo rechaza (400) direcciones con caracteres colados del HTML, p.ej.
+    'info@empresa.com\\ufeff', y antes se perdía ese envío sin aviso."""
+    e = raw.strip().strip("﻿​‌‍")
+    return e if _EMAIL_RE.match(e) else None
+
 
 def _parse_emails_from_html(html):
     emails = []
     mailtos = re.findall(r'href=["\']mailto:([^"\'?&\s>]+)', html, re.IGNORECASE)
     for m in mailtos:
-        m = m.strip().lower()
-        if "@" in m and "." in m.split("@")[-1]:
-            if not any(s in m for s in _EMAIL_SKIP):
-                emails.append(m)
+        m = _clean_email(m.lower())
+        if m and not any(s in m for s in _EMAIL_SKIP):
+            emails.append(m)
     if emails:
         return emails
     found = re.findall(r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}', html)
     for f in found:
-        f = f.lower()
-        if not any(s in f for s in _EMAIL_SKIP | {"example", "sentry", "schema", "pixel"}):
+        f = _clean_email(f.lower())
+        if f and not any(s in f for s in _EMAIL_SKIP | {"example", "sentry", "schema", "pixel"}):
             emails.append(f)
     return emails
 
 
 def get_real_email(website):
     paths = ["", "/contacto", "/contact", "/sobre-nosotros", "/about"]
-    for path in paths[:3]:
+    for path in paths:
         url = website.rstrip("/") + path
         try:
             r = requests.get(url, timeout=5, headers=HEADERS, allow_redirects=True)

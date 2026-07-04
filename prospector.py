@@ -279,8 +279,9 @@ def search_gmaps(query, ciudad):
     while True:
         pagina += 1
         r = requests.get(url, params=params, timeout=10).json()
+        if r.get("status") != "OK":
+            print(f"  [Maps] status={r.get('status')} error_message={r.get('error_message')} query={query!r} ciudad={ciudad!r}")
         if r.get("status") in ("OVER_QUERY_LIMIT", "REQUEST_DENIED"):
-            print(f"  [Maps] ⚠️  API error: {r.get('status')} — deteniendo búsqueda")
             break
         for p in r.get("results", []):
             place_id = p.get("place_id")

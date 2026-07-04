@@ -5,9 +5,14 @@ on:
     - cron: '0 7 * * *'  # Cada día a las 9:00 hora española (UTC+2 verano)
   workflow_dispatch:      # También permite lanzarlo manualmente
 
+concurrency:
+  group: prospector
+  cancel-in-progress: false  # no cancelar un envío real a medias; solo evita que se pisen dos runs
+
 jobs:
   prospect:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # evita runs colgados de horas (visto: 1h22m y un fallo a las 3h11m)
     steps:
       - uses: actions/checkout@v4
 
@@ -31,4 +36,5 @@ jobs:
           git config user.email "bot@leadforge.es"
           git add sent_emails.json crm_data.json warmup_state.json
           git diff --staged --quiet || git commit -m "chore: actualizar sent_emails y crm"
+          git pull --rebase origin main
           git push

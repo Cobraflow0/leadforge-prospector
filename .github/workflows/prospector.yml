@@ -12,7 +12,7 @@ concurrency:
 jobs:
   prospect:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  # evita runs colgados de horas (visto: 1h22m y un fallo a las 3h11m)
+    timeout-minutes: 60  # evita runs colgados de horas (visto: 1h22m y un fallo a las 3h11m); con guardado incremental, un corte por timeout ya no duplica envíos, solo manda menos ese día
     steps:
       - uses: actions/checkout@v4
 

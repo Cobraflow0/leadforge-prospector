@@ -545,58 +545,69 @@ def main():
     print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override)")
 
     # 2. Enriquecer + verificar + enviar
+    # Guarda progreso cada pocos envíos (y en cualquier corte/excepción) para
+    # que un timeout o un job cancelado a medias nunca vuelva a escribirle
+    # dos veces a la misma empresa al día siguiente — antes solo se guardaba
+    # al terminar el bucle entero, así que un corte a mitad de camino perdía
+    # todo el progreso de esa ejecución.
+    SAVE_EVERY     = 10
     enviados       = 0
     rechazados_dns = 0
     emails_reales  = 0
 
-    for lead in nuevos:
-        if enviados >= max_per_run:
-            break
+    try:
+        for lead in nuevos:
+            if enviados >= max_per_run:
+                break
 
-        nombre  = lead["nombre"]
-        website = lead["web"]
-        ciudad  = lead["ciudad"]
+            nombre  = lead["nombre"]
+            website = lead["web"]
+            ciudad  = lead["ciudad"]
 
-        real = get_real_email(website)
-        if real:
-            lead["email"] = real
-            emails_reales += 1
-            print(f"  📧 Email real: {real} ({nombre})")
-        else:
-            print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
+            real = get_real_email(website)
+            if real:
+                lead["email"] = real
+                emails_reales += 1
+                print(f"  📧 Email real: {real} ({nombre})")
+            else:
+                print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
 
-        if not verify_email(lead["email"]):
-            rechazados_dns += 1
-            print(f"  ⛔ {lead['email']} — no existe, descartado")
-            continue
+            if not verify_email(lead["email"]):
+                rechazados_dns += 1
+                print(f"  ⛔ {lead['email']} — no existe, descartado")
+                continue
 
-        if lead["email"] in sent:
-            continue
+            if lead["email"] in sent:
+                continue
 
-        sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
-        ok, message_id = send_email(lead["email"], nombre, ciudad, sector_label, dia)
-        if ok:
-            sent.add(lead["email"])
-            enviados += 1
-            print(f"  ✅ {lead['email']} ({nombre})")
-            if lead["email"] not in crm_ids:
-                crm.append({
-                    "email":     lead["email"],
-                    "nombre":    nombre,
-                    "web":       website,
-                    "ciudad":    ciudad.split(",")[0],
-                    "sector":    sector_label,
-                    "fecha":     datetime.now().strftime("%Y-%m-%d"),
-                    "messageId": message_id or "",
-                    "status":    "sent",
-                })
-                crm_ids.add(lead["email"])
-        else:
-            print(f"  ❌ {lead['email']} — error Brevo")
-        time.sleep(0.5)
+            sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
+            ok, message_id = send_email(lead["email"], nombre, ciudad, sector_label, dia)
+            if ok:
+                sent.add(lead["email"])
+                enviados += 1
+                print(f"  ✅ {lead['email']} ({nombre})")
+                if enviados % SAVE_EVERY == 0:
+                    save_sent(sent)
+                    save_crm(crm)
+                if lead["email"] not in crm_ids:
+                    crm.append({
+                        "email":     lead["email"],
+                        "nombre":    nombre,
+                        "web":       website,
+                        "ciudad":    ciudad.split(",")[0],
+                        "sector":    sector_label,
+                        "fecha":     datetime.now().strftime("%Y-%m-%d"),
+                        "messageId": message_id or "",
+                        "status":    "sent",
+                    })
+                    crm_ids.add(lead["email"])
+            else:
+                print(f"  ❌ {lead['email']} — error Brevo")
+            time.sleep(0.5)
+    finally:
+        save_sent(sent)
+        save_crm(crm)
 
-    save_sent(sent)
-    save_crm(crm)
     print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS")
 
     ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_hoy)

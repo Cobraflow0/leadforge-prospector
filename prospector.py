@@ -15,7 +15,6 @@ import dns.resolver
 from datetime import datetime
 
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
-GMAPS_API_KEY  = os.environ["GMAPS_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL") or "aquilesgbi@gmail.com"
 SENDER_NAME    = os.environ.get("SENDER_NAME") or "Aquiles — LeadForge"
 SENT_FILE      = "sent_emails.json"
@@ -116,6 +115,132 @@ TARGET_LABEL = {
     "gestoría administrativa":         "gestorías administrativas",
     "empresa de telecomunicaciones":   "empresas de telecomunicaciones",
 }
+
+# ══════════════════════════════════════════════════════════
+# OPENSTREETMAP (Overpass API) — reemplaza a Google Maps
+# ══════════════════════════════════════════════════════════
+# Dato abierto, sin coste ni cuota de pago — mismo enfoque ya validado en
+# leadforge-api tras el incidente de facturación de Google Maps Platform
+# (2026-07-02). No cubre bien servicios de oficina "abstractos" sin
+# equivalente físico claro (consultoría, telecomunicaciones, formación
+# empresarial genérica) — esas categorías se saltan (tags = None) en vez
+# de devolver resultados basura.
+OSM_HEADERS = {"User-Agent": "LeadForgeProspector/1.0 (contacto: hola@leadforge.es)"}
+
+OSM_TAGS_MAP = {
+    "agencia de marketing digital":     [("office", "advertising_agency")],
+    "agencia inmobiliaria":             [("office", "estate_agent")],
+    "correduría de seguros":            [("office", "insurance")],
+    "consultoría de negocio":           None,
+    "asesoría fiscal":                  [("office", "tax_advisor")],
+    "academia de formación empresarial": None,
+    "empresa de software B2B":          [("office", "it")],
+    "agencia de publicidad":            [("office", "advertising_agency")],
+    "gestoría administrativa":          [("office", "tax_advisor")],
+    "empresa de telecomunicaciones":    None,
+}
+
+_osm_area_cache = {}
+
+
+def _osm_area_id(ciudad):
+    """Geocodifica la ciudad vía Nominatim para sacar el area id real de
+    Overpass — buscar solo por nombre en Overpass es ambiguo. Cachea por
+    ciudad para no regeocodificar en cada categoría del mismo run."""
+    if ciudad in _osm_area_cache:
+        return _osm_area_cache[ciudad]
+
+    try:
+        r = requests.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={"q": ciudad, "format": "json", "addressdetails": 1, "limit": 5},
+            headers=OSM_HEADERS, timeout=15,
+        )
+        candidatos = r.json()
+    except Exception as e:
+        print(f"  [OSM] Error geocodificando {ciudad}: {e}")
+        _osm_area_cache[ciudad] = None
+        return None
+
+    tipos_buenos = {"city", "town", "village", "municipality"}
+    elegido = next(
+        (c for c in candidatos if c.get("osm_type") == "relation" and c.get("addresstype") in tipos_buenos),
+        None,
+    )
+    if not elegido:
+        elegido = next((c for c in candidatos if c.get("osm_type") == "relation"), None)
+
+    if not elegido:
+        print(f"  [OSM] No se encontró área OSM para {ciudad}")
+        _osm_area_cache[ciudad] = None
+        return None
+
+    area_id = 3600000000 + int(elegido["osm_id"])
+    _osm_area_cache[ciudad] = area_id
+    time.sleep(1)  # cortesía Nominatim: máx. 1 request/segundo
+    return area_id
+
+
+def search_osm(target, ciudad):
+    tags = OSM_TAGS_MAP.get(target)
+    if not tags:
+        print(f"  [OSM] Saltando '{target}' — sin categoría OSM equivalente")
+        return []
+
+    area_id = _osm_area_id(ciudad)
+    if not area_id:
+        return []
+
+    time.sleep(1.5)  # margen entre llamadas al servidor público de Overpass — evita 429/respuesta vacía
+
+    filtros = "".join(f'node["{k}"="{v}"](area.a);way["{k}"="{v}"](area.a);' for k, v in tags)
+    query = f'[out:json][timeout:50];area({area_id})->.a;({filtros});out center tags 80;'
+
+    try:
+        r = requests.post(
+            "https://overpass-api.de/api/interpreter",
+            data={"data": query}, headers=OSM_HEADERS, timeout=55,
+        )
+        if r.status_code != 200:
+            print(f"  [OSM] Error HTTP {r.status_code} query={target!r} ciudad={ciudad!r}")
+            return []
+        data = r.json()
+    except Exception as e:
+        print(f"  [OSM] Error: {e} query={target!r} ciudad={ciudad!r}")
+        return []
+
+    leads = []
+    vistos = set()
+    for el in data.get("elements", []):
+        t = el.get("tags", {}) or {}
+        nombre = t.get("name", "").strip()
+        if not nombre or nombre in vistos:
+            continue
+        vistos.add(nombre)
+
+        website = t.get("website") or t.get("contact:website") or ""
+        if not website:
+            continue
+
+        domain = (
+            website.replace("https://", "").replace("http://", "")
+            .replace("www.", "").split("/")[0].lower()
+        )
+        if not dominio_valido(domain):
+            continue
+
+        email_tag = t.get("email") or t.get("contact:email") or ""
+
+        leads.append({
+            "nombre":  nombre,
+            "web":     website,
+            "domain":  domain,
+            "email":   email_tag or f"info@{domain}",
+            "target":  target,
+            "ciudad":  ciudad,
+        })
+
+    return leads
 
 SUBJECTS = [
     "Clientes nuevos en {ciudad} — sin publicidad",
@@ -267,61 +392,6 @@ def verify_email(email):
 
 
 # ══════════════════════════════════════════════════════════
-# GOOGLE MAPS
-# ══════════════════════════════════════════════════════════
-MAX_PAGINAS_GMAPS = 1  # cada página cuesta hasta 20 llamadas a Place Details — limitar protege la cuota gratuita
-
-def search_gmaps(query, ciudad):
-    leads = []
-    url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
-    params = {"query": f"{query} en {ciudad}", "key": GMAPS_API_KEY, "language": "es"}
-    pagina = 0
-    while True:
-        pagina += 1
-        r = requests.get(url, params=params, timeout=10).json()
-        if r.get("status") != "OK":
-            print(f"  [Maps] status={r.get('status')} error_message={r.get('error_message')} query={query!r} ciudad={ciudad!r}")
-        if r.get("status") in ("OVER_QUERY_LIMIT", "REQUEST_DENIED"):
-            break
-        for p in r.get("results", []):
-            place_id = p.get("place_id")
-            if not place_id:
-                continue
-            try:
-                detail = requests.get(
-                    "https://maps.googleapis.com/maps/api/place/details/json",
-                    params={"place_id": place_id, "fields": "name,website", "key": GMAPS_API_KEY},
-                    timeout=10,
-                ).json().get("result", {})
-            except Exception:
-                continue
-            website = detail.get("website", "")
-            if not website:
-                continue
-            domain = (
-                website.replace("https://", "").replace("http://", "")
-                .replace("www.", "").split("/")[0].lower()
-            )
-            if not dominio_valido(domain):
-                continue
-            leads.append({
-                "nombre":  p.get("name", ""),
-                "web":     website,
-                "domain":  domain,
-                "email":   f"info@{domain}",
-                "target":  query,
-                "ciudad":  ciudad,
-            })
-            time.sleep(0.2)
-        next_token = r.get("next_page_token")
-        if not next_token or pagina >= MAX_PAGINAS_GMAPS:
-            break
-        params = {"pagetoken": next_token, "key": GMAPS_API_KEY}
-        time.sleep(2)
-    return leads
-
-
-# ══════════════════════════════════════════════════════════
 # EMAIL HTML
 # ══════════════════════════════════════════════════════════
 def build_email(nombre_empresa, ciudad, sector_label):
@@ -447,12 +517,12 @@ def main():
     crm_ids = {e["email"] for e in crm}
     print(f"[prospector] {len(sent)} emails ya enviados anteriormente")
 
-    # 1. Recoger candidatos de Google Maps en todas las ciudades
+    # 1. Recoger candidatos de OpenStreetMap en todas las ciudades
     all_leads = []
     for ciudad in ciudades_hoy:
         for target in TARGETS:
             print(f"[prospector] Buscando: {target} en {ciudad}")
-            leads = search_gmaps(target, ciudad)
+            leads = search_osm(target, ciudad)
             all_leads.extend(leads)
             time.sleep(1)
 

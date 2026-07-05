@@ -978,5 +978,395 @@
     "fecha": "2026-07-04",
     "messageId": "<202607041347.40768401702@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "hola@prismalia.com",
+    "nombre": "Prismalia",
+    "web": "https://prismalia.com/diseno-web-madrid/",
+    "ciudad": "Madrid",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.71580118982@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@arrenda.es",
+    "nombre": "Arrenda",
+    "web": "https://arrenda.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.11323005715@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gruposimma.es",
+    "nombre": "Simma",
+    "web": "https://www.gruposimma.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.68152902447@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@alquilerseguro.es",
+    "nombre": "Alquiler Seguro",
+    "web": "https://www.alquilerseguro.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.28835806265@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "administracion@mafyc.com",
+    "nombre": "Mafyc Administración de fincas e Inmobiliaria Alfa",
+    "web": "https://mafyc.com/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.96386318546@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@ikasa.es",
+    "nombre": "iKasa",
+    "web": "http://www.ikasa.es/",
+    "ciudad": "Madrid",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.99574194253@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "autonomos@uniondemutuas.es",
+    "nombre": "Unión de Mutuas",
+    "web": "https://www.uniondemutuas.es",
+    "ciudad": "Madrid",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050939.80985945072@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@iliquidis.com",
+    "nombre": "Iliquidis",
+    "web": "http://iliquidis.com/pagina-Inicio/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050940.65821152295@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gestorianara.com",
+    "nombre": "Gestoría Administrativa Nara",
+    "web": "https://www.gestorianara.com/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050940.84710979363@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gestoriamenendez.net",
+    "nombre": "Gestoría Menéndez",
+    "web": "https://www.gestoriamenendez.net/",
+    "ciudad": "Madrid",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050940.44840173535@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@quieroviviraqui.com",
+    "nombre": "Quiero vivir aquí.com",
+    "web": "https://quieroviviraqui.com/",
+    "ciudad": "Salamanca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050940.21126633298@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@rasconsalamanca.com",
+    "nombre": "Asesoría Rascón Salamanca",
+    "web": "http://rasconsalamanca.com/",
+    "ciudad": "Salamanca",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050941.85965495265@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@mutuauniversal.net",
+    "nombre": "Mutua Universal",
+    "web": "https://www.mutuauniversal.net/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050941.45168526685@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@patriahispana.com",
+    "nombre": "Patria Hispana",
+    "web": "https://www.patriahispana.com/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.91257315490@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@almudenaseguros.es",
+    "nombre": "Almudena Seguros",
+    "web": "https://www.almudenaseguros.es/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.74384206720@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@mapfre.com",
+    "nombre": "Mapfre Seguros",
+    "web": "https://www.mapfre.com/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.13718779600@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "proautos@soliss.com",
+    "nombre": "Seguros Soliss",
+    "web": "https://www.soliss.es/",
+    "ciudad": "Toledo",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.13513190120@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@o2studio.es",
+    "nombre": "O2 Studio",
+    "web": "https://o2studio.es",
+    "ciudad": "Burgos",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.16536299959@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@idycos.es",
+    "nombre": "Idycos",
+    "web": "https://idycos.es",
+    "ciudad": "Burgos",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.85186759439@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@lourdesgarciasocialmedia.es",
+    "nombre": "Lourdes García",
+    "web": "https://lourdesgarciasocialmedia.es/",
+    "ciudad": "Burgos",
+    "sector": "agencias de marketing digital",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050942.76637818808@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ventas@divinaseguros.com",
+    "nombre": "divina seguros",
+    "web": "https://seguros.divinaseguros.com/seguro-de-coche-burgos/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050943.47525259919@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "web@trascasa.com",
+    "nombre": "TRASCASA",
+    "web": "https://www.trascasa.com/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050943.99705039093@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@muface.es",
+    "nombre": "Mutualidad General de Funcionarios Civiles del Estado",
+    "web": "https://www.muface.es/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050943.88455210857@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@segurcaixaadeslas.es",
+    "nombre": "Adeslas SegurCaixa",
+    "web": "https://www.segurcaixaadeslas.es/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050943.74824716787@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "inforacc@racc.es",
+    "nombre": "RACC",
+    "web": "https://www.racc.es/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050943.17391504800@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clientes@robledaseguros.com",
+    "nombre": "MAROBLEDA Correduría de Seguros",
+    "web": "https://robledaseguros.com",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050944.75161007583@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@blancoseguros.es",
+    "nombre": "Blanco",
+    "web": "https://blancoseguros.es/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050944.61446542243@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "juancarsoma@generalimediadores.es",
+    "nombre": "Generali",
+    "web": "https://www.generali.es/agente/juancarlossomavilla",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050945.23321391065@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@vioviaseguros.com",
+    "nombre": "Viovia Seguros",
+    "web": "https://www.vioviaseguros.com/",
+    "ciudad": "Burgos",
+    "sector": "corredurías de seguros",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050945.74945591486@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "central@tax.es",
+    "nombre": "TAX Burgos",
+    "web": "https://www.tax.es/",
+    "ciudad": "Burgos",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050945.41068921534@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "carlosmartin@martinportugal.com",
+    "nombre": "Asesoría y Gestoría Martín Portugal",
+    "web": "https://www.martinportugal.com/",
+    "ciudad": "Burgos",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050945.11394613932@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "soporte@recursosfiscales.com",
+    "nombre": "Recursos fiscales",
+    "web": "https://recursosfiscales.com/",
+    "ciudad": "Burgos",
+    "sector": "asesorías fiscales",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050945.76132389103@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@moovity.io",
+    "nombre": "Moovity",
+    "web": "https://www.moovity.io/",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050946.72221541328@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "infotech@tequipo.com",
+    "nombre": "Tequipo S.L.",
+    "web": "https://www.tequipo.com",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050946.90835719990@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@geotelecom.es",
+    "nombre": "Geotelecom",
+    "web": "https://www.geotelecom.es/",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050946.95641242848@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@keyland.es",
+    "nombre": "Keyland",
+    "web": "https://www.keyland.es/",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050946.66721611853@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@innovanity.com",
+    "nombre": "Innovanity",
+    "web": "https://innovanity.com/",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050947.93828981980@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@robotix.es",
+    "nombre": "Robotix Consulting",
+    "web": "https://www.robotix.es/es/",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050947.84759816457@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "marketing@evolk.es",
+    "nombre": "Evolk",
+    "web": "https://evolk.es",
+    "ciudad": "Burgos",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-05",
+    "messageId": "<202607050947.73235892289@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

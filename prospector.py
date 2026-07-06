@@ -91,29 +91,29 @@ CIUDADES = [
 ]
 
 TARGETS = [
-    "agencia de marketing digital",
+    "empresa de reformas",
+    "fontanería",
+    "electricista",
+    "cerrajería",
+    "pintor profesional",
+    "despacho de abogados",
     "agencia inmobiliaria",
-    "correduría de seguros",
-    "consultoría de negocio",
-    "asesoría fiscal",
-    "academia de formación empresarial",
-    "empresa de software B2B",
-    "agencia de publicidad",
-    "gestoría administrativa",
-    "empresa de telecomunicaciones",
+    "clínica dental",
+    "clínica de fisioterapia",
+    "taller mecánico",
 ]
 
 TARGET_LABEL = {
-    "agencia de marketing digital":   "agencias de marketing digital",
-    "agencia inmobiliaria":            "agencias inmobiliarias",
-    "correduría de seguros":           "corredurías de seguros",
-    "consultoría de negocio":          "consultoras de negocio",
-    "asesoría fiscal":                 "asesorías fiscales",
-    "academia de formación empresarial": "academias de formación",
-    "empresa de software B2B":         "empresas de software B2B",
-    "agencia de publicidad":           "agencias de publicidad",
-    "gestoría administrativa":         "gestorías administrativas",
-    "empresa de telecomunicaciones":   "empresas de telecomunicaciones",
+    "empresa de reformas":       "empresas de reformas",
+    "fontanería":                "fontaneros",
+    "electricista":              "electricistas",
+    "cerrajería":                "cerrajeros",
+    "pintor profesional":        "pintores",
+    "despacho de abogados":      "despachos de abogados",
+    "agencia inmobiliaria":      "agencias inmobiliarias",
+    "clínica dental":            "clínicas dentales",
+    "clínica de fisioterapia":   "clínicas de fisioterapia",
+    "taller mecánico":           "talleres mecánicos",
 }
 
 # ══════════════════════════════════════════════════════════
@@ -121,23 +121,26 @@ TARGET_LABEL = {
 # ══════════════════════════════════════════════════════════
 # Dato abierto, sin coste ni cuota de pago — mismo enfoque ya validado en
 # leadforge-api tras el incidente de facturación de Google Maps Platform
-# (2026-07-02). No cubre bien servicios de oficina "abstractos" sin
-# equivalente físico claro (consultoría, telecomunicaciones, formación
-# empresarial genérica) — esas categorías se saltan (tags = None) en vez
-# de devolver resultados basura.
+# (2026-07-02). Todos los TARGETS de abajo son negocios locales con
+# necesidad real y constante de captar clientes nuevos (nada de agencias
+# de marketing/publicidad — esas son competencia directa de LeadForge,
+# no clientes) y con tag OSM físico bien poblado (craft/office/amenity),
+# a diferencia de los "servicios de oficina abstractos" (consultoría,
+# telecomunicaciones, formación genérica) que antes se saltaban por falta
+# de equivalente OSM y no aportaban volumen.
 OSM_HEADERS = {"User-Agent": "LeadForgeProspector/1.0 (contacto: hola@leadforge.es)"}
 
 OSM_TAGS_MAP = {
-    "agencia de marketing digital":     [("office", "advertising_agency")],
-    "agencia inmobiliaria":             [("office", "estate_agent")],
-    "correduría de seguros":            [("office", "insurance")],
-    "consultoría de negocio":           None,
-    "asesoría fiscal":                  [("office", "tax_advisor")],
-    "academia de formación empresarial": None,
-    "empresa de software B2B":          [("office", "it")],
-    "agencia de publicidad":            [("office", "advertising_agency")],
-    "gestoría administrativa":          [("office", "tax_advisor")],
-    "empresa de telecomunicaciones":    None,
+    "empresa de reformas":     [("craft", "builder")],
+    "fontanería":              [("craft", "plumber")],
+    "electricista":            [("craft", "electrician")],
+    "cerrajería":              [("shop", "locksmith"), ("craft", "locksmith")],
+    "pintor profesional":      [("craft", "painter")],
+    "despacho de abogados":    [("office", "lawyer")],
+    "agencia inmobiliaria":    [("office", "estate_agent")],
+    "clínica dental":          [("amenity", "dentist")],
+    "clínica de fisioterapia": [("healthcare", "physiotherapist")],
+    "taller mecánico":         [("shop", "car_repair")],
 }
 
 _osm_area_cache = {}

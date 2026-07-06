@@ -1368,5 +1368,215 @@
     "fecha": "2026-07-05",
     "messageId": "<202607050947.73235892289@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@many-worlds.es",
+    "nombre": "Many-Worlds",
+    "web": "https://many-worlds.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061126.12384496635@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pool.es",
+    "nombre": "Pool Informático",
+    "web": "https://www.pool.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061126.78604183171@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "eptisa@eptisa.com",
+    "nombre": "Eptisa",
+    "web": "https://www.eptisa.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.22680930228@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@teamequipalia.es",
+    "nombre": "Team Equipalia",
+    "web": "https://www.teamequipalia.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.43500625159@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sct.es",
+    "nombre": "SCT Telecom",
+    "web": "https://www.sct.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.88938715861@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@artesap.com",
+    "nombre": "Artesap",
+    "web": "https://www.artesap.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.28911515218@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@labpossible.com",
+    "nombre": "Possible Lab",
+    "web": "https://labpossible.com",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.22918379849@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "labpossible@mastertic.es",
+    "nombre": "Máster TIC",
+    "web": "http://mastertic.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.67431248989@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "informacion@esri.es",
+    "nombre": "Esri España",
+    "web": "https://www.esri.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061127.79262679384@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@crossolutions.com",
+    "nombre": "Cros Solutions",
+    "web": "https://crossolutions.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061128.82615855131@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "marketing@ic-consult.com",
+    "nombre": "iC Consult Spain S.L.",
+    "web": "https://ic-consult.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061128.95465482679@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@redhat.com",
+    "nombre": "Red Hat",
+    "web": "https://www.redhat.com",
+    "ciudad": "Madrid",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061128.15944120434@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inmoactivox.com",
+    "nombre": "Activox Gestion Inmobiliaria",
+    "web": "https://www.inmoactivox.com/",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061128.41235859278@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inmobiliariaplaza.es",
+    "nombre": "Plaza",
+    "web": "https://inmobiliariaplaza.es",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061129.48598245280@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@emgestion.es",
+    "nombre": "E&M gestión",
+    "web": "https://emgestion.es/",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061129.50885655623@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "inmosanpablo@inmosanpablo.es",
+    "nombre": "San Pablo",
+    "web": "https://www.inmosanpablo.es/",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061129.49332446780@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "administracion@eurekasainmobiliaria.com",
+    "nombre": "eurekasa",
+    "web": "https://eurekasainmobiliaria.com/",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061129.14158956519@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "distrito10@distrito10.com",
+    "nombre": "Distrito 10",
+    "web": "https://distrito10.com/",
+    "ciudad": "Burgos",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061129.61593327150@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@cabanarentals.es",
+    "nombre": "Cabana Rentals",
+    "web": "https://cabanarentals.es/",
+    "ciudad": "Vigo",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061130.45534452483@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "inmobiliaria@cardicasa.com",
+    "nombre": "Inmobiliaria Cardicasa",
+    "web": "https://www.cardicasa.com/",
+    "ciudad": "Vigo",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061130.25874343861@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contact@revelio.dev",
+    "nombre": "Revelio Development SRL",
+    "web": "https://revelio.dev/",
+    "ciudad": "Vigo",
+    "sector": "empresas de software B2B",
+    "fecha": "2026-07-06",
+    "messageId": "<202607061130.80843564742@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

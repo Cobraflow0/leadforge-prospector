@@ -199,7 +199,7 @@ def _osm_elements(area_id, tags):
     time.sleep(1.5)  # margen entre llamadas al servidor público de Overpass — evita 429/respuesta vacía
 
     filtros = "".join(f'node["{k}"="{v}"](area.a);way["{k}"="{v}"](area.a);' for k, v in tags)
-    query = f'[out:json][timeout:50];area({area_id})->.a;({filtros});out center tags 80;'
+    query = f'[out:json][timeout:50];area({area_id})->.a;({filtros});out center tags 200;'
 
     try:
         r = requests.post(
@@ -239,24 +239,41 @@ def search_osm(target, ciudad):
             continue
         vistos.add(nombre)
 
-        website = t.get("website") or t.get("contact:website") or ""
-        if not website:
-            continue
-
-        domain = (
-            website.replace("https://", "").replace("http://", "")
-            .replace("www.", "").split("/")[0].lower()
-        )
-        if not dominio_valido(domain):
-            continue
-
+        website   = t.get("website") or t.get("contact:website") or ""
         email_tag = _clean_email((t.get("email") or t.get("contact:email") or "").lower())
+
+        # Antes se exigía "website" sí o sí, y se perdían negocios que en OSM
+        # solo tienen tag de email (frecuente en oficios locales: fontaneros,
+        # electricistas...). Ahora basta con tener uno de los dos.
+        if not website and not email_tag:
+            continue
+
+        if website:
+            domain = (
+                website.replace("https://", "").replace("http://", "")
+                .replace("www.", "").split("/")[0].lower()
+            )
+            if not dominio_valido(domain):
+                continue
+            email = email_tag or f"info@{domain}"
+            clave_dedup = domain
+        else:
+            # Solo hay tag de email, sin web propia — no hay dominio de empresa
+            # que visitar/enriquecer. Si es un proveedor de correo genérico
+            # (gmail, hotmail...) el "dominio" no identifica a la empresa, así
+            # que se deduplica por el email completo en vez de por dominio.
+            email_domain = email_tag.split("@")[-1]
+            if not dominio_valido(email_domain):
+                continue
+            clave_dedup = email_tag if email_domain in PROVEEDORES_EMAIL_GENERICOS else email_domain
+            website = ""
+            email = email_tag
 
         leads.append({
             "nombre":  nombre,
             "web":     website,
-            "domain":  domain,
-            "email":   email_tag or f"info@{domain}",
+            "domain":  clave_dedup,
+            "email":   email,
             "target":  target,
             "ciudad":  ciudad,
         })
@@ -275,6 +292,15 @@ DOMINIOS_INVALIDOS = {
     "youtube.com", "google.com", "wix.com", "wordpress.com",
     "blogspot.com", "weebly.com", "squarespace.com", "godaddy.com",
     "1and1.es", "jimdo.com",
+}
+
+# Proveedores de correo genéricos — cuando un negocio solo tiene tag de email
+# en OSM (sin web propia) y usa uno de estos, el dominio no identifica a la
+# empresa (lo comparten miles de negocios distintos), así que no sirve como
+# clave de deduplicación — se deduplica por el email completo en su lugar.
+PROVEEDORES_EMAIL_GENERICOS = {
+    "gmail.com", "hotmail.com", "outlook.com", "yahoo.com", "yahoo.es",
+    "live.com", "icloud.com", "hotmail.es", "aol.com",
 }
 
 _verify_cache = {}
@@ -592,13 +618,15 @@ def main():
                 nombre  = lead["nombre"]
                 website = lead["web"]
 
-                real = get_real_email(website)
+                real = get_real_email(website) if website else None
                 if real:
                     lead["email"] = real
                     emails_reales += 1
                     print(f"  📧 Email real: {real} ({nombre})")
-                else:
+                elif website:
                     print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
+                else:
+                    print(f"  📇 Email directo de OSM (sin web propia): {lead['email']} ({nombre})")
 
                 if not verify_email(lead["email"]):
                     rechazados_dns += 1

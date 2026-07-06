@@ -281,12 +281,18 @@ _verify_cache = {}
 
 
 # ══════════════════════════════════════════════════════════
-# CIUDADES DE HOY — Madrid siempre + 3 rotando
+# ORDEN DE CIUDADES — Madrid siempre primero, el resto rotando
 # ══════════════════════════════════════════════════════════
-def get_ciudades_hoy(dia):
+# Antes se miraban solo 4 ciudades/día y, si no daban suficientes
+# candidatos, el run se quedaba corto del objetivo aunque quedaran
+# ciudades sin probar. Ahora se recorren las 20 en orden (rotado cada
+# día para repartir cuál va primero) y se para en cuanto se alcanza
+# max_per_run — solo se gastan de más las llamadas a Overpass/Nominatim
+# de las ciudades que hagan falta ese día, nunca las 20 si no hace falta.
+def get_ciudades_orden(dia):
     resto = [c for c in CIUDADES if c != "Madrid, España"]
-    adicionales = [resto[(dia + i) % len(resto)] for i in range(3)]
-    return ["Madrid, España"] + adicionales
+    orden_resto = [resto[(dia + i) % len(resto)] for i in range(len(resto))]
+    return ["Madrid, España"] + orden_resto
 
 
 # ══════════════════════════════════════════════════════════
@@ -539,110 +545,106 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
 # ══════════════════════════════════════════════════════════
 def main():
     dia = datetime.now().timetuple().tm_yday
-    ciudades_hoy = get_ciudades_hoy(dia)
-    print(f"[prospector] Ciudades de hoy: {', '.join(ciudades_hoy)}")
+    ciudades_orden = get_ciudades_orden(dia)
 
     sent    = load_sent()
     crm     = load_crm()
     crm_ids = {e["email"] for e in crm}
     print(f"[prospector] {len(sent)} emails ya enviados anteriormente")
 
-    # 1. Recoger candidatos de OpenStreetMap en todas las ciudades
-    all_leads = []
-    for ciudad in ciudades_hoy:
-        for target in TARGETS:
-            print(f"[prospector] Buscando: {target} en {ciudad}")
-            leads = search_osm(target, ciudad)
-            all_leads.extend(leads)
-            time.sleep(1)
-
-    # Dedup por dominio
-    seen_domains = set()
-    unique_leads = []
-    for l in all_leads:
-        if l["domain"] not in seen_domains:
-            seen_domains.add(l["domain"])
-            unique_leads.append(l)
-
-    # Filtrar ya enviados por dominio
-    nuevos = [
-        l for l in unique_leads
-        if l["domain"] not in {e.split("@")[-1] for e in sent}
-    ]
-    print(f"[prospector] {len(nuevos)} candidatos nuevos")
-
     max_per_run = get_max_per_run()
     print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override)")
 
-    # 2. Enriquecer + verificar + enviar
-    # Guarda progreso cada pocos envíos (y en cualquier corte/excepción) para
-    # que un timeout o un job cancelado a medias nunca vuelva a escribirle
-    # dos veces a la misma empresa al día siguiente — antes solo se guardaba
-    # al terminar el bucle entero, así que un corte a mitad de camino perdía
-    # todo el progreso de esa ejecución.
-    SAVE_EVERY     = 10
-    enviados       = 0
-    rechazados_dns = 0
-    emails_reales  = 0
+    sent_domains = {e.split("@")[-1] for e in sent}
+
+    # Recorre ciudades una a una (Madrid primero, luego el resto rotado) y
+    # manda sobre la marcha — para en cuanto llega al objetivo del día, pero
+    # si una ciudad no da suficientes candidatos sigue probando con la
+    # siguiente en vez de rendirse, hasta agotar las 20 si hace falta.
+    SAVE_EVERY      = 10
+    enviados        = 0
+    rechazados_dns  = 0
+    emails_reales   = 0
+    seen_domains    = set()
+    ciudades_usadas = []
 
     try:
-        for lead in nuevos:
+        for ciudad in ciudades_orden:
             if enviados >= max_per_run:
                 break
+            ciudades_usadas.append(ciudad)
 
-            nombre  = lead["nombre"]
-            website = lead["web"]
-            ciudad  = lead["ciudad"]
+            leads_ciudad = []
+            for target in TARGETS:
+                print(f"[prospector] Buscando: {target} en {ciudad}")
+                leads_ciudad.extend(search_osm(target, ciudad))
+                time.sleep(1)
 
-            real = get_real_email(website)
-            if real:
-                lead["email"] = real
-                emails_reales += 1
-                print(f"  📧 Email real: {real} ({nombre})")
-            else:
-                print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
+            for lead in leads_ciudad:
+                if enviados >= max_per_run:
+                    break
 
-            if not verify_email(lead["email"]):
-                rechazados_dns += 1
-                print(f"  ⛔ {lead['email']} — no existe, descartado")
-                continue
+                domain = lead["domain"]
+                if domain in seen_domains or domain in sent_domains:
+                    continue
+                seen_domains.add(domain)
 
-            if lead["email"] in sent:
-                continue
+                nombre  = lead["nombre"]
+                website = lead["web"]
 
-            sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
-            ok, message_id = send_email(lead["email"], nombre, ciudad, sector_label, dia)
-            if ok:
-                sent.add(lead["email"])
-                enviados += 1
-                print(f"  ✅ {lead['email']} ({nombre})")
-                if enviados % SAVE_EVERY == 0:
-                    save_sent(sent)
-                    save_crm(crm)
-                if lead["email"] not in crm_ids:
-                    crm.append({
-                        "email":     lead["email"],
-                        "nombre":    nombre,
-                        "web":       website,
-                        "ciudad":    ciudad.split(",")[0],
-                        "sector":    sector_label,
-                        "fecha":     datetime.now().strftime("%Y-%m-%d"),
-                        "messageId": message_id or "",
-                        "status":    "sent",
-                    })
-                    crm_ids.add(lead["email"])
-            else:
-                print(f"  ❌ {lead['email']} — error Brevo")
-            time.sleep(0.5)
+                real = get_real_email(website)
+                if real:
+                    lead["email"] = real
+                    emails_reales += 1
+                    print(f"  📧 Email real: {real} ({nombre})")
+                else:
+                    print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
+
+                if not verify_email(lead["email"]):
+                    rechazados_dns += 1
+                    print(f"  ⛔ {lead['email']} — no existe, descartado")
+                    continue
+
+                if lead["email"] in sent:
+                    continue
+
+                sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
+                ok, message_id = send_email(lead["email"], nombre, ciudad, sector_label, dia)
+                if ok:
+                    sent.add(lead["email"])
+                    sent_domains.add(domain)
+                    enviados += 1
+                    print(f"  ✅ {lead['email']} ({nombre})")
+                    if enviados % SAVE_EVERY == 0:
+                        save_sent(sent)
+                        save_crm(crm)
+                    if lead["email"] not in crm_ids:
+                        crm.append({
+                            "email":     lead["email"],
+                            "nombre":    nombre,
+                            "web":       website,
+                            "ciudad":    ciudad.split(",")[0],
+                            "sector":    sector_label,
+                            "fecha":     datetime.now().strftime("%Y-%m-%d"),
+                            "messageId": message_id or "",
+                            "status":    "sent",
+                        })
+                        crm_ids.add(lead["email"])
+                else:
+                    print(f"  ❌ {lead['email']} — error Brevo")
+                time.sleep(0.5)
     finally:
         save_sent(sent)
         save_crm(crm)
 
-    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS")
+    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)}")
 
-    ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_hoy)
+    ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_usadas)
+    objetivo_cumplido = enviados >= max_per_run
+    aviso_corto = "" if objetivo_cumplido else "<p style='color:#b45309'>⚠️ No se llegó al objetivo — se agotaron las 20 ciudades sin encontrar más candidatos válidos.</p>"
     resumen_html = f"""
-    <p>Hoy el prospector buscó en <b>{ciudad_str}</b>.</p>
+    <p>Hoy el prospector buscó en <b>{ciudad_str}</b> ({len(ciudades_usadas)} de {len(ciudades_orden)} ciudades).</p>
+    {aviso_corto}
     <ul>
       <li>🎯 Objetivo del día (rampa/override): <b>{max_per_run}</b></li>
       <li>✅ Enviados: <b>{enviados}</b></li>

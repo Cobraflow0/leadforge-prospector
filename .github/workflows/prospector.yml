@@ -2,7 +2,7 @@ name: LeadForge Prospector
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # Cada día a las 9:00 hora española (UTC+2 verano)
+    - cron: '53 6 * * *'  # ~8:53 hora española (UTC+2 verano) — minuto no redondo para evitar la cola de GitHub Actions en horas en punto y llegar cerca de las 9:00
   workflow_dispatch:      # También permite lanzarlo manualmente
 
 concurrency:

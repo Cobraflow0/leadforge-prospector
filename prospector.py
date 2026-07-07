@@ -15,6 +15,7 @@ import concurrent.futures
 import requests
 import dns.resolver
 from datetime import datetime
+from urllib.parse import quote_plus
 
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL") or "aquilesgbi@gmail.com"
@@ -470,8 +471,15 @@ def verify_email(email):
 # ══════════════════════════════════════════════════════════
 # EMAIL HTML
 # ══════════════════════════════════════════════════════════
-def build_email(nombre_empresa, ciudad, sector_label):
+def build_email(nombre_empresa, ciudad, sector_label, lead_email=""):
     ciudad_corta = ciudad.split(",")[0]
+    # Tracking de conversión — sin esto no había forma de saber si el
+    # prospector convierte en algo real (clics, registros), solo si Brevo
+    # decía que se abrió el email.
+    demo_url = (
+        "https://cobraflow0.github.io/leadforge-app/app.html"
+        f"?demo=true&utm_source=prospector&lead={quote_plus(lead_email)}"
+    )
     return f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -505,13 +513,13 @@ def build_email(nombre_empresa, ciudad, sector_label):
 
     <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
       Si quieres verlo funcionar, aquí tienes una prueba gratuita con 20 leads reales de {ciudad_corta}:
-      <a href="https://cobraflow0.github.io/leadforge-app/app.html?demo=true" style="color:#0066FF;font-weight:600;">prueba LeadForge gratis</a>
+      <a href="{demo_url}" style="color:#0066FF;font-weight:600;">prueba LeadForge gratis</a>
     </p>
 
     <!-- CTA -->
     <table cellpadding="0" cellspacing="0" style="margin:0 0 28px;">
       <tr><td style="background:linear-gradient(135deg,#0066FF,#0052cc);border-radius:8px;box-shadow:0 4px 16px rgba(0,102,255,0.3);">
-        <a href="https://cobraflow0.github.io/leadforge-app/app.html?demo=true"
+        <a href="{demo_url}"
            style="display:inline-block;padding:15px 36px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.2px;">
           Ver mis leads gratis →
         </a>
@@ -564,7 +572,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
         "replyTo":     {"email": MY_EMAIL},
         "to":          [{"email": to_email}],
         "subject":     subject,
-        "htmlContent": build_email(nombre_empresa, ciudad, sector_label),
+        "htmlContent": build_email(nombre_empresa, ciudad, sector_label, to_email),
         "tags":        ["prospector"],
     }
     r = requests.post(

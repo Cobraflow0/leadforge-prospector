@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadForge Prospector — Progreso de rampa</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --surface-1:      #0f1117;
+      --card:           #1a1f2e;
+      --text-primary:   #e5e7eb;
+      --text-secondary: #9ca3af;
+      --text-muted:     #6b7280;
+      --gridline:       #2a2f3e;
+      --baseline:       #383e4f;
+      --series-blue:    #60a5fa;
+      --series-blue-wash: rgba(96,165,250,0.12);
+      --good:           #34d399;
+      --shortfall:      #fbbf24;
+      --target-tick:    #e5e7eb;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--surface-1);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0D1420, #1a2540);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header h1 { font-size: 20px; font-weight: 700; color: #fff; }
+    header span { font-size: 13px; color: rgba(255,255,255,0.4); }
+    header a { color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none; margin-left: auto; }
+    header a:hover { color: #fff; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+    /* KPIs */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .number {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-card .sub {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 6px;
+    }
+
+    /* CHART CARD */
+    .chart-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 24px 24px 16px;
+      margin-bottom: 24px;
+    }
+
+    .chart-card h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .chart-card .subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .legend {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+    .legend-swatch { width: 12px; height: 12px; border-radius: 3px; background: var(--series-blue); }
+    .legend-tick   { width: 12px; height: 2px; background: var(--target-tick); }
+
+    #chart-wrap { position: relative; overflow-x: auto; }
+    svg { display: block; }
+
+    .bar { fill: var(--series-blue); }
+    .bar:hover, .bar.hovered { fill: #7db8fb; }
+    .bar.missed { fill: var(--shortfall); }
+    .bar.missed:hover, .bar.missed.hovered { fill: #fcd34d; }
+
+    .target-tick { stroke: var(--target-tick); stroke-width: 2; }
+    .gridline { stroke: var(--gridline); stroke-width: 1; }
+    .axis-label { fill: var(--text-muted); font-size: 11px; }
+
+    .hit-area { fill: transparent; cursor: pointer; }
+
+    .tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #0d0f16;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.1s;
+      z-index: 10;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .tooltip .row { display: flex; justify-content: space-between; gap: 16px; }
+    .tooltip .row + .row { margin-top: 4px; }
+    .tooltip .val { color: var(--text-primary); font-weight: 700; }
+    .tooltip .fecha { color: #fff; font-weight: 700; margin-bottom: 6px; font-size: 12.5px; }
+
+    /* TABLE (accesibilidad — misma info sin hover) */
+    details { margin-top: 8px; }
+    summary {
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    td {
+      padding: 8px 12px;
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .ok   { color: var(--good); }
+    .fail { color: var(--shortfall); }
+
+    .empty { text-align: center; padding: 60px 20px; color: #4b5563; font-size: 14px; }
+    .note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📈 Progreso de rampa</h1>
+    <span>Objetivo vs. enviados — LeadForge Prospector</span>
+  </div>
+  <a href="crm.html">Ver CRM →</a>
+</header>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="label">Día de rampa</div>
+      <div class="number" id="stat-dia">—</div>
+      <div class="sub" id="stat-dia-sub">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Objetivo de hoy</div>
+      <div class="number" id="stat-objetivo">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Enviados hoy</div>
+      <div class="number" id="stat-hoy">—</div>
+      <div class="sub" id="stat-hoy-sub">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Total acumulado</div>
+      <div class="number" id="stat-total">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Días con objetivo cumplido</div>
+      <div class="number" id="stat-cumplidos">—</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <h2>Enviados por día vs. objetivo de rampa</h2>
+    <div class="subtitle" id="chart-subtitle">Cargando…</div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-swatch"></span> Enviados (objetivo cumplido)</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--shortfall)"></span> Enviados (por debajo del objetivo)</div>
+      <div class="legend-item"><span class="legend-tick"></span> Objetivo del día</div>
+    </div>
+
+    <div id="chart-wrap">
+      <div id="chart-empty" class="empty" style="display:none;">Cargando datos…</div>
+      <svg id="chart-svg"></svg>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <details>
+      <summary>Ver tabla de datos</summary>
+      <table>
+        <thead>
+          <tr><th>Fecha</th><th>Día de rampa</th><th>Objetivo</th><th>Enviados</th><th>Cumplido</th></tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </details>
+
+    <p class="note">Un día sin envíos puede ser un run que falló o que se agotaron las 20 ciudades sin candidatos válidos — no distingue entre las dos causas, solo que ese día no se cumplió.</p>
+  </div>
+
+</div>
+
+<script>
+  const CRM_URL    = "https://raw.githubusercontent.com/Cobraflow0/leadforge-prospector/main/crm_data.json";
+  const WARMUP_URL = "https://raw.githubusercontent.com/Cobraflow0/leadforge-prospector/main/warmup_state.json";
+
+  // Debe coincidir con RAMP_SCHEDULE en prospector.py
+  const RAMP_SCHEDULE = [[0, 50], [3, 100], [6, 150], [9, 250], [12, 350], [15, 500]];
+
+  function objetivoParaDia(diasTranscurridos) {
+    let objetivo = RAMP_SCHEDULE[0][1];
+    for (const [umbral, valor] of RAMP_SCHEDULE) {
+      if (diasTranscurridos >= umbral) objetivo = valor;
+    }
+    return objetivo;
+  }
+
+  function parseFechaUTC(fechaStr) {
+    const [y, m, d] = fechaStr.split("-").map(Number);
+    return Date.UTC(y, m - 1, d);
+  }
+
+  function hoyUTC() {
+    const n = new Date();
+    return Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate());
+  }
+
+  function fmtFechaCorta(ms) {
+    const d = new Date(ms);
+    return `${String(d.getUTCDate()).padStart(2,"0")}/${String(d.getUTCMonth()+1).padStart(2,"0")}`;
+  }
+
+  async function load() {
+    let crm, warmup;
+    try {
+      const [rCrm, rWarmup] = await Promise.all([
+        fetch(CRM_URL + "?t=" + Date.now()),
+        fetch(WARMUP_URL + "?t=" + Date.now()),
+      ]);
+      crm    = await rCrm.json();
+      warmup = await rWarmup.json();
+    } catch (e) {
+      document.getElementById("chart-subtitle").textContent = "Error cargando datos.";
+      document.getElementById("chart-empty").style.display = "block";
+      document.getElementById("chart-empty").textContent = "Error cargando datos. Comprueba el acceso al repo.";
+      return;
+    }
+
+    const startMs = parseFechaUTC(warmup.start_date);
+    const today = hoyUTC();
+
+    // Enviados reales por fecha
+    const enviadosPorFecha = {};
+    for (const entry of crm) {
+      if (!entry.fecha) continue;
+      enviadosPorFecha[entry.fecha] = (enviadosPorFecha[entry.fecha] || 0) + 1;
+    }
+
+    // Construye un día por cada fecha desde start_date hasta hoy (huecos = 0)
+    const dias = [];
+    for (let ms = startMs; ms <= today; ms += 86400000) {
+      const fecha = new Date(ms).toISOString().slice(0, 10);
+      const diasTranscurridos = Math.round((ms - startMs) / 86400000);
+      const objetivo = objetivoParaDia(diasTranscurridos);
+      const enviados = enviadosPorFecha[fecha] || 0;
+      dias.push({ ms, fecha, diasTranscurridos, objetivo, enviados, esHoy: ms === today });
+    }
+
+    render(dias);
+  }
+
+  function render(dias) {
+    const diaActual = dias[dias.length - 1];
+    const diasConDato = dias.filter(d => !d.esHoy || d.enviados > 0);
+    const cumplidos = diasConDato.filter(d => d.enviados >= d.objetivo).length;
+    const totalAcumulado = dias.reduce((s, d) => s + d.enviados, 0);
+
+    document.getElementById("stat-dia").textContent = diaActual.diasTranscurridos;
+    document.getElementById("stat-dia-sub").textContent = `desde ${dias[0].fecha}`;
+    document.getElementById("stat-objetivo").textContent = diaActual.objetivo;
+    document.getElementById("stat-hoy").textContent = diaActual.enviados;
+    document.getElementById("stat-hoy-sub").textContent = diaActual.enviados === 0
+      ? "sin datos todavía hoy"
+      : (diaActual.enviados >= diaActual.objetivo ? "objetivo cumplido" : "por debajo del objetivo");
+    document.getElementById("stat-total").textContent = totalAcumulado;
+    document.getElementById("stat-cumplidos").textContent = `${cumplidos}/${diasConDato.length}`;
+    document.getElementById("chart-subtitle").textContent =
+      `${dias[0].fecha} — ${diaActual.fecha} (${dias.length} días)`;
+
+    drawChart(dias);
+    fillTable(dias);
+  }
+
+  function fillTable(dias) {
+    const tbody = document.getElementById("table-body");
+    tbody.innerHTML = "";
+    for (const d of [...dias].reverse()) {
+      const tr = document.createElement("tr");
+      const cumplido = d.enviados >= d.objetivo;
+      const cells = [
+        d.fecha,
+        String(d.diasTranscurridos),
+        String(d.objetivo),
+        String(d.enviados),
+        cumplido ? "✅ Sí" : "⚠️ No",
+      ];
+      cells.forEach((text, i) => {
+        const td = document.createElement("td");
+        td.textContent = text;
+        if (i === 4) td.className = cumplido ? "ok" : "fail";
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    }
+  }
+
+  function drawChart(dias) {
+    const svg = document.getElementById("chart-svg");
+    const tooltip = document.getElementById("tooltip");
+    const wrap = document.getElementById("chart-wrap");
+
+    const barSlot = 34;
+    const barWidth = 20;
+    const marginLeft = 48;
+    const marginRight = 16;
+    const marginTop = 16;
+    const marginBottom = 28;
+    const chartHeight = 260;
+
+    const maxVal = Math.max(...dias.map(d => Math.max(d.objetivo, d.enviados)), 1);
+    const width = marginLeft + marginRight + dias.length * barSlot;
+    const height = marginTop + marginBottom + chartHeight;
+
+    svg.setAttribute("width", width);
+    svg.setAttribute("height", height);
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svg.innerHTML = "";
+
+    const ns = "http://www.w3.org/2000/svg";
+    const yScale = v => chartHeight - (v / maxVal) * chartHeight;
+
+    // Gridlines (4 pasos redondos)
+    const steps = 4;
+    for (let i = 0; i <= steps; i++) {
+      const val = Math.round((maxVal / steps) * i / 10) * 10;
+      const y = marginTop + yScale(val);
+      const line = document.createElementNS(ns, "line");
+      line.setAttribute("x1", marginLeft);
+      line.setAttribute("x2", width - marginRight);
+      line.setAttribute("y1", y);
+      line.setAttribute("y2", y);
+      line.setAttribute("class", "gridline");
+      svg.appendChild(line);
+
+      const label = document.createElementNS(ns, "text");
+      label.setAttribute("x", marginLeft - 8);
+      label.setAttribute("y", y + 4);
+      label.setAttribute("text-anchor", "end");
+      label.setAttribute("class", "axis-label");
+      label.textContent = val.toLocaleString("es-ES");
+      svg.appendChild(label);
+    }
+
+    dias.forEach((d, i) => {
+      const x = marginLeft + i * barSlot + (barSlot - barWidth) / 2;
+      const cumplido = d.enviados >= d.objetivo;
+      const barTop = marginTop + yScale(d.enviados);
+      const barH = Math.max(chartHeight - yScale(d.enviados), 0);
+
+      if (d.enviados > 0) {
+        const rect = document.createElementNS(ns, "rect");
+        rect.setAttribute("x", x);
+        rect.setAttribute("y", barTop);
+        rect.setAttribute("width", barWidth);
+        rect.setAttribute("height", barH);
+        rect.setAttribute("rx", 4);
+        rect.setAttribute("class", "bar" + (cumplido ? "" : " missed"));
+        rect.dataset.idx = i;
+        svg.appendChild(rect);
+      }
+
+      // Target tick
+      const tickY = marginTop + yScale(d.objetivo);
+      const tick = document.createElementNS(ns, "line");
+      tick.setAttribute("x1", x - 3);
+      tick.setAttribute("x2", x + barWidth + 3);
+      tick.setAttribute("y1", tickY);
+      tick.setAttribute("y2", tickY);
+      tick.setAttribute("class", "target-tick");
+      svg.appendChild(tick);
+
+      // X label (cada 2 días si hay muchos, para no amontonar)
+      if (dias.length <= 20 || i % Math.ceil(dias.length / 20) === 0) {
+        const label = document.createElementNS(ns, "text");
+        label.setAttribute("x", x + barWidth / 2);
+        label.setAttribute("y", marginTop + chartHeight + 18);
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("class", "axis-label");
+        label.textContent = fmtFechaCorta(d.ms);
+        svg.appendChild(label);
+      }
+
+      // Hit area — todo el carril, más grande que la barra
+      const hit = document.createElementNS(ns, "rect");
+      hit.setAttribute("x", marginLeft + i * barSlot);
+      hit.setAttribute("y", marginTop);
+      hit.setAttribute("width", barSlot);
+      hit.setAttribute("height", chartHeight);
+      hit.setAttribute("class", "hit-area");
+      hit.addEventListener("pointerenter", () => showTooltip(d, hit, cumplido));
+      hit.addEventListener("pointermove", () => positionTooltip(hit));
+      hit.addEventListener("pointerleave", hideTooltip);
+      svg.appendChild(hit);
+    });
+
+    function showTooltip(d, hitEl, cumplido) {
+      tooltip.innerHTML = "";
+      const fecha = document.createElement("div");
+      fecha.className = "fecha";
+      fecha.textContent = `${d.fecha} · día ${d.diasTranscurridos} de rampa`;
+      tooltip.appendChild(fecha);
+
+      const rows = [
+        ["Enviados", d.enviados.toLocaleString("es-ES")],
+        ["Objetivo", d.objetivo.toLocaleString("es-ES")],
+        ["Resultado", cumplido ? "✅ Cumplido" : "⚠️ Por debajo"],
+      ];
+      rows.forEach(([k, v]) => {
+        const row = document.createElement("div");
+        row.className = "row";
+        const kEl = document.createElement("span");
+        kEl.textContent = k;
+        const vEl = document.createElement("span");
+        vEl.className = "val";
+        vEl.textContent = v;
+        row.appendChild(kEl);
+        row.appendChild(vEl);
+        tooltip.appendChild(row);
+      });
+
+      tooltip.style.opacity = "1";
+      positionTooltip(hitEl);
+    }
+
+    function positionTooltip(hitEl) {
+      const wrapRect = wrap.getBoundingClientRect();
+      const hitRect = hitEl.getBoundingClientRect();
+      let left = hitRect.left - wrapRect.left + wrap.scrollLeft + hitRect.width / 2 - tooltip.offsetWidth / 2;
+      left = Math.max(4, Math.min(left, wrap.scrollWidth - tooltip.offsetWidth - 4));
+      tooltip.style.left = left + "px";
+      tooltip.style.top = (hitRect.top - wrapRect.top - tooltip.offsetHeight - 10) + "px";
+    }
+
+    function hideTooltip() {
+      tooltip.style.opacity = "0";
+    }
+  }
+
+  load();
+</script>
+</body>
+</html>

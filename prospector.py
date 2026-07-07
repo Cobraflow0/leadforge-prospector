@@ -10,6 +10,8 @@ import time
 import re
 import smtplib
 import socket
+import threading
+import concurrent.futures
 import requests
 import dns.resolver
 from datetime import datetime
@@ -36,6 +38,18 @@ RAMP_SCHEDULE = [
     (12, 350),
     (15, 500),
 ]
+
+# Procesar leads uno a uno (web propia + DNS/SMTP + Brevo) es lo que más
+# tiempo real consume del run — con la rampa subiendo hasta 500/día, hacerlo
+# en serie arriesgaba pasarse del timeout del workflow. Cada lead es un
+# dominio/servidor distinto, así que se procesan en paralelo en lotes;
+# LEAD_WORKERS controla cuántos a la vez, BATCH_SIZE cada cuántos se revisa
+# si ya se llegó al objetivo del día (para no pasarse de largo).
+LEAD_WORKERS = 8
+BATCH_SIZE   = 15
+SAVE_EVERY   = 10
+
+_lock = threading.Lock()
 
 
 def _load_or_init_warmup_start():
@@ -567,6 +581,66 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
 
 
 # ══════════════════════════════════════════════════════════
+# PROCESAR UN LEAD (email real + verificación + envío)
+# ══════════════════════════════════════════════════════════
+# Se llama en paralelo desde un ThreadPoolExecutor — cada lead visita su
+# propia web y su propio servidor de correo, así que no compiten entre sí.
+# Lo único compartido es el estado (sent/crm/contadores), protegido por _lock.
+def procesar_lead(lead, ciudad, dia, sent, sent_domains, crm, crm_ids, estado):
+    nombre  = lead["nombre"]
+    website = lead["web"]
+    domain  = lead["domain"]
+
+    real  = get_real_email(website) if website else None
+    email = real or lead["email"]
+    if real:
+        print(f"  📧 Email real: {email} ({nombre})")
+    elif website:
+        print(f"  ↩  Usando info@: {email} ({nombre})")
+    else:
+        print(f"  📇 Email directo de OSM (sin web propia): {email} ({nombre})")
+
+    if not verify_email(email):
+        with _lock:
+            estado["rechazados_dns"] += 1
+        print(f"  ⛔ {email} — no existe, descartado")
+        return
+
+    with _lock:
+        if email in sent or estado["enviados"] >= estado["max_per_run"]:
+            return
+
+    sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
+    ok, message_id = send_email(email, nombre, ciudad, sector_label, dia)
+    if not ok:
+        print(f"  ❌ {email} — error Brevo")
+        return
+
+    with _lock:
+        sent.add(email)
+        sent_domains.add(domain)
+        estado["enviados"] += 1
+        if real:
+            estado["emails_reales"] += 1
+        if email not in crm_ids:
+            crm.append({
+                "email":     email,
+                "nombre":    nombre,
+                "web":       website,
+                "ciudad":    ciudad.split(",")[0],
+                "sector":    sector_label,
+                "fecha":     datetime.now().strftime("%Y-%m-%d"),
+                "messageId": message_id or "",
+                "status":    "sent",
+            })
+            crm_ids.add(email)
+        if estado["enviados"] % SAVE_EVERY == 0:
+            save_sent(sent)
+            save_crm(crm)
+    print(f"  ✅ {email} ({nombre})")
+
+
+# ══════════════════════════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════════════════════════
 def main():
@@ -587,83 +661,49 @@ def main():
     # manda sobre la marcha — para en cuanto llega al objetivo del día, pero
     # si una ciudad no da suficientes candidatos sigue probando con la
     # siguiente en vez de rendirse, hasta agotar las 20 si hace falta.
-    SAVE_EVERY      = 10
-    enviados        = 0
-    rechazados_dns  = 0
-    emails_reales   = 0
+    estado = {"enviados": 0, "rechazados_dns": 0, "emails_reales": 0, "max_per_run": max_per_run}
     seen_domains    = set()
     ciudades_usadas = []
 
     try:
-        for ciudad in ciudades_orden:
-            if enviados >= max_per_run:
-                break
-            ciudades_usadas.append(ciudad)
-
-            leads_ciudad = []
-            for target in TARGETS:
-                print(f"[prospector] Buscando: {target} en {ciudad}")
-                leads_ciudad.extend(search_osm(target, ciudad))
-                time.sleep(1)
-
-            for lead in leads_ciudad:
-                if enviados >= max_per_run:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=LEAD_WORKERS) as executor:
+            for ciudad in ciudades_orden:
+                if estado["enviados"] >= max_per_run:
                     break
+                ciudades_usadas.append(ciudad)
 
-                domain = lead["domain"]
-                if domain in seen_domains or domain in sent_domains:
-                    continue
-                seen_domains.add(domain)
+                leads_ciudad = []
+                for target in TARGETS:
+                    print(f"[prospector] Buscando: {target} en {ciudad}")
+                    leads_ciudad.extend(search_osm(target, ciudad))
+                    time.sleep(1)
 
-                nombre  = lead["nombre"]
-                website = lead["web"]
+                # Dedup por dominio en serie antes de paralelizar — así dos
+                # leads del mismo dominio nunca se procesan a la vez.
+                pendientes = []
+                for lead in leads_ciudad:
+                    domain = lead["domain"]
+                    if domain in seen_domains or domain in sent_domains:
+                        continue
+                    seen_domains.add(domain)
+                    pendientes.append(lead)
 
-                real = get_real_email(website) if website else None
-                if real:
-                    lead["email"] = real
-                    emails_reales += 1
-                    print(f"  📧 Email real: {real} ({nombre})")
-                elif website:
-                    print(f"  ↩  Usando info@: {lead['email']} ({nombre})")
-                else:
-                    print(f"  📇 Email directo de OSM (sin web propia): {lead['email']} ({nombre})")
-
-                if not verify_email(lead["email"]):
-                    rechazados_dns += 1
-                    print(f"  ⛔ {lead['email']} — no existe, descartado")
-                    continue
-
-                if lead["email"] in sent:
-                    continue
-
-                sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
-                ok, message_id = send_email(lead["email"], nombre, ciudad, sector_label, dia)
-                if ok:
-                    sent.add(lead["email"])
-                    sent_domains.add(domain)
-                    enviados += 1
-                    print(f"  ✅ {lead['email']} ({nombre})")
-                    if enviados % SAVE_EVERY == 0:
-                        save_sent(sent)
-                        save_crm(crm)
-                    if lead["email"] not in crm_ids:
-                        crm.append({
-                            "email":     lead["email"],
-                            "nombre":    nombre,
-                            "web":       website,
-                            "ciudad":    ciudad.split(",")[0],
-                            "sector":    sector_label,
-                            "fecha":     datetime.now().strftime("%Y-%m-%d"),
-                            "messageId": message_id or "",
-                            "status":    "sent",
-                        })
-                        crm_ids.add(lead["email"])
-                else:
-                    print(f"  ❌ {lead['email']} — error Brevo")
-                time.sleep(0.5)
+                for i in range(0, len(pendientes), BATCH_SIZE):
+                    if estado["enviados"] >= max_per_run:
+                        break
+                    lote = pendientes[i:i + BATCH_SIZE]
+                    futures = [
+                        executor.submit(procesar_lead, lead, ciudad, dia, sent, sent_domains, crm, crm_ids, estado)
+                        for lead in lote
+                    ]
+                    concurrent.futures.wait(futures)
     finally:
         save_sent(sent)
         save_crm(crm)
+
+    enviados       = estado["enviados"]
+    rechazados_dns = estado["rechazados_dns"]
+    emails_reales  = estado["emails_reales"]
 
     print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)}")
 

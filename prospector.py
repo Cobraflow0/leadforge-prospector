@@ -137,17 +137,17 @@ CIUDADES = [
     "Vigo, España",
 ]
 
+# Solo oficios de construcción/reformas (2026-07-08): el único caso de éxito
+# real (Neopanels, paneles de revestimiento) es de este vertical — mandar el
+# mismo pitch a un dentista o un abogado diluye la prueba social. Enfocar el
+# marketing en un solo nicho mientras hay 1 solo cliente de referencia
+# (recomendación de Fable 5, ver [[strategy_growth_plan_fable]]).
 TARGETS = [
     "empresa de reformas",
     "fontanería",
     "electricista",
     "cerrajería",
     "pintor profesional",
-    "despacho de abogados",
-    "agencia inmobiliaria",
-    "clínica dental",
-    "clínica de fisioterapia",
-    "taller mecánico",
 ]
 
 TARGET_LABEL = {
@@ -156,11 +156,6 @@ TARGET_LABEL = {
     "electricista":              "electricistas",
     "cerrajería":                "cerrajeros",
     "pintor profesional":        "pintores",
-    "despacho de abogados":      "despachos de abogados",
-    "agencia inmobiliaria":      "agencias inmobiliarias",
-    "clínica dental":            "clínicas dentales",
-    "clínica de fisioterapia":   "clínicas de fisioterapia",
-    "taller mecánico":           "talleres mecánicos",
 }
 
 # ══════════════════════════════════════════════════════════
@@ -183,11 +178,6 @@ OSM_TAGS_MAP = {
     "electricista":            [("craft", "electrician")],
     "cerrajería":              [("shop", "locksmith"), ("craft", "locksmith")],
     "pintor profesional":      [("craft", "painter")],
-    "despacho de abogados":    [("office", "lawyer")],
-    "agencia inmobiliaria":    [("office", "estate_agent")],
-    "clínica dental":          [("amenity", "dentist")],
-    "clínica de fisioterapia": [("healthcare", "physiotherapist")],
-    "taller mecánico":         [("shop", "car_repair")],
 }
 
 _osm_area_cache = {}
@@ -534,8 +524,9 @@ def build_email(nombre_empresa, ciudad, sector_label, lead_email=""):
     </p>
 
     <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      La mayoría de empresas en <strong>{ciudad_corta}</strong> pierden clientes potenciales
-      cada semana porque no tienen tiempo de buscarlos uno a uno.
+      La mayoría de empresas de reformas y construcción en <strong>{ciudad_corta}</strong>
+      dependen del boca a boca o de plataformas que se quedan con parte del margen —
+      y pierden clientes potenciales cada semana porque no tienen tiempo de buscarlos uno a uno.
     </p>
 
     <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
@@ -559,7 +550,8 @@ def build_email(nombre_empresa, ciudad, sector_label, lead_email=""):
     </table>
 
     <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      Un cliente consiguió 3 presupuestos nuevos el primer día de uso, sin llamadas en frío ni publicidad.
+      A una empresa de reformas (paneles de revestimiento) le conseguimos 1.309 leads cualificados
+      de su sector y 3 clientes nuevos el primer día de campaña, sin llamadas en frío ni publicidad.
     </p>
 
     <p style="margin:0 0 6px;font-size:14px;color:#6b7280;line-height:1.7;">

@@ -19,7 +19,14 @@ from urllib.parse import quote_plus
 
 BREVO_API_KEY  = os.environ["BREVO_API_KEY"]
 MY_EMAIL       = os.environ.get("MY_EMAIL") or "aquilesgbi@gmail.com"
-SENDER_NAME    = os.environ.get("SENDER_NAME") or "Aquiles — LeadForge"
+SENDER_NAME    = os.environ.get("SENDER_NAME") or "LeadForge"
+# Dominio distinto al de los clientes de pago (leadforge.es) a propósito: el
+# Prospector manda cold email a desconocidos (mucho más arriesgado que las
+# campañas de clientes a leads cualificados) — si comparte remitente y se
+# quema la reputación, arrastra también los envíos de los clientes. cobraflow.es
+# ya estaba autenticado en Brevo (SPF/DKIM) de un proyecto anterior, así que no
+# hizo falta tocar DNS. Ver [[strategy_growth_plan_fable]] (2026-07-08).
+PROSPECTOR_SENDER_EMAIL = os.environ.get("PROSPECTOR_SENDER_EMAIL") or "aquiles@cobraflow.es"
 SENT_FILE      = "sent_emails.json"
 CRM_FILE       = "crm_data.json"
 WARMUP_FILE    = "warmup_state.json"
@@ -592,7 +599,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
         ciudad=ciudad_corta,
     )
     payload = {
-        "sender":      {"name": SENDER_NAME, "email": "hola@leadforge.es"},
+        "sender":      {"name": SENDER_NAME, "email": PROSPECTOR_SENDER_EMAIL},
         "replyTo":     {"email": MY_EMAIL},
         "to":          [{"email": to_email}],
         "subject":     subject,

@@ -3078,5 +3078,1505 @@
     "fecha": "2026-07-07",
     "messageId": "<202607070841.91541879031@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "anagestora73@gmail.com",
+    "nombre": "Gestoria Sánchez y Soria agrupados S.L.",
+    "web": "",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080917.27449305231@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@lapropiedad.es",
+    "nombre": "La Propiedad Consulting",
+    "web": "https://lapropiedad.es/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080917.14541226574@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@habilitadosclasespasivas.com",
+    "nombre": "Habilitación Clases Pasivas García Bravo & Fernández Goñi",
+    "web": "https://www.habilitadosclasespasivas.com/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080917.45052691039@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bufete@menendezyasociados.es",
+    "nombre": "Menéndez y Asociados",
+    "web": "http://menendezyasociados.es/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080918.20068465601@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "acudeweb@acudeweb.es",
+    "nombre": "Acude",
+    "web": "https://www.acudeweb.es/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080918.88750857221@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "accidentaliabogados@gmail.com",
+    "nombre": "Indemnizaciones Accidentes",
+    "web": "https://www.indemnizacionesaccidentes.info/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080918.36579878269@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bueyesabogados@gmail.com",
+    "nombre": "Teresa Bueyes Abogados",
+    "web": "https://teresabueyes.com/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080918.22586505087@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@herceabogados.es",
+    "nombre": "Herce Abogados",
+    "web": "https://herceabogadosmilitares.es/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080918.56488974768@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@aceroabogados.com",
+    "nombre": "Dulce Acero",
+    "web": "https://aceroabogados.com/",
+    "ciudad": "Madrid",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080919.35203639203@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@natisatalleres.com",
+    "nombre": "Taller Natisa",
+    "web": "https://www.natisatalleres.com/",
+    "ciudad": "Madrid",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080919.30505556567@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@nermovil.es",
+    "nombre": "Nermovil",
+    "web": "https://nermovil.es",
+    "ciudad": "Madrid",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080919.75359198796@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cristauto@gmail.com",
+    "nombre": "Cristauto Sport",
+    "web": "https://www.cristauto.com/",
+    "ciudad": "Madrid",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080919.47344975503@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@itva42.com",
+    "nombre": "ITV A-42",
+    "web": "https://itva42.com/",
+    "ciudad": "Madrid",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080919.62582847147@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "tallereslaestrella@tallereslaestrella.es",
+    "nombre": "Bosch Car Service - La Estrella",
+    "web": "https://www.tallereslaestrella.es/",
+    "ciudad": "Vigo",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080921.62159644018@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "tucoche@paisautomocion.com",
+    "nombre": "Talleres CPR – Taller mecánico, chapa y pintura",
+    "web": "https://tallerescpr.es/",
+    "ciudad": "Vigo",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080921.82588605886@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@falkloebel.com",
+    "nombre": "Löbel & González",
+    "web": "http://www.loebelgonzalez.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.43787614351@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "jjperezmontes@icab.cat",
+    "nombre": "Contractualia.com",
+    "web": "https://estudiolegal-contrac.wixsite.com/contractualia-legal",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.84394470612@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@estudiolegal.com",
+    "nombre": "Pérez-Montes García & Partners Legal",
+    "web": "http://www.estudiolegal.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.70219766400@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bufeteaguilar.es@gmail.com",
+    "nombre": "Abogados Bufete Aguilar",
+    "web": "http://bufeteaguilar.es/abogado-barcelona/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.22635359395@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@arrelsadvocats.cat",
+    "nombre": "Arrels Advocats",
+    "web": "https://arrelsadvocats.cat/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.65504391747@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cronda.com",
+    "nombre": "Col·lectiu Ronda",
+    "web": "http://www.cronda.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.77266967173@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@beglobalbcn.com",
+    "nombre": "Be Global Attorneys",
+    "web": "http://www.beglobalbcn.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080922.10958989640@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "silviacapella@icab.cat",
+    "nombre": "Calzada - Capella - Lahoz",
+    "web": "http://www.calzadacapella.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.77890919688@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pallaresfernandez.com",
+    "nombre": "Pallarès & Fernàndez",
+    "web": "https://pallaresfernandez.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.73254753874@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pcpabogados.com",
+    "nombre": "PCP Abogados",
+    "web": "http://www.pcpabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.73697984520@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@interasesores.com",
+    "nombre": "Interasesores",
+    "web": "https://interasesores.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.69275958867@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "natmontiel@icab.es",
+    "nombre": "Bufete Montiel",
+    "web": "https://bufetemontiel.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.38913201556@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@quarsadvocats.com",
+    "nombre": "Quars Advocats",
+    "web": "http://www.quarsadvocats.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.30575401716@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gbgabogados.com",
+    "nombre": "Guillermo Busquets Giralt",
+    "web": "http://gbgabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.27859989584@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@casualadvocats.com",
+    "nombre": "Casual Advocats",
+    "web": "http://www.casualadvocats.com/es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.23687131600@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@brosa.es",
+    "nombre": "Brosa",
+    "web": "http://brosa.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.99000410763@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@barcinoadvocats.es",
+    "nombre": "Barcino Advocats",
+    "web": "http://barcinoadvocats.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.81748162941@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cal-bcn.com",
+    "nombre": "Cuch-Aguilera Legal",
+    "web": "https://cal-bcn.com/ca/cuch-aguilera/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.15368823942@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@rocassoc.es",
+    "nombre": "Roca & Asociados",
+    "web": "https://rocassoc.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.83783393566@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bufetiglesias.com",
+    "nombre": "Bufet Iglesias",
+    "web": "http://www.bufetiglesias.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.73703627797@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "alex@villalbaprocurador.org",
+    "nombre": "Villalba",
+    "web": "http://www.villalbaprocurador.org/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.30582822416@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "alaman@alamanasociados.com",
+    "nombre": "Alamán & Asociados",
+    "web": "https://alamanasociados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.30411032623@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@euroforo.eu",
+    "nombre": "Euroforo Arasa de Miquel",
+    "web": "https://euroforo.eu/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.54663300776@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@caellas.com",
+    "nombre": "Caellas",
+    "web": "http://caellas.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.92842725649@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "annacabanyol@bufetegambero.net",
+    "nombre": "Bufete Gambero",
+    "web": "https://www.bufetegambero.net/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.87018168507@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@arraut.com",
+    "nombre": "Arraut & Asociados",
+    "web": "http://arraut-asociados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.53337625410@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bufete@abogadoscdr.com",
+    "nombre": "CDR Abogados",
+    "web": "http://abogadoscdr.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.53718713254@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ozoresbarbany.com",
+    "nombre": "Alicia Ozores Barbany. Abogado especializado en defensa Penal y Extranjería",
+    "web": "https://www.ozoresbarbany.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.50668047380@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "dquerol@icab.cat",
+    "nombre": "David Querol & Abogados",
+    "web": "https://www.extranjeria.cat/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.31034814260@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ramonrussinolabogados@gmail.com",
+    "nombre": "Ramón Russinañol Abogados",
+    "web": "http://www.ramonabogados.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.63863119793@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pineradelolmo.com",
+    "nombre": "Piñera del Olmo",
+    "web": "https://www.pineradelolmo.com/es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.46198660675@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bufeteduque.com",
+    "nombre": "Duque de Lama & Pérez",
+    "web": "http://www.bufeteduque.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.45517280387@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "janeadvocats@janeadvocats.com",
+    "nombre": "Jané Advocats",
+    "web": "https://www.janeadvocats.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080923.57714811243@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contact@mysite.com",
+    "nombre": "SMK Advocats",
+    "web": "https://smkabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.40065854664@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "rojasjaile@icab.cat",
+    "nombre": "Rojas Jaile",
+    "web": "https://rojasjaileadvocat.es/index.html",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.74309603558@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@abdv.com",
+    "nombre": "Anglès-Buxeda",
+    "web": "https://abdv.com/es/inicio/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.14889940713@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@mpabogados.eu",
+    "nombre": "Murcia Palomar",
+    "web": "https://mpabogados.eu/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.28435319027@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bufetepuigdollers.com",
+    "nombre": "Bufete Puigdollers",
+    "web": "http://www.bufetepuigdollers.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.61239895694@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@verdaguerabogados.com",
+    "nombre": "Advocats & Finques Verdaguer",
+    "web": "http://verdaguerabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.45931743518@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "madrid@uria.com",
+    "nombre": "Uría Menéndez",
+    "web": "https://www.uria.com/en/#news",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.88638193817@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "infoweb@duranyduranabogados.com",
+    "nombre": "Duran & Duran",
+    "web": "https://duranyduranabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.68464226644@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@aab-aa.com",
+    "nombre": "Aynes & Abril",
+    "web": "https://aab-aa.com/es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.69145937487@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "advocats@aequoadvocats.com",
+    "nombre": "Aequo",
+    "web": "http://www.aequoadvocats.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.16979915698@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "admin@grupomirandaabogados.com",
+    "nombre": "Miranda Abogados",
+    "web": "https://www.grupomirandaabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.28706314758@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "eudald@lligona.com",
+    "nombre": "LLigoña",
+    "web": "https://www.lligona.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.69972914770@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@benjelali.eu",
+    "nombre": "Benjelali",
+    "web": "https://benjelali.eu/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.24657948969@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "alejandro@oliveabogados.com",
+    "nombre": "Olivé Gorgues",
+    "web": "https://oliveabogados.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.36715756497@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@letradosbarcelona.com",
+    "nombre": "Letrados Barcelona",
+    "web": "https://www.letradosbarcelona.com",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.98199643165@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@abogadosacura.com",
+    "nombre": "Acura",
+    "web": "https://abogadosacura.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.74962377480@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "faloy@correonotarial.org",
+    "nombre": "Notaría Francisca Aloy Martorell",
+    "web": "",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.97475481024@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "infoabogadosbarcelona@gmail.com",
+    "nombre": "Abogados Fernando Ruano de la Cámara Alan López Zheen",
+    "web": "https://www.abogadosespecialistasbcn.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.13370122447@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "saidavi@iridia.cat",
+    "nombre": "Irídia. Centre per la defensa dels drets humans.",
+    "web": "",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.86074480045@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "lnogales@notariado.org",
+    "nombre": "Notaria Laura Nogales",
+    "web": "https://notarialauranogales.es/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.23838769562@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bufet@herrera-advocats.com",
+    "nombre": "Herrera Advocats",
+    "web": "https://herrera-advocats.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.10099612824@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@wipyme.com",
+    "nombre": "WIPYME Abogados",
+    "web": "https://wipyme.com/",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.56503478392@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "pardogeijo@pardogeijo.com",
+    "nombre": "mejorabogado.es",
+    "web": "https://mejorabogado.es",
+    "ciudad": "Barcelona",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080924.49848557561@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "alarconclinic@gmail.com",
+    "nombre": "Alarcón Clinic",
+    "web": "https://alarconclinic.com/",
+    "ciudad": "Barcelona",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080925.20644266789@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@lemornebrabant.com",
+    "nombre": "Le Morne Brabant",
+    "web": "https://lemornebrabant.com/",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.42562331138@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "saramg@moltoabogados.es",
+    "nombre": "Montó abogados",
+    "web": "https://moltoabogados.wixsite.com/moltoabogados",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.50068584661@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "emilio@bufetemonzo.com",
+    "nombre": "Bufete Monzó",
+    "web": "https://www.bufetemonzo.com/",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.58215272270@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@wilawi.com",
+    "nombre": "Wilawi Abogados",
+    "web": "https://wilawi.com/",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.82575409987@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "menejat24@gmail.com",
+    "nombre": "Meneja't",
+    "web": "https://menejat.com/",
+    "ciudad": "Valencia",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.30745359514@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@avanzac.es",
+    "nombre": "AvanzAC Abogados & Consultores",
+    "web": "https://www.avanzac.es/",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.54346668585@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacte@elrogle.es",
+    "nombre": "El Rogle",
+    "web": "https://elrogle.es/",
+    "ciudad": "Valencia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.36122577084@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "elenacostafisioterapia@gmail.com",
+    "nombre": "UPV / FISIO",
+    "web": "https://www.upvfisio.es/",
+    "ciudad": "Valencia",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.47810370724@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info.crecersinlimites@gmail.com",
+    "nombre": "Crecer Sin Límites Valencia",
+    "web": "https://crecersinlimites.es/",
+    "ciudad": "Valencia",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.32607980386@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ypsilonsportclinic.com",
+    "nombre": "Ypsilon",
+    "web": "https://www.ypsilonsportclinic.com/",
+    "ciudad": "Valencia",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080926.55563856962@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "tallerbarato21@gmail.com",
+    "nombre": "NeumaticosSevilla",
+    "web": "https://neumaticossevilla.com/",
+    "ciudad": "Sevilla",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.28611731230@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ventas@ferreteriaelbombin.com",
+    "nombre": "Ferretería \"El Bombín\" SAN PEDRO. Especialistas en Cerrajería",
+    "web": "https://ferreteriaelbombin.com/",
+    "ciudad": "Sevilla",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.41934002483@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@clinicadentalb.com",
+    "nombre": "Clinica Dental-B",
+    "web": "https://www.clinicadentalb.com/",
+    "ciudad": "Sevilla",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.23002671468@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@tallerescaba.es",
+    "nombre": "Neumáticos Caba",
+    "web": "https://neumaticoscaba.com/sevilla/",
+    "ciudad": "Sevilla",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.98195711223@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fisiomacarenaleon.es",
+    "nombre": "Clínica Macarena León",
+    "web": "https://fisiomacarenaleon.es/",
+    "ciudad": "Sevilla",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.71638021398@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bermejalesmotor@gmail.com",
+    "nombre": "Bermejales Motor",
+    "web": "",
+    "ciudad": "Sevilla",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.99048471990@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "jjm.mecanicayelectricidad@gmail.com",
+    "nombre": "Talleres JJM",
+    "web": "http://talleresjjm.com/",
+    "ciudad": "Sevilla",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.35175050330@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ramon.nimo@nigoauto.com",
+    "nombre": "Nimo Gordillo",
+    "web": "https://nimogordillo.toyota.es/",
+    "ciudad": "Sevilla",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080928.40904675814@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pisozorroza.eu",
+    "nombre": "Pisozorroza",
+    "web": "http://pisozorroza.eu",
+    "ciudad": "Bilbao",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.81331648403@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ihbilbao.com",
+    "nombre": "Infinity Homes",
+    "web": "https://ihbilbao.com",
+    "ciudad": "Bilbao",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.10697563851@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "somera@inmobiliariasomera.com",
+    "nombre": "Inmobiliaria Somera",
+    "web": "https://www.inmobiliariasomera.com/",
+    "ciudad": "Bilbao",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.46967543475@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@marfilden.com",
+    "nombre": "Marfil Den",
+    "web": "",
+    "ciudad": "Bilbao",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.34540107462@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cdpdeusto.com",
+    "nombre": "CDP Deusto",
+    "web": "https://cdpdeusto.com",
+    "ciudad": "Bilbao",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.45416846468@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cliniques-dentaires-delobel.fr",
+    "nombre": "Delobel",
+    "web": "https://www.cliniques-dentaires-delobel.fr/es/clinicas/clinica-bilbao",
+    "ciudad": "Bilbao",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.85647917709@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inmobiliariadeusto.com",
+    "nombre": "Inmobiliaria Deusto",
+    "web": "https://www.inmobiliariadeusto.com",
+    "ciudad": "Bilbao",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.15793459043@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@midas.es",
+    "nombre": "Midas",
+    "web": "https://www.midas.es/",
+    "ciudad": "Bilbao",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.77981861641@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "bonaparte@grupobonaparte.com",
+    "nombre": "Automóviles Bonaparte",
+    "web": "https://www.grupobonaparte.com/",
+    "ciudad": "Bilbao",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080930.40681559936@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cerramalaga@gmail.com",
+    "nombre": "Cerrajería Cerramálaga",
+    "web": "",
+    "ciudad": "Málaga",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080931.92954470337@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "grupoarcre@outlook.com",
+    "nombre": "Cerrajeros Málaga",
+    "web": "https://cerrajeromalagac.com",
+    "ciudad": "Málaga",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080931.56244873500@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@clinicadentalcarlosrodriguez.com",
+    "nombre": "Clinica Dental Dr. Carlos Rodriguez",
+    "web": "https://www.clinicadentalcarlosrodriguez.com/",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080931.43546155488@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@cerrajeriadominguez.com",
+    "nombre": "Cerrajería Domínguez",
+    "web": "https://cerrajeriadominguez.com",
+    "ciudad": "Málaga",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.63525544429@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@clinicadentalar.es",
+    "nombre": "A R",
+    "web": "https://clinicadentalar.es/",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.40903707497@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@dentalhuelin.com",
+    "nombre": "Centro Dental Huelin",
+    "web": "https://www.dentalhuelin.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.54547190346@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clinica@bybdental.com",
+    "nombre": "ByB Dental",
+    "web": "https://bybdental.com/",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.80156441462@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cerrajeriamarquez@yahoo.es",
+    "nombre": "Cerrajería La Estrella",
+    "web": "https://cerrajerialaestrella.net/",
+    "ciudad": "Málaga",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.32814677731@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "centrojavaloyes@gmail.com",
+    "nombre": "Centro Javaloyes",
+    "web": "https://www.centrojavaloyes.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.50656256740@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@clinicadental-lavictoria.es",
+    "nombre": "Clínica Dental de la Victoria",
+    "web": "https://clinicadental-lavictoria.es/",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.57832552460@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@clinicadentalvelasco.com",
+    "nombre": "Clínica Dental Velasco",
+    "web": "https://www.clinicadentalvelasco.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.86424495041@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajeriadilo.com",
+    "nombre": "Cerrajería Dilo",
+    "web": "https://www.cerrajeriadilo.com",
+    "ciudad": "Málaga",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.43786525411@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "recepcion@clinicaraizarequena.es",
+    "nombre": "Clínica Dental Raiza Requena",
+    "web": "https://clinicaraizarequena.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.65836060022@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "andresfranco.fisioterapia@gmail.com",
+    "nombre": "Andrés Franco Fisioterapia y Osteopatía",
+    "web": "https://www.andresfrancofisioterapia.com/",
+    "ciudad": "Málaga",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.45680046853@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@tallereslafuentemalaga.com",
+    "nombre": "Talleres La Fuente",
+    "web": "http://www.tallereslafuentemalaga.com/",
+    "ciudad": "Málaga",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.54990750297@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@eurotallermalaga.com",
+    "nombre": "ReparAuto",
+    "web": "https://www.tallermecanicomalaga.com/",
+    "ciudad": "Málaga",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080932.96905274934@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@rvtherapyclinic.com",
+    "nombre": "RV Therapy",
+    "web": "https://www.rvtherapyclinic.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080933.72574513004@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fisio360.es",
+    "nombre": "Fisio360",
+    "web": "https://www.fisio360.es/Clinicas/Malaga",
+    "ciudad": "Málaga",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080933.53516888773@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clinica@avilesyroman.com",
+    "nombre": "Clínica Dental Avilés y Román",
+    "web": "https://www.clinicadentalavilesyroman.com",
+    "ciudad": "Málaga",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080933.37319802103@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pmkchapaypintura.com",
+    "nombre": "PMK Chapa y Pintura",
+    "web": "https://pmkchapaypintura.com",
+    "ciudad": "Málaga",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080933.73690991410@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@openoil.es",
+    "nombre": "Open Oil",
+    "web": "https://openoil.es",
+    "ciudad": "Málaga",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080933.28034937196@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "decoglobalzaragoza@gmail.com",
+    "nombre": "Aplicaciones Decoglobal",
+    "web": "",
+    "ciudad": "Zaragoza",
+    "sector": "pintores",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.92916599846@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ventas@castillobalduz.es",
+    "nombre": "Castillo Balduz",
+    "web": "https://www.castillobalduz.es/",
+    "ciudad": "Zaragoza",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.91765433364@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "daserpiso@gmail.com",
+    "nombre": "Daser Piso",
+    "web": "https://www.daserpisoinmobiliaria.es",
+    "ciudad": "Zaragoza",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.94805467361@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "fisioterapia@acturzentro.es",
+    "nombre": "Acturzentro Fisioterapia",
+    "web": "https://www.acturzentro.es",
+    "ciudad": "Zaragoza",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.36126456564@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pintoresarte.com",
+    "nombre": "Pintores Arte",
+    "web": "https://www.pintoresarte.com",
+    "ciudad": "Zaragoza",
+    "sector": "pintores",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.83810209261@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@espaziozg.com",
+    "nombre": "Espazio ZG",
+    "web": "https://www.espaziozg.com/",
+    "ciudad": "Zaragoza",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.40429552500@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sierrafisio.es",
+    "nombre": "Clínica de Fisioterapia Enrique Sierra",
+    "web": "https://fisioterapiaenriquesierra.es/",
+    "ciudad": "Zaragoza",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.63795203411@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "personalzaragoza1@gmail.com",
+    "nombre": "Personal",
+    "web": "https://www.personalzaragoza.com",
+    "ciudad": "Zaragoza",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.98508164576@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@takkhomes.com",
+    "nombre": "Takk! Asesores Inmobiliarios",
+    "web": "https://takkhomes.com",
+    "ciudad": "Zaragoza",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080934.64311006714@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fisioterapia-global.es",
+    "nombre": "Fisioterapia Global",
+    "web": "https://www.fisioterapia-global.es/",
+    "ciudad": "Zaragoza",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.68847787333@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "mag370@norauto.es",
+    "nombre": "Norauto",
+    "web": "",
+    "ciudad": "Zaragoza",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.42289252759@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@caravaningplaza.com",
+    "nombre": "Caravaning Plaza",
+    "web": "http://www.caravaningplaza.es",
+    "ciudad": "Zaragoza",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.88662645174@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@alanpe.com",
+    "nombre": "Alanpe",
+    "web": "https://www.alanpe.com",
+    "ciudad": "Zaragoza",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.38458686547@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "canalclientes@eurotaller.com",
+    "nombre": "Paddock 82",
+    "web": "https://www.eurotaller.com/taller/962/talleres-paddock-82",
+    "ciudad": "Zaragoza",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.36074413597@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "eduardo@automocionmiraflores.com",
+    "nombre": "Automoción Miraflores",
+    "web": "https://www.automocionmiraflores.com/",
+    "ciudad": "Zaragoza",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080935.82464086116@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerezoabogados.com",
+    "nombre": "Cerezo & Orígenes Abogados",
+    "web": "https://cerezoabogados.com/",
+    "ciudad": "Murcia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.13421230134@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@atico55.com",
+    "nombre": "Ático55 Inmobiliaria",
+    "web": "https://atico55.com/",
+    "ciudad": "Murcia",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.45155331685@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@lexforis.com",
+    "nombre": "Lex Foris International Law",
+    "web": "https://www.lexforis.com/",
+    "ciudad": "Murcia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.33986360974@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bnfix.com",
+    "nombre": "BNFIX",
+    "web": "https://www.bnfix.com/",
+    "ciudad": "Murcia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.47846838709@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "aethicus@aethicus.es",
+    "nombre": "Aethicus",
+    "web": "https://www.aethicus.com/",
+    "ciudad": "Murcia",
+    "sector": "despachos de abogados",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.65567639636@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@talleressanchezcanales.com",
+    "nombre": "Sánchez Canales",
+    "web": "http://www.talleressanchezcanales.com/",
+    "ciudad": "Murcia",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.61231385352@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inmobiliariatecnica.com",
+    "nombre": "Inmobiliaria Técnica",
+    "web": "https://www.inmobiliariatecnica.com/",
+    "ciudad": "Murcia",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.53214771764@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajeriadorotea.com",
+    "nombre": "Cerrajería Doroteo",
+    "web": "https://cerrajeriadorotea.com/",
+    "ciudad": "Murcia",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080936.91183820082@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "fisioholistik@gmail.com",
+    "nombre": "FISIOHOLISTIK- Juan Sanchiz- Fisioterapia, Osteopatía,...",
+    "web": "https://www.fisioholistik.com",
+    "ciudad": "Palma de Mallorca",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.55206541743@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cevirh@hotmail.com",
+    "nombre": "Cevi",
+    "web": "https://www.fisioterapiacevi.es/",
+    "ciudad": "Palma de Mallorca",
+    "sector": "clínicas de fisioterapia",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.39504741520@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fincascalamajor.com",
+    "nombre": "Fincas Cala Major",
+    "web": "https://fincascalamajor.com/",
+    "ciudad": "Palma de Mallorca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.54801999192@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sonvida.es",
+    "nombre": "SonVida Inmobiliaria",
+    "web": "http://www.sonvida.es",
+    "ciudad": "Palma de Mallorca",
+    "sector": "agencias inmobiliarias",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.47664956709@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@clinicasudemax.com",
+    "nombre": "Arc dental",
+    "web": "https://arcdental.es/",
+    "ciudad": "Palma de Mallorca",
+    "sector": "clínicas dentales",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.35402460814@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sea3d.net",
+    "nombre": "Sea3D",
+    "web": "https://sea3d.net/",
+    "ciudad": "Palma de Mallorca",
+    "sector": "talleres mecánicos",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.72974894789@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajeros24hmallorca.com",
+    "nombre": "Cerrajeros Antonio Coll",
+    "web": "https://www.cerrajeros24hmallorca.com",
+    "ciudad": "Palma de Mallorca",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-08",
+    "messageId": "<202607080938.55871846341@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

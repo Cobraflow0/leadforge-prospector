@@ -76,6 +76,38 @@ def get_max_per_run():
             objetivo = valor
     return objetivo
 
+
+# ══════════════════════════════════════════════════════════
+# CUPO COMPARTIDO DE BREVO — hola@leadforge.es es la misma cuenta que usan
+# los clientes de pago de la app leadforge-api (mismo límite de 300/día en
+# el plan free). Sin esto, la rampa podía intentar sus 150-500/día sin saber
+# que los clientes ya se habían gastado el cupo esa mañana, y encontrarse
+# con "insufficient credits" a las pocas decenas de envíos.
+# ══════════════════════════════════════════════════════════
+BREVO_DAILY_CAP     = 300
+BREVO_SAFETY_MARGIN = 10
+
+
+def get_brevo_remaining_today():
+    """Cupo que queda hoy en la cuenta de Brevo compartida con leadforge-api,
+    con colchón de seguridad. Si falla la consulta, no limita más allá del
+    colchón — el límite real de Brevo actuará de todos modos si hace falta."""
+    try:
+        today = datetime.now().strftime("%Y-%m-%d")
+        r = requests.get(
+            "https://api.brevo.com/v3/smtp/statistics/aggregatedReport",
+            headers={"api-key": BREVO_API_KEY},
+            params={"startDate": today, "endDate": today},
+            timeout=10,
+        )
+        if r.status_code == 200:
+            used = r.json().get("requests", 0)
+            return max(0, BREVO_DAILY_CAP - BREVO_SAFETY_MARGIN - used)
+    except Exception:
+        pass
+    return BREVO_DAILY_CAP - BREVO_SAFETY_MARGIN
+
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
@@ -661,7 +693,11 @@ def main():
     print(f"[prospector] {len(sent)} emails ya enviados anteriormente")
 
     max_per_run = get_max_per_run()
-    print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override)")
+    brevo_remaining = get_brevo_remaining_today()
+    if brevo_remaining < max_per_run:
+        print(f"[prospector] Cupo compartido de Brevo limita a {brevo_remaining} (objetivo de rampa era {max_per_run})")
+        max_per_run = brevo_remaining
+    print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override, ajustado por cupo compartido de Brevo)")
 
     sent_domains = {e.split("@")[-1] for e in sent}
 

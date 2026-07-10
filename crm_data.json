@@ -4578,5 +4578,265 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080938.55871846341@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@meta360.es",
+    "nombre": "meta360",
+    "web": "http://meta360.es/",
+    "ciudad": "Sevilla",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101014.17694643938@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@mgelectricidad.es",
+    "nombre": "MG Electricidad",
+    "web": "https://www.mgelectricidad.es",
+    "ciudad": "Alicante",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101019.37597185052@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inanco.com",
+    "nombre": "Inanco Telecomunicaciones",
+    "web": "https://inanco.com",
+    "ciudad": "Alicante",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101019.26449520297@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@domoelectra.com",
+    "nombre": "Domo Electra",
+    "web": "https://www.domoelectra.com/",
+    "ciudad": "Granada",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101020.57839127004@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "anfrasa@anfrasa.com",
+    "nombre": "Anfrasa",
+    "web": "https://www.anfrasa.com",
+    "ciudad": "Granada",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101020.68597576170@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@desatranquesengranada.com",
+    "nombre": "Desatranques Granada",
+    "web": "https://www.desatranquesengranada.com",
+    "ciudad": "Granada",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101020.42820119425@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@marcosgamero.com",
+    "nombre": "Saneamientos Marcos Gamero",
+    "web": "https://www.marcosgamero.com/",
+    "ciudad": "Córdoba",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101020.41429988519@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "joseantoniogrela1963@gmail.com",
+    "nombre": "Central Cerrajeros",
+    "web": "https://www.centralcerrajeros.es/",
+    "ciudad": "A Coruña",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101022.75313550278@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@automatismoselectronicos.com",
+    "nombre": "Automatismos Electrónicos Industriales",
+    "web": "https://www.automatismoselectronicos.com/",
+    "ciudad": "A Coruña",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101022.24231907790@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "gasfuertes@hotmail.com",
+    "nombre": "Fontanería Fernández Fuertes",
+    "web": "http://www.fontaneriafuertes.com",
+    "ciudad": "Santander",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.40172876343@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "parcu@parcu.com",
+    "nombre": "Parcu",
+    "web": "http://www.cerrajeriaparcu.es",
+    "ciudad": "Santander",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.41846810819@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "briccal@briccal.com",
+    "nombre": "Briccal",
+    "web": "https://www.briccal.com/",
+    "ciudad": "Santander",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.54302870173@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "fontaneriacamus@fontaneriacamus.com",
+    "nombre": "Fontanería Camus",
+    "web": "https://fontaneriacamus.com/",
+    "ciudad": "Santander",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.79529328303@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "herveluz@herveluz.com",
+    "nombre": "Herveluz",
+    "web": "http://www.herveluz.com/",
+    "ciudad": "Santander",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.46552696086@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "correo@lostal.com",
+    "nombre": "Lostal",
+    "web": "https://www.lostal.com/",
+    "ciudad": "Santander",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.69491370839@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cerrajeria_el_llavin@hotmail.com",
+    "nombre": "El Llavín",
+    "web": "https://cerrajeriaelllavin.es/",
+    "ciudad": "Santander",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.32698188666@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@senimontes.com",
+    "nombre": "Fontanería Seni Montes",
+    "web": "http://www.senimontes.com/",
+    "ciudad": "Santander",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.77507806579@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@hispanofil.es",
+    "nombre": "Hispanofil",
+    "web": "http://hispanofil.es/",
+    "ciudad": "Santander",
+    "sector": "electricistas",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101024.39695870148@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fontaneriasinobrasalamanca.es",
+    "nombre": "Suiz System S.L.",
+    "web": "https://www.fontaneriasinobrasalamanca.es/",
+    "ciudad": "Salamanca",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101025.74536813557@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "tiendaburgos@sirovazquez.es",
+    "nombre": "Saneamientos Siro Vázquez",
+    "web": "",
+    "ciudad": "Burgos",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101026.33290621312@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "stosroman@gmail.com",
+    "nombre": "Saneamientos Román",
+    "web": "https://saneamientosroman.com/",
+    "ciudad": "Burgos",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101026.68768316479@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@saneamientosgozalo.com",
+    "nombre": "Saneamientos Gozalo",
+    "web": "https://saneamientosgozalo.com/",
+    "ciudad": "Burgos",
+    "sector": "fontaneros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101026.21540888459@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "lagalaxiadelasllaves@hotmail.com",
+    "nombre": "La Galaxia de las Llaves",
+    "web": "http://www.lagalaxiadelasllaves.com/",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101028.32864431068@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "abccerrajeros@gmail.com",
+    "nombre": "Cerrajeros Barcelona - ABCcerrajeros 24 Horas",
+    "web": "https://abccerrajeros.es/",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101028.25134093000@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@rodriguezbcn.com",
+    "nombre": "Rodríguez BCN",
+    "web": "https://www.rodriguezbcn.com/",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101028.77170798456@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@barcelonacerrajeros.org",
+    "nombre": "Barcelona Cerrajeros",
+    "web": "https://barcelonacerrajeros.org/",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-10",
+    "messageId": "<202607101028.59507430833@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

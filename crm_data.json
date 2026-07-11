@@ -4838,5 +4838,55 @@
     "fecha": "2026-07-10",
     "messageId": "<202607101028.59507430833@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "cerrajeroseconomicoszaragoza@gmail.com",
+    "nombre": "Cerrajeros Economicos Zaragoza",
+    "web": "",
+    "ciudad": "Zaragoza",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-11",
+    "messageId": "<202607110834.10712581002@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "deante.slu@hotmail.com",
+    "nombre": "Deante",
+    "web": "https://www.deantecerrajeria.com/",
+    "ciudad": "Valladolid",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-11",
+    "messageId": "<202607110838.58835473513@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@blancosan.com",
+    "nombre": "Blanco San",
+    "web": "https://blancosan.com/",
+    "ciudad": "A Coruña",
+    "sector": "fontaneros",
+    "fecha": "2026-07-11",
+    "messageId": "<202607110838.39946421700@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "loscantabros4@hotmail.com",
+    "nombre": "Reformas Los Cántabros",
+    "web": "https://www.reformas-loscantabros.com",
+    "ciudad": "Santander",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-11",
+    "messageId": "<202607110840.69855834394@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@factoriaintegralnorte.com",
+    "nombre": "Factoría Integral Norte",
+    "web": "https://www.factoriaintegralnorte.com/",
+    "ciudad": "Santander",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-11",
+    "messageId": "<202607110840.43783720860@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

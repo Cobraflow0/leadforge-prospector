@@ -4888,5 +4888,65 @@
     "fecha": "2026-07-11",
     "messageId": "<202607110840.43783720860@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "tenofransa@tenofransa.com",
+    "nombre": "Tenofransa Poceros",
+    "web": "https://tenofransa.com",
+    "ciudad": "Madrid",
+    "sector": "fontaneros",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120856.27914052594@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pintoresmadrid.online",
+    "nombre": "Maestros Pintores",
+    "web": "https://pintoresmadrid.online",
+    "ciudad": "Madrid",
+    "sector": "pintores",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120856.53030154550@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "tienda@santaclotilde.es",
+    "nombre": "Ferretería Llaves Santa Clotilde",
+    "web": "http://www.santaclotilde.es/",
+    "ciudad": "Granada",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120901.56942378490@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "palomera@palomeraobras.com",
+    "nombre": "Palomera Obras y Proyectos",
+    "web": "https://www.palomeraobras.com",
+    "ciudad": "Santander",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120904.59911651260@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@voltia.es",
+    "nombre": "STM Voltia",
+    "web": "https://voltia.es/",
+    "ciudad": "Burgos",
+    "sector": "electricistas",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120906.74732453752@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@elvan.es",
+    "nombre": "Elvan Instalaciones",
+    "web": "https://www.elvan.es",
+    "ciudad": "Vigo",
+    "sector": "electricistas",
+    "fecha": "2026-07-12",
+    "messageId": "<202607120907.36891239864@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

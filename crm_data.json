@@ -4988,5 +4988,135 @@
     "fecha": "2026-07-13",
     "messageId": "<202607131014.84932263764@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@repuestoscalefaccion.com",
+    "nombre": "Repuestos Calefacción",
+    "web": "https://repuestoscalefaccion.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131655.30728214021@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@intergas.es",
+    "nombre": "Intergas",
+    "web": "https://www.intergas.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131655.94239866678@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@costachamartin.com",
+    "nombre": "Ventanas Costa Chamartín, S.L.",
+    "web": "https://www.ventanascostachamartin.com/",
+    "ciudad": "Madrid",
+    "sector": "cristaleros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131655.10062393209@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info.andalucia@ofisat.net",
+    "nombre": "Servicio Técnico Oficial Saunier Duval",
+    "web": "https://www.serviciotecnicooficial.saunierduval.es",
+    "ciudad": "Granada",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131703.94410282697@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "anfecantabria@yahoo.es",
+    "nombre": "Carpinteria Anfe",
+    "web": "",
+    "ciudad": "Santander",
+    "sector": "carpinteros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131709.51330761810@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "barcenasantander@hotmail.com",
+    "nombre": "Cristalería Barcena",
+    "web": "https://cristaleriabarcena.com/",
+    "ciudad": "Santander",
+    "sector": "cristaleros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131709.83781152105@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@autossardinero.com",
+    "nombre": "Luzyma",
+    "web": "http://www.auto10automoviles.com",
+    "ciudad": "Santander",
+    "sector": "cristaleros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131709.15177867517@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "organizacion@electroclisa.es",
+    "nombre": "Electroclisa",
+    "web": "https://www.electroclisa.es/",
+    "ciudad": "Salamanca",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131710.69251227768@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "burgos@ofisat.net",
+    "nombre": "Ofisat Burgos",
+    "web": "https://www.serviciotecnicooficial.vaillant.es/localice-su-servicio-tecnico-oficial/sat/ofisat-burgos-251; https://www.serviciotecnicooficial.saunierduval.es/sats/burgos-150",
+    "ciudad": "Burgos",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131713.47499667769@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@salvadorescoda.com",
+    "nombre": "Salvador Escoda",
+    "web": "https://www.salvadorescoda.com/",
+    "ciudad": "Burgos",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131713.18605056927@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@segatur.com",
+    "nombre": "SEGATUR",
+    "web": "https://segatur.es",
+    "ciudad": "Vigo",
+    "sector": "carpinteros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131715.82244873346@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "climelectricvalencia@gmail.com",
+    "nombre": "Climelectric",
+    "web": "https://www.climelectric.com/",
+    "ciudad": "Valencia",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131717.51840541446@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@venter.es",
+    "nombre": "Venter Systems",
+    "web": "https://www.venter.es",
+    "ciudad": "Bilbao",
+    "sector": "cristaleros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131720.10028996462@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

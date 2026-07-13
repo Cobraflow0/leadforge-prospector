@@ -14,6 +14,7 @@ import threading
 import concurrent.futures
 import requests
 import dns.resolver
+from bs4 import BeautifulSoup
 from datetime import datetime
 from urllib.parse import quote_plus
 
@@ -200,6 +201,209 @@ OSM_TAGS_MAP = {
     "cristalería":             [("craft", "glaziery")],
     "climatización":           [("craft", "hvac")],
 }
+
+
+# ══════════════════════════════════════════════════════════
+# EUROPAGES — fuente nacional gratis (sin ScraperAPI), complementa OSM
+# ══════════════════════════════════════════════════════════
+# Añadido 2026-07-13, misma fuente gratuita que ya usa leadforge_scraper.py
+# (leadforge-api) para clientes de pago. Descartadas del resto de fuentes
+# gratis de ese repo: Habitissimo (nunca da email ni web propia — solo perfil
+# de directorio, sin ficha que visitar para sacar contacto real, confirmado
+# revisando su código) y Sortlist (agencias de marketing, sector irrelevante
+# y competencia directa de LeadForge). LinkedIn/Instagram por Google dork
+# también descartadas: scrapean resultados de Google directamente, muy frágil
+# (Google bloquea/CAPTCHA esto fácilmente) para un cron diario.
+#
+# A diferencia de OSM, Europages NO es una fuente por ciudad — es un
+# directorio paneuropeo con búsqueda nacional, así que se consulta una sola
+# vez por oficio (no 20 veces, una por ciudad). Cada ficha de empresa trae
+# un bloque JSON-LD (schema.org Organization) con teléfono/email/web reales.
+#
+# Probado en vivo antes de portarlo (2026-07-13): ?country=ES en la URL de
+# búsqueda NO filtra de verdad (mismo bug ya conocido en leadforge-api,
+# confirmado otra vez: búsquedas devolvieron negocios franceses/británicos
+# mezclados). La página de resultados trae, en un bloque JSON-LD ItemList
+# aparte, el país real de cada empresa — se usa para descartar las que no
+# son de España antes de gastar una petición en visitar su ficha.
+EUROPAGES_TERMS_MAP = {
+    "empresa de reformas": ["empresa reformas", "reformas integrales"],
+    "fontanería":          ["fontanero", "empresa fontanería"],
+    "electricista":        ["electricista", "empresa electricidad"],
+    "cerrajería":          ["cerrajero", "empresa cerrajería"],
+    "pintor profesional":  ["pintor", "empresa pintura"],
+    "climatización":       ["instalador aire acondicionado", "empresa climatización"],
+    "carpintería":         ["carpintero", "empresa carpintería"],
+    "cristalería":         ["cristalero", "empresa cristalería"],
+}
+
+EUROPAGES_PAGINAS_POR_TERMINO = 2  # conservador — es gratis pero cada página tarda, y esto corre una sola vez por oficio, no por ciudad
+
+
+def _europages_get(url, timeout=15):
+    try:
+        r = requests.get(url, headers=OSM_HEADERS, timeout=timeout)
+        if r.status_code != 200:
+            return None
+        return r
+    except Exception:
+        return None
+
+
+def _europages_country_map(html):
+    """El país real de cada empresa de la página de resultados, sacado del
+    bloque JSON-LD ItemList — el ?country= de la URL no filtra de verdad."""
+    mapa = {}
+    for raw in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
+        try:
+            data = json.loads(raw)
+        except Exception:
+            continue
+        items = data.get("@graph", [data]) if isinstance(data, dict) else []
+        for item in items:
+            if not isinstance(item, dict) or item.get("@type") != "ItemList":
+                continue
+            for el in item.get("itemListElement", []) or []:
+                org = el.get("item", {}) if isinstance(el, dict) else {}
+                url = org.get("url", "")
+                direccion = org.get("address") or {}
+                pais_real = direccion.get("addressCountry", "")
+                ciudad_real = direccion.get("addressLocality", "")
+                if url and pais_real:
+                    mapa[url] = (pais_real, ciudad_real)
+    return mapa
+
+
+def _europages_contacto_desde_ficha(fuente_url):
+    """La ficha de cada empresa trae un bloque JSON-LD (schema.org
+    Organization) con teléfono, email y web real — no hace falta adivinar
+    selectores."""
+    r = _europages_get(fuente_url, timeout=12)
+    if not r:
+        return {}
+    contacto = {}
+    for raw in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', r.text, re.S):
+        try:
+            data = json.loads(raw)
+        except Exception:
+            continue
+        items = data.get("@graph", [data]) if isinstance(data, dict) else []
+        for item in items:
+            if not isinstance(item, dict) or item.get("@type") != "Organization":
+                continue
+            for cp in item.get("contactPoint", []) or []:
+                if not contacto.get("email") and cp.get("email"):
+                    contacto["email"] = cp["email"]
+            web = item.get("sameAs", "")
+            if isinstance(web, list):
+                web = web[0] if web else ""
+            if web:
+                contacto["web"] = web
+    return contacto
+
+
+def buscar_europages(target):
+    """Busca candidatos de un oficio en toda España de una sola vez (no por
+    ciudad). Devuelve leads ya en el mismo formato que search_osm()."""
+    terminos = EUROPAGES_TERMS_MAP.get(target)
+    if not terminos:
+        return []
+
+    candidatos = []  # (nombre, fuente_url, ciudad_real)
+    vistos_url = set()
+    for term in terminos:
+        for page in range(1, EUROPAGES_PAGINAS_POR_TERMINO + 1):
+            url = f"https://www.europages.es/empresas/pg-{page}/{quote_plus(term)}.html?country=ES"
+            r = _europages_get(url)
+            if not r:
+                break
+
+            soup = BeautifulSoup(r.text, "html.parser")
+            cards = soup.select('[data-test="company"]')
+            if not cards:
+                break
+
+            cmap = _europages_country_map(r.text)
+
+            for card in cards:
+                link_el = card.select_one('[data-test="company-name"]')
+                if not link_el:
+                    continue
+                nombre_el = card.select_one('[data-test="company-name"] h2') or card.select_one("h2, h3")
+                nombre = clean(nombre_el.get_text()) if nombre_el else ""
+                if not nombre:
+                    continue
+                href = link_el.get("href", "")
+                fuente_url = f"https://www.europages.es{href}" if href.startswith("/") else href
+                if not fuente_url or fuente_url in vistos_url:
+                    continue
+
+                pais_real, ciudad_real = cmap.get(fuente_url, ("", ""))
+                if pais_real != "ES":
+                    continue  # descarta negocios de fuera de España (el ?country= no filtra de verdad)
+
+                vistos_url.add(fuente_url)
+                candidatos.append((nombre, fuente_url, ciudad_real or "España"))
+
+            time.sleep(1)
+
+    if not candidatos:
+        return []
+
+    # Segunda pasada en paralelo: visitar cada ficha para sacar email/web real.
+    leads = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {
+            pool.submit(_europages_contacto_desde_ficha, fu): (nombre, fu, ciudad_real)
+            for nombre, fu, ciudad_real in candidatos
+        }
+        for fut in concurrent.futures.as_completed(futures):
+            nombre, fuente_url, ciudad_real = futures[fut]
+            try:
+                contacto = fut.result()
+            except Exception:
+                contacto = {}
+
+            website = contacto.get("web", "")
+            email_directo = _clean_email((contacto.get("email") or "").lower())
+            if not website and not email_directo:
+                continue
+
+            if website:
+                domain = (
+                    website.replace("https://", "").replace("http://", "")
+                    .replace("www.", "").split("/")[0].lower()
+                )
+                if not dominio_valido(domain):
+                    continue
+                email = email_directo or f"info@{domain}"
+            else:
+                email_domain = email_directo.split("@")[-1]
+                if not dominio_valido(email_domain):
+                    continue
+                domain = email_directo if email_domain in PROVEEDORES_EMAIL_GENERICOS else email_domain
+                website = ""
+                email = email_directo
+
+            leads.append({
+                "nombre": nombre,
+                "web":    website,
+                "domain": domain,
+                "email":  email,
+                "target": target,
+                "ciudad": ciudad_real,
+            })
+
+    if leads:
+        print(f"  [Europages] {target}: {len(leads)} candidatos con contacto real")
+    return leads
+
+
+def clean(text):
+    if not text:
+        return ""
+    return " ".join(str(text).strip().split())
+
 
 _osm_area_cache = {}
 
@@ -660,10 +864,15 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
 # Se llama en paralelo desde un ThreadPoolExecutor — cada lead visita su
 # propia web y su propio servidor de correo, así que no compiten entre sí.
 # Lo único compartido es el estado (sent/crm/contadores), protegido por _lock.
-def procesar_lead(lead, ciudad, dia, sent, sent_domains, crm, crm_ids, estado):
+def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
     nombre  = lead["nombre"]
     website = lead["web"]
     domain  = lead["domain"]
+    # Cada lead trae su propia ciudad (search_osm y buscar_europages ya la
+    # incluyen) — antes se pasaba una "ciudad" aparte igual para todo el lote,
+    # que casualmente coincidía siempre con la de OSM, pero con Europages
+    # (fuente nacional, no por ciudad) cada lead tiene una ciudad distinta.
+    ciudad = lead["ciudad"]
 
     real  = get_real_email(website) if website else None
     email = real or lead["email"]
@@ -739,27 +948,18 @@ def main():
     # manda sobre la marcha — para en cuanto llega al objetivo del día, pero
     # si una ciudad no da suficientes candidatos sigue probando con la
     # siguiente en vez de rendirse, hasta agotar las 20 si hace falta.
-    estado = {"enviados": 0, "rechazados_dns": 0, "emails_reales": 0, "max_per_run": max_per_run}
+    estado = {"enviados": 0, "rechazados_dns": 0, "emails_reales": 0, "max_per_run": max_per_run, "europages_candidatos": 0}
     seen_domains    = set()
     ciudades_usadas = []
 
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=LEAD_WORKERS) as executor:
-            for ciudad in ciudades_orden:
-                if estado["enviados"] >= max_per_run:
-                    break
-                ciudades_usadas.append(ciudad)
 
-                leads_ciudad = []
-                for target in TARGETS:
-                    print(f"[prospector] Buscando: {target} en {ciudad}")
-                    leads_ciudad.extend(search_osm(target, ciudad))
-                    time.sleep(1)
-
+            def procesar_lote(leads_lote):
                 # Dedup por dominio en serie antes de paralelizar — así dos
                 # leads del mismo dominio nunca se procesan a la vez.
                 pendientes = []
-                for lead in leads_ciudad:
+                for lead in leads_lote:
                     domain = lead["domain"]
                     if domain in seen_domains or domain in sent_domains:
                         continue
@@ -771,10 +971,34 @@ def main():
                         break
                     lote = pendientes[i:i + BATCH_SIZE]
                     futures = [
-                        executor.submit(procesar_lead, lead, ciudad, dia, sent, sent_domains, crm, crm_ids, estado)
+                        executor.submit(procesar_lead, lead, dia, sent, sent_domains, crm, crm_ids, estado)
                         for lead in lote
                     ]
                     concurrent.futures.wait(futures)
+
+            # Europages es una fuente nacional (no por ciudad, a diferencia
+            # de OSM) — se consulta una sola vez por oficio, antes del bucle
+            # de ciudades, no 20 veces.
+            if estado["enviados"] < max_per_run:
+                leads_nacionales = []
+                for target in TARGETS:
+                    print(f"[prospector] Buscando en Europages: {target} (nacional)")
+                    leads_nacionales.extend(buscar_europages(target))
+                estado["europages_candidatos"] = len(leads_nacionales)
+                procesar_lote(leads_nacionales)
+
+            for ciudad in ciudades_orden:
+                if estado["enviados"] >= max_per_run:
+                    break
+                ciudades_usadas.append(ciudad)
+
+                leads_ciudad = []
+                for target in TARGETS:
+                    print(f"[prospector] Buscando: {target} en {ciudad}")
+                    leads_ciudad.extend(search_osm(target, ciudad))
+                    time.sleep(1)
+
+                procesar_lote(leads_ciudad)
     finally:
         save_sent(sent)
         save_crm(crm)
@@ -782,20 +1006,22 @@ def main():
     enviados       = estado["enviados"]
     rechazados_dns = estado["rechazados_dns"]
     emails_reales  = estado["emails_reales"]
+    europages_cand = estado["europages_candidatos"]
 
-    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)}")
+    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)} | Europages: {europages_cand} candidatos")
 
     ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_usadas)
     objetivo_cumplido = enviados >= max_per_run
     aviso_corto = "" if objetivo_cumplido else "<p style='color:#b45309'>⚠️ No se llegó al objetivo — se agotaron las 20 ciudades sin encontrar más candidatos válidos.</p>"
     resumen_html = f"""
-    <p>Hoy el prospector buscó en <b>{ciudad_str}</b> ({len(ciudades_usadas)} de {len(ciudades_orden)} ciudades).</p>
+    <p>Hoy el prospector buscó en <b>{ciudad_str}</b> ({len(ciudades_usadas)} de {len(ciudades_orden)} ciudades), más Europages a nivel nacional.</p>
     {aviso_corto}
     <ul>
       <li>🎯 Objetivo del día (rampa/override): <b>{max_per_run}</b></li>
       <li>✅ Enviados: <b>{enviados}</b></li>
       <li>📧 Emails reales encontrados en web: <b>{emails_reales}</b></li>
       <li>⛔ Descartados por DNS/SMTP: <b>{rechazados_dns}</b></li>
+      <li>📇 Candidatos de Europages (con contacto real): <b>{europages_cand}</b></li>
       <li>📬 Total acumulado contactados: <b>{len(sent)}</b></li>
     </ul>
     """

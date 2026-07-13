@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependencias
-        run: pip install requests dnspython
+        run: pip install requests dnspython beautifulsoup4
 
       - name: Ejecutar prospector
         env:

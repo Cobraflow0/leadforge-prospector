@@ -155,6 +155,9 @@ TARGETS = [
     "electricista",
     "cerrajería",
     "pintor profesional",
+    "carpintería",
+    "cristalería",
+    "climatización",
 ]
 
 TARGET_LABEL = {
@@ -163,6 +166,9 @@ TARGET_LABEL = {
     "electricista":              "electricistas",
     "cerrajería":                "cerrajeros",
     "pintor profesional":        "pintores",
+    "carpintería":               "carpinteros",
+    "cristalería":               "cristaleros",
+    "climatización":             "empresas de climatización",
 }
 
 # ══════════════════════════════════════════════════════════
@@ -185,6 +191,14 @@ OSM_TAGS_MAP = {
     "electricista":            [("craft", "electrician")],
     "cerrajería":              [("shop", "locksmith"), ("craft", "locksmith")],
     "pintor profesional":      [("craft", "painter")],
+    # Añadidos 2026-07-13: densidad real en OSM comprobada vía Overpass antes
+    # de añadirlos (Madrid/Barcelona) — carpenter y hvac dan un volumen
+    # comparable a builder/plumber; glaziery algo menos pero mejor que painter
+    # (que ya sabíamos que apenas rendía). Se descartan roofer/tiler/plasterer
+    # por tener una densidad casi nula (0-1 por ciudad), igual de mal que painter.
+    "carpintería":             [("craft", "carpenter")],
+    "cristalería":             [("craft", "glaziery")],
+    "climatización":           [("craft", "hvac")],
 }
 
 _osm_area_cache = {}

@@ -4948,5 +4948,45 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120907.36891239864@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@robertocerrajero.es",
+    "nombre": "Cerrajería Garcia",
+    "web": "https://www.robertocerrajero.es/",
+    "ciudad": "Zaragoza",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131004.13136333675@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@manitascordoba.com",
+    "nombre": "Manitas Córdoba",
+    "web": "https://manitascordoba.com",
+    "ciudad": "Córdoba",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131008.44113179368@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@electricidadtifema.com",
+    "nombre": "Tifema",
+    "web": "https://www.electricidadtifema.com/",
+    "ciudad": "Burgos",
+    "sector": "electricistas",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131012.32257032269@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@instalaciones-martinez.com",
+    "nombre": "Instalaciones Martinez Masini",
+    "web": "http://www.instalaciones-martinez.com/index.php/es/",
+    "ciudad": "Barcelona",
+    "sector": "fontaneros",
+    "fecha": "2026-07-13",
+    "messageId": "<202607131014.84932263764@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

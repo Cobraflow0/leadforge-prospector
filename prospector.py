@@ -249,33 +249,54 @@ def _osm_elements(area_id, tags):
     """Cachea los elementos crudos de Overpass por (área, tags) — varios
     TARGETS distintos (p.ej. 'agencia de marketing digital' y 'agencia de
     publicidad') comparten el mismo tag OSM, y sin este cache se lanzaba la
-    misma consulta dos veces por ciudad al servidor público."""
+    misma consulta dos veces por ciudad al servidor público.
+
+    Reintenta una vez en 429/504 — confirmado en vivo 2026-07-13: al pasar
+    de 5 a 8 oficios (100→160 consultas/run) el servidor público de Overpass
+    empezó a rechazar/tumbar casi la mitad de las consultas (48%: 32 HTTP 429
+    + 44 HTTP 504 en un solo run). Antes se rendía a la primera, perdiendo
+    candidatos reales que solo hacía falta volver a pedir un momento después."""
     key = (area_id, tags)
     if key in _osm_elements_cache:
         return _osm_elements_cache[key]
 
-    time.sleep(1.5)  # margen entre llamadas al servidor público de Overpass — evita 429/respuesta vacía
-
     filtros = "".join(f'node["{k}"="{v}"](area.a);way["{k}"="{v}"](area.a);' for k, v in tags)
     query = f'[out:json][timeout:50];area({area_id})->.a;({filtros});out center tags 200;'
 
-    try:
-        r = requests.post(
-            "https://overpass-api.de/api/interpreter",
-            data={"data": query}, headers=OSM_HEADERS, timeout=55,
-        )
-        if r.status_code != 200:
-            print(f"  [OSM] Error HTTP {r.status_code} tags={tags!r} area={area_id}")
+    for intento in range(2):
+        time.sleep(1.5)  # margen entre llamadas al servidor público de Overpass
+        try:
+            r = requests.post(
+                "https://overpass-api.de/api/interpreter",
+                data={"data": query}, headers=OSM_HEADERS, timeout=55,
+            )
+        except Exception as e:
+            if intento == 0:
+                continue
+            print(f"  [OSM] Error: {e} tags={tags!r} area={area_id}")
             _osm_elements_cache[key] = []
             return []
-        elements = r.json().get("elements", [])
-    except Exception as e:
-        print(f"  [OSM] Error: {e} tags={tags!r} area={area_id}")
+
+        if r.status_code == 200:
+            elements = r.json().get("elements", [])
+            _osm_elements_cache[key] = elements
+            return elements
+
+        if r.status_code in (429, 504) and intento == 0:
+            try:
+                espera = min(int(r.headers.get("Retry-After", 8)), 15)
+            except ValueError:
+                espera = 8
+            print(f"  [OSM] HTTP {r.status_code} — reintentando en {espera}s")
+            time.sleep(espera)
+            continue
+
+        print(f"  [OSM] Error HTTP {r.status_code} tags={tags!r} area={area_id}")
         _osm_elements_cache[key] = []
         return []
 
-    _osm_elements_cache[key] = elements
-    return elements
+    _osm_elements_cache[key] = []
+    return []
 
 
 def search_osm(target, ciudad):

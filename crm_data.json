@@ -6268,5 +6268,405 @@
     "fecha": "2026-07-13",
     "messageId": "<202607132034.21355900803@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@nervion.net",
+    "nombre": "NERVIÓN, Papelera del Nervión, s.a. , NERPEL®, ANTIOX® y SIDERWRAP®",
+    "web": "https://www.nervion.net/",
+    "ciudad": "Mungia",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140857.66872515289@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@adnconstruccion.es",
+    "nombre": "ADN CONSTRUCCION GROUP",
+    "web": "https://www.adnconstruccion.com/",
+    "ciudad": "Molins de Rei",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140857.76832083637@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@brimervallesconstruccion.com",
+    "nombre": "BRIMER VALLÈS, SL",
+    "web": "https://brimervallesconstruccion.com/",
+    "ciudad": "Canovelles",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140857.68804660936@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@jmrreformas.com",
+    "nombre": "JMR Reformas",
+    "web": "https://jmrreformas.com",
+    "ciudad": "Icod de Los Vinos",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.23211484946@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@serviciossosa.com",
+    "nombre": "Sosa Reformas y Vaciados de Pisos",
+    "web": "https://www.serviciossosa.com",
+    "ciudad": "Arucas",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.70759962568@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@progesolcanarias.com",
+    "nombre": "REFORMAS LAS PALMAS INTEGRALES",
+    "web": "http://www.reformasintegraleslaspalmas.com",
+    "ciudad": "Las Palmas",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.26036630763@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@hiblab.com",
+    "nombre": "HIBLAB SOLUTIONS",
+    "web": "http://hiblab.com/",
+    "ciudad": "Ondarroa",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.80749734403@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@25grados.com",
+    "nombre": "25grados ( Vlad Ioan Danciu)",
+    "web": "https://25grados.com/",
+    "ciudad": "Burgos",
+    "sector": "fontaneros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.36176458105@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "shop@promoshark.eu",
+    "nombre": "PROMOSHARK SL",
+    "web": "https://promoshark.eu/",
+    "ciudad": "Vilanova y la Geltrú",
+    "sector": "fontaneros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.21575649021@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@alvier.es",
+    "nombre": "ALVIER REFORMAS INTEGRALES",
+    "web": "http://www.alvier.es/",
+    "ciudad": "Santander",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.54174439845@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@alicanteelectricista.com",
+    "nombre": "Electricista Alicante",
+    "web": "https://alicanteelectricista.com/",
+    "ciudad": "Mutxamel",
+    "sector": "electricistas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.38740116019@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "boro@boro.es",
+    "nombre": "Instalaciones Boro",
+    "web": "https://boro.es/",
+    "ciudad": "Vitoria-Gasteiz",
+    "sector": "fontaneros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.91240087663@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ormeinstalaciones.com",
+    "nombre": "Orme Instalaciones,S.L:",
+    "web": "https://ormeinstalaciones.com/",
+    "ciudad": "Santa Úrsula",
+    "sector": "electricistas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.56924734084@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@induplast.es",
+    "nombre": "INDUPLAST PLÁSTICOS DE INGENIERÍA",
+    "web": "https://induplast.es/en/",
+    "ciudad": "Barcelona",
+    "sector": "electricistas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.30305449461@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cycling@relber.com",
+    "nombre": "RELBER SA",
+    "web": "https://www.relber.com/en-eu",
+    "ciudad": "Caldes de Montbui",
+    "sector": "electricistas",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.92677057674@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "solicitud@llavexpert.com",
+    "nombre": "Cerrajeros Jimenez",
+    "web": "https://www.llavexpert.com",
+    "ciudad": "Madrid",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.77181430756@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "marcoscerrajeros.es@gmail.com",
+    "nombre": "Marcos Cerrajeros Alcorcón",
+    "web": "https://www.marcoscerrajeros.es/",
+    "ciudad": "Alcorcón",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.18436065386@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@daevi.net",
+    "nombre": "DAEVI",
+    "web": "http://www.daevi.net",
+    "ciudad": "Montornes del Valles",
+    "sector": "pintores",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.52814360872@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "mercapinturas@mercapinturas.es",
+    "nombre": "MERCAPINTURAS SL",
+    "web": "https://www.mercapinturas.es",
+    "ciudad": "Almeria",
+    "sector": "pintores",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.10766108774@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@aga.es",
+    "nombre": "AGA",
+    "web": "http://www.aga.es",
+    "ciudad": "Arrasate-Mondragón-Guipúzcoa",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.58433481697@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "email@pintserceba.com",
+    "nombre": "PINTSERCEBA",
+    "web": "http://www.pintserceba.com",
+    "ciudad": "Valencia",
+    "sector": "pintores",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.84362458453@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "judoma@judoma.com",
+    "nombre": "Domingo Otero e Hijos S.L",
+    "web": "https://judoma.com/",
+    "ciudad": "sevilla",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.89789044130@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "miguel@representacionesangellopez.com",
+    "nombre": "REPRESENTACIONES ÁNGEL LÓPEZ SL",
+    "web": "https://www.representacionesangellopez.com",
+    "ciudad": "Outeiro De Rei-Lugo",
+    "sector": "carpinteros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.66106571372@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ecemis@ecemis.es",
+    "nombre": "ECEMIS SL",
+    "web": "https://ecemis.es/",
+    "ciudad": "Barcelona",
+    "sector": "pintores",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140858.75344373169@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "alberto@medva.es",
+    "nombre": "MEDVA MECANISMOS DEL VALLES, S.L.",
+    "web": "https://medva.es/en/",
+    "ciudad": "Rubí ",
+    "sector": "carpinteros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.24263441711@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@venprodin.com",
+    "nombre": "Venprodin Sociedad Limitada.",
+    "web": "",
+    "ciudad": "VALENCIA",
+    "sector": "cristaleros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.32587424679@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@casapastor.es",
+    "nombre": "CASA PASTOR S.L.",
+    "web": "https://casapastor.es",
+    "ciudad": "Algeciras",
+    "sector": "carpinteros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.98988845077@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "productos@codina.es",
+    "nombre": "PRODUCTOS CODINA S.A.",
+    "web": "http://www.codina.es",
+    "ciudad": "Mataro",
+    "sector": "cristaleros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.59645121302@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@marmorama.es",
+    "nombre": "MARMORAMA.ES",
+    "web": "https://www.marmorama.es",
+    "ciudad": "Petrer",
+    "sector": "cristaleros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.57871184106@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@barnacork.com",
+    "nombre": "Barnacork",
+    "web": "https://www.barnacork.com/",
+    "ciudad": "Barcelona",
+    "sector": "cristaleros",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.87413140965@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "ecotec@ecotecinstaladors.com",
+    "nombre": "ECOTEC INSTALADORS",
+    "web": "https://www.ecotecinstaladors.com",
+    "ciudad": "Vilassar De Dalt",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.44793005225@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@fourclima-gasnatural.com",
+    "nombre": "FOURCLIMA PARTNER LS SL",
+    "web": "https://fourclima-gasnatural.com/",
+    "ciudad": "Barcelona",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.52373955139@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "charmex@charmex.info",
+    "nombre": "CHARMEX S.A.",
+    "web": "https://charmex.info/?lang=en",
+    "ciudad": "BARCELONA",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.65204218371@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "airnou@airnou.com",
+    "nombre": "AIRNOU S.L.",
+    "web": "https://airnou.com/",
+    "ciudad": "Barcelona",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140859.16644641962@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@gaselecsl.es",
+    "nombre": "GASELEC",
+    "web": "http://www.gaselecsl.es/",
+    "ciudad": "Zaragoza",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140904.10530320949@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "humiclima@humiclima.com",
+    "nombre": "Humiclima",
+    "web": "",
+    "ciudad": "Palma de Mallorca",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140908.68677675266@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "infrica@infrica.com",
+    "nombre": "Infrica",
+    "web": "https://www.infrica.es/",
+    "ciudad": "Santander",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140924.42607305105@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@saunierduval.es",
+    "nombre": "Servicio Técnico Saunier Duval",
+    "web": "https://www.saunierduval.es/",
+    "ciudad": "Salamanca",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140926.56019228904@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "remica@remica.es",
+    "nombre": "Remica",
+    "web": "https://remica.es",
+    "ciudad": "Salamanca",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140926.23141731631@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@proinco.es",
+    "nombre": "Proinco",
+    "web": "https://www.proinco.es/",
+    "ciudad": "Málaga",
+    "sector": "empresas de climatización",
+    "fecha": "2026-07-14",
+    "messageId": "<202607140945.61125507322@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

@@ -28,25 +28,61 @@ SENDER_NAME    = os.environ.get("SENDER_NAME") or "LeadForge"
 # ya estaba autenticado en Brevo (SPF/DKIM) de un proyecto anterior, así que no
 # hizo falta tocar DNS. Ver [[strategy_growth_plan_fable]] (2026-07-08).
 PROSPECTOR_SENDER_EMAIL = os.environ.get("PROSPECTOR_SENDER_EMAIL") or "aquiles@cobraflow.es"
-SENT_FILE      = "sent_emails.json"
-CRM_FILE       = "crm_data.json"
-WARMUP_FILE    = "warmup_state.json"
+SENT_FILE        = "sent_emails.json"
+CRM_FILE         = "crm_data.json"
+WARMUP_FILE      = "warmup_state.json"
+SUPPRESSION_FILE = "suppression.json"
 
 # ══════════════════════════════════════════════════════════
-# RAMPA DE ENVÍO — protege la reputación del dominio hola@leadforge.es
-# (compartido con los emails transaccionales de los clientes de pago).
-# Sube el volumen diario poco a poco en vez de saltar directo al objetivo.
+# RAMPA DE ENVÍO — protege la reputación del remitente del Prospector
+# (aquiles@cobraflow.es, dominio separado del de los clientes de pago desde
+# el 2026-07-08, ver [[strategy_growth_plan_fable]]).
+#
+# REINTERPRETADA 2026-07-14 (plan Fable 5 Max): esta rampa marcaba el
+# objetivo de ENVÍOS TOTALES/día, pero con la secuencia de seguimiento
+# (TOQUE2_DIAS/TOQUE3_DIAS más abajo) cada lead nuevo genera ~3 envíos —
+# perseguir 350-500 LEADS NUEVOS/día era un objetivo físicamente imposible
+# con fuentes gratuitas en España. Ahora esta tabla es el objetivo de LEADS
+# NUEVOS/día (primer contacto); el volumen total de envíos = nuevos +
+# seguimientos, y ese total sí puede llegar a 300-500/día real.
 # Para forzar un número fijo (saltarse la rampa), define la env var
-# MAX_PER_RUN_OVERRIDE (p.ej. 500) como secret en GitHub Actions.
+# MAX_PER_RUN_OVERRIDE (p.ej. 120) como secret en GitHub Actions.
 # ══════════════════════════════════════════════════════════
 RAMP_SCHEDULE = [
     (0,  50),
-    (3,  100),
-    (6,  150),
-    (9,  250),
-    (12, 350),
-    (15, 500),
+    (3,  80),
+    (9,  100),
+    (15, 120),
 ]
+
+# ══════════════════════════════════════════════════════════
+# SECUENCIA DE SEGUIMIENTO (plan Fable 5 Max, 2026-07-14) — hasta hoy cada
+# dominio recibía un solo email en su vida. Ahora cada lead contactado
+# recibe hasta 3 toques (día 0, +4, +9) salvo que responda o pida baja.
+# "Responde" no se puede detectar automáticamente: el replyTo del email es
+# el Gmail personal de Aquiles, el script no lo lee. Decisión explícita de
+# Aquiles (2026-07-14): supresión MANUAL — en cuanto vea una respuesta o
+# baja en su bandeja, añade el email a suppression.json y lo empuja al
+# repo; el próximo run ya no le vuelve a escribir. Sin eso, el kill-switch
+# de abajo es la única red de seguridad automática.
+# ══════════════════════════════════════════════════════════
+TOQUE2_DIAS = 4
+TOQUE3_DIAS = 9
+FOLLOWUP_DAILY_CAP = int(os.environ.get("FOLLOWUP_MAX_PER_RUN_OVERRIDE") or 130)
+
+# ══════════════════════════════════════════════════════════
+# KILL-SWITCH — a 300-500 envíos/día desde una cuenta de Brevo que también
+# sostiene los transaccionales de los clientes de pago, un pico de rebotes
+# duros o quejas de spam sin frenar automáticamente puede quemar reputación
+# antes de que Aquiles se entere. Se consulta el mismo aggregatedReport que
+# ya usa get_brevo_remaining_today(). Umbrales del plan Fable 5 Max
+# (2026-07-14): ~2% rebote duro, ~0.15% quejas, medidos sobre lo entregado
+# hoy. Si se dispara, el run corta el envío (no cancela lo ya mandado) y
+# avisa a MY_EMAIL — no vuelve a bajar solo, hay que revisar y quitar
+# KILL_SWITCH_FORCE_OFF del entorno para reanudar al día siguiente.
+# ══════════════════════════════════════════════════════════
+KILL_SWITCH_HARD_BOUNCE_RATE = 0.02
+KILL_SWITCH_COMPLAINT_RATE   = 0.0015
 
 # Procesar leads uno a uno (web propia + DNS/SMTP + Brevo) es lo que más
 # tiempo real consume del run — con la rampa subiendo hasta 500/día, hacerlo
@@ -96,10 +132,9 @@ BREVO_DAILY_CAP     = 300
 BREVO_SAFETY_MARGIN = 10
 
 
-def get_brevo_remaining_today():
-    """Cupo que queda hoy en la cuenta de Brevo compartida con leadforge-api,
-    con colchón de seguridad. Si falla la consulta, no limita más allá del
-    colchón — el límite real de Brevo actuará de todos modos si hace falta."""
+def _get_brevo_report_today():
+    """Un único fetch del aggregatedReport de hoy, reusado por el cupo
+    restante y por el kill-switch — evita pedirlo dos veces por run."""
     try:
         today = datetime.now().strftime("%Y-%m-%d")
         r = requests.get(
@@ -109,11 +144,41 @@ def get_brevo_remaining_today():
             timeout=10,
         )
         if r.status_code == 200:
-            used = r.json().get("requests", 0)
-            return max(0, BREVO_DAILY_CAP - BREVO_SAFETY_MARGIN - used)
+            return r.json()
     except Exception:
         pass
+    return None
+
+
+def get_brevo_remaining_today(report=None):
+    """Cupo que queda hoy en la cuenta de Brevo compartida con leadforge-api,
+    con colchón de seguridad. Si falla la consulta, no limita más allá del
+    colchón — el límite real de Brevo actuará de todos modos si hace falta."""
+    report = report if report is not None else _get_brevo_report_today()
+    if report is not None:
+        used = report.get("requests", 0)
+        return max(0, BREVO_DAILY_CAP - BREVO_SAFETY_MARGIN - used)
     return BREVO_DAILY_CAP - BREVO_SAFETY_MARGIN
+
+
+def kill_switch_triggered(report):
+    """(disparado, motivo) según los umbrales del plan Fable 5 Max. Sobre
+    muy poco volumen entregado (inicio del día) los ratios son ruido, así
+    que exige un mínimo de entregas antes de poder disparar."""
+    if not report:
+        return False, ""
+    delivered = report.get("delivered", 0)
+    if delivered < 20:
+        return False, ""
+    hard_bounces = report.get("hardBounces", 0)
+    complaints   = report.get("spamReports", report.get("complaints", 0))
+    bounce_rate    = hard_bounces / delivered
+    complaint_rate = complaints / delivered
+    if bounce_rate > KILL_SWITCH_HARD_BOUNCE_RATE:
+        return True, f"rebote duro {bounce_rate:.1%} > {KILL_SWITCH_HARD_BOUNCE_RATE:.1%} ({hard_bounces}/{delivered})"
+    if complaint_rate > KILL_SWITCH_COMPLAINT_RATE:
+        return True, f"quejas de spam {complaint_rate:.2%} > {KILL_SWITCH_COMPLAINT_RATE:.2%} ({complaints}/{delivered})"
+    return False, ""
 
 
 HEADERS = {
@@ -631,6 +696,17 @@ def save_crm(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def load_suppression():
+    """Lista de emails que nunca deben recibir otro toque — respondieron,
+    pidieron baja, o rebotaron. Mantenimiento MANUAL (ver nota en
+    TOQUE2_DIAS más arriba): Aquiles la edita a mano cuando ve algo en su
+    bandeja y la empuja al repo antes del próximo run."""
+    if os.path.exists(SUPPRESSION_FILE):
+        with open(SUPPRESSION_FILE) as f:
+            return set(json.load(f))
+    return set()
+
+
 # ══════════════════════════════════════════════════════════
 # VALIDACIÓN DE DOMINIO
 # ══════════════════════════════════════════════════════════
@@ -843,7 +919,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
         "to":          [{"email": to_email}],
         "subject":     subject,
         "htmlContent": build_email(nombre_empresa, ciudad, sector_label, to_email),
-        "tags":        ["prospector"],
+        "tags":        ["prospector", "toque1"],
     }
     r = requests.post(
         "https://api.brevo.com/v3/smtp/email",
@@ -853,8 +929,112 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
     )
     if r.status_code in (200, 201):
         message_id = r.json().get("messageId", "")
-        return True, message_id
+        return True, message_id, subject
     print(f"    [Brevo error] status={r.status_code} body={r.text[:200]}")
+    return False, None, subject
+
+
+# ══════════════════════════════════════════════════════════
+# SEGUIMIENTOS (toque 2 / toque 3) — plan Fable 5 Max 2026-07-14. Copy
+# corto, en el mismo asunto con "Re:" para simular hilo, ofreciendo
+# directamente la muestra piloto (25-50 leads de su zona en 48h) en vez de
+# repetir el pitch largo del primer email — es lo que de verdad acorta el
+# ciclo de respuesta según el propio plan.
+# ══════════════════════════════════════════════════════════
+FOLLOWUP_COPY = {
+    2: {
+        "parrafo": (
+            "Te escribí hace unos días — no sé si te llegó o simplemente no ha sido "
+            "el momento. Te dejo la oferta en dos líneas: te preparo gratis una muestra "
+            "de 25-50 leads reales de tu zona en 48h, sin compromiso. Si te interesa, "
+            "responde a este email y te la mando yo mismo."
+        ),
+        "cta": "Quiero mi muestra gratis →",
+    },
+    3: {
+        "parrafo": (
+            "Último aviso por mi parte — no quiero insistir más de la cuenta. Si en algún "
+            "momento te hace falta captar clientes nuevos sin depender solo del boca a boca, "
+            "aquí me tienes. Si no es para ti, no hace falta que respondas, no te vuelvo a escribir."
+        ),
+        "cta": "Ver cómo funciona →",
+    },
+}
+
+
+def build_followup_email(nombre_empresa, ciudad, numero_toque, lead_email=""):
+    ciudad_corta = ciudad.split(",")[0]
+    demo_url = (
+        "https://cobraflow0.github.io/leadforge-app/app.html"
+        f"?demo=true&utm_source=prospector_followup{numero_toque}&lead={quote_plus(lead_email)}"
+    )
+    copy = FOLLOWUP_COPY[numero_toque]
+    return f"""<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#f4f6f9;font-family:'Helvetica Neue',Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f9;padding:40px 16px;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
+
+  <tr><td style="padding:32px 40px 24px;">
+
+    <p style="margin:0 0 18px;font-size:15px;color:#111827;line-height:1.7;">
+      Hola,
+    </p>
+
+    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
+      {copy['parrafo']}
+    </p>
+
+    <table cellpadding="0" cellspacing="0" style="margin:0 0 24px;">
+      <tr><td style="background:linear-gradient(135deg,#0066FF,#0052cc);border-radius:8px;">
+        <a href="{demo_url}"
+           style="display:inline-block;padding:13px 28px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;">
+          {copy['cta']}
+        </a>
+      </td></tr>
+    </table>
+
+    <p style="margin:20px 0 0;font-size:14px;color:#374151;line-height:1.8;">
+      Un saludo,<br>
+      <strong>Aquiles</strong><br>
+      <span style="color:#9ca3af;font-size:13px;">Fundador · LeadForge</span>
+    </p>
+
+  </td></tr>
+
+  <tr><td style="background:#f9fafb;padding:14px 40px;border-top:1px solid #e5e7eb;text-align:center;">
+    <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
+      ¿No es para ti? Responde a este email y no volvemos a escribirte.
+    </p>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body></html>"""
+
+
+def send_followup_email(to_email, nombre_empresa, ciudad, numero_toque, asunto_original):
+    subject = "Re: " + asunto_original
+    payload = {
+        "sender":      {"name": SENDER_NAME, "email": PROSPECTOR_SENDER_EMAIL},
+        "replyTo":     {"email": MY_EMAIL},
+        "to":          [{"email": to_email}],
+        "subject":     subject,
+        "htmlContent": build_followup_email(nombre_empresa, ciudad, numero_toque, to_email),
+        "tags":        ["prospector", f"toque{numero_toque}"],
+    }
+    r = requests.post(
+        "https://api.brevo.com/v3/smtp/email",
+        headers={"api-key": BREVO_API_KEY, "Content-Type": "application/json"},
+        json=payload,
+        timeout=10,
+    )
+    if r.status_code in (200, 201):
+        return True, r.json().get("messageId", "")
+    print(f"    [Brevo error toque{numero_toque}] status={r.status_code} body={r.text[:200]}")
     return False, None
 
 
@@ -864,7 +1044,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
 # Se llama en paralelo desde un ThreadPoolExecutor — cada lead visita su
 # propia web y su propio servidor de correo, así que no compiten entre sí.
 # Lo único compartido es el estado (sent/crm/contadores), protegido por _lock.
-def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
+def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, suppression, estado):
     nombre  = lead["nombre"]
     website = lead["web"]
     domain  = lead["domain"]
@@ -883,6 +1063,9 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
     else:
         print(f"  📇 Email directo de OSM (sin web propia): {email} ({nombre})")
 
+    if email in suppression:
+        return
+
     if not verify_email(email):
         with _lock:
             estado["rechazados_dns"] += 1
@@ -890,11 +1073,11 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
         return
 
     with _lock:
-        if email in sent or estado["enviados"] >= estado["max_per_run"]:
+        if email in sent or estado["nuevos"] >= estado["nuevos_max"]:
             return
 
     sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
-    ok, message_id = send_email(email, nombre, ciudad, sector_label, dia)
+    ok, message_id, asunto = send_email(email, nombre, ciudad, sector_label, dia)
     if not ok:
         print(f"  ❌ {email} — error Brevo")
         return
@@ -902,6 +1085,7 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
     with _lock:
         sent.add(email)
         sent_domains.add(domain)
+        estado["nuevos"] += 1
         estado["enviados"] += 1
         if real:
             estado["emails_reales"] += 1
@@ -913,6 +1097,7 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
                 "ciudad":    ciudad.split(",")[0],
                 "sector":    sector_label,
                 "fecha":     datetime.now().strftime("%Y-%m-%d"),
+                "asunto":    asunto,
                 "messageId": message_id or "",
                 "status":    "sent",
             })
@@ -924,23 +1109,135 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, estado):
 
 
 # ══════════════════════════════════════════════════════════
+# PROCESAR SEGUIMIENTOS (toque 2 / toque 3)
+# ══════════════════════════════════════════════════════════
+# No re-verifica el email (ya pasó verify_email() en el toque 1 hace días —
+# decisión de Fable 5 Max: riesgo de rebote marginal, no vale la pena
+# repetir la sonda SMTP para esto). Prioriza los contactos más antiguos
+# primero, así el backfill de ~600 se reparte solo entre varios runs según
+# el tope diario (FOLLOWUP_DAILY_CAP), sin necesidad de un puntero aparte.
+#
+# FILTRO POR SECTOR (añadido 2026-07-14 al probar esto en seco contra el
+# crm_data.json real): crm_data.json arrastra ~380 contactos de ANTES del
+# pivote a construcción (07-06/07-08) — abogados, clínicas dentales,
+# fisioterapia, inmobiliarias, seguros, talleres, asesorías, incluso
+# agencias de marketing digital (competencia directa, ya descartada
+# explícitamente). Sin este filtro el backfill les habría mandado un
+# seguimiento hablando de "empresas de reformas", contradiciendo la
+# decisión de un solo vertical y arriesgando quejas de gente que no
+# entiende por qué le llega esto. Solo se reactivan los sectores de
+# TARGET_LABEL (los 8 oficios de construcción actuales).
+SECTORES_ACTIVOS = set(TARGET_LABEL.values())
+
+
+def procesar_seguimientos(crm, suppression, estado, tope):
+    if tope <= 0:
+        return
+    hoy = datetime.now().date()
+
+    elegibles = []
+    for entry in crm:
+        email = entry.get("email")
+        if not email or email in suppression:
+            continue
+        if entry.get("sector") not in SECTORES_ACTIVOS:
+            continue
+        try:
+            fecha_toque1 = datetime.strptime(entry["fecha"], "%Y-%m-%d").date()
+        except (KeyError, ValueError):
+            continue
+        dias = (hoy - fecha_toque1).days
+
+        if not entry.get("toque2_fecha") and dias >= TOQUE2_DIAS:
+            elegibles.append((fecha_toque1, entry, 2))
+        elif entry.get("toque2_fecha") and not entry.get("toque3_fecha") and dias >= TOQUE3_DIAS:
+            elegibles.append((fecha_toque1, entry, 3))
+
+    elegibles.sort(key=lambda x: x[0])  # más antiguos primero
+
+    for _, entry, numero_toque in elegibles[:tope]:
+        if estado["seguimientos"] >= tope:
+            break
+        email  = entry["email"]
+        asunto = entry.get("asunto") or f"Clientes nuevos en {entry.get('ciudad', 'tu ciudad')} — sin publicidad"
+        ok, message_id = send_followup_email(email, entry.get("nombre", ""), entry.get("ciudad", ""), numero_toque, asunto)
+        if not ok:
+            print(f"  ❌ [toque{numero_toque}] {email} — error Brevo")
+            continue
+        entry[f"toque{numero_toque}_fecha"] = hoy.strftime("%Y-%m-%d")
+        estado["seguimientos"] += 1
+        estado["enviados"] += 1
+        print(f"  ✅ [toque{numero_toque}] {email}")
+
+
+# ══════════════════════════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════════════════════════
 def main():
     dia = datetime.now().timetuple().tm_yday
     ciudades_orden = get_ciudades_orden(dia)
 
-    sent    = load_sent()
-    crm     = load_crm()
-    crm_ids = {e["email"] for e in crm}
-    print(f"[prospector] {len(sent)} emails ya enviados anteriormente")
+    sent        = load_sent()
+    crm         = load_crm()
+    crm_ids     = {e["email"] for e in crm}
+    suppression = load_suppression()
+    print(f"[prospector] {len(sent)} emails ya enviados anteriormente | {len(suppression)} en supresión")
 
-    max_per_run = get_max_per_run()
-    brevo_remaining = get_brevo_remaining_today()
-    if brevo_remaining < max_per_run:
-        print(f"[prospector] Cupo compartido de Brevo limita a {brevo_remaining} (objetivo de rampa era {max_per_run})")
-        max_per_run = brevo_remaining
-    print(f"[prospector] Objetivo de hoy: {max_per_run} emails (rampa/override, ajustado por cupo compartido de Brevo)")
+    reporte = _get_brevo_report_today()
+    disparado, motivo_kill = kill_switch_triggered(reporte)
+    if disparado:
+        print(f"[prospector] 🚨 KILL-SWITCH activado antes de enviar nada: {motivo_kill}")
+        requests.post(
+            "https://api.brevo.com/v3/smtp/email",
+            headers={"api-key": BREVO_API_KEY, "Content-Type": "application/json"},
+            json={
+                "sender":      {"name": SENDER_NAME, "email": "hola@leadforge.es"},
+                "replyTo":     {"email": MY_EMAIL},
+                "to":          [{"email": MY_EMAIL}],
+                "subject":     "🚨 [Prospector] Kill-switch activado — 0 envíos hoy",
+                "htmlContent": f"<p>El prospector no ha mandado nada hoy porque ya se había disparado el kill-switch: <b>{motivo_kill}</b>.</p><p>Revisa rebotes/quejas en Brevo antes del próximo run.</p>",
+            },
+            timeout=10,
+        )
+        return
+
+    nuevos_ramp     = get_max_per_run()
+    brevo_remaining = get_brevo_remaining_today(reporte)
+    print(f"[prospector] Cupo restante hoy en Brevo: {brevo_remaining} | objetivo de leads nuevos (rampa/override): {nuevos_ramp} | tope de seguimientos: {FOLLOWUP_DAILY_CAP}")
+
+    # Los seguimientos van primero — son la palanca de mayor impacto/menor
+    # esfuerzo del plan (2026-07-14): reactivar ~650 contactos ya
+    # verificados pesa más que perseguir leads nuevos en un pool agotado.
+    seguimientos_tope = min(FOLLOWUP_DAILY_CAP, brevo_remaining)
+    nuevos_max         = 0  # se calcula después de saber cuánto gastaron los seguimientos
+
+    estado = {
+        "enviados": 0, "rechazados_dns": 0, "emails_reales": 0,
+        "nuevos": 0, "nuevos_max": 0, "seguimientos": 0,
+        "europages_candidatos": 0,
+    }
+
+    procesar_seguimientos(crm, suppression, estado, seguimientos_tope)
+    save_sent(sent)
+    save_crm(crm)
+    print(f"[prospector] Seguimientos enviados: {estado['seguimientos']}/{seguimientos_tope}")
+
+    # Re-chequeo del kill-switch tras los seguimientos, antes de gastar
+    # tiempo cosechando leads nuevos — Brevo tarda en reportar rebotes, así
+    # que esto es una red de seguridad adicional, no la única.
+    if estado["seguimientos"] >= 20:
+        reporte2 = _get_brevo_report_today()
+        disparado2, motivo2 = kill_switch_triggered(reporte2)
+        if disparado2:
+            print(f"[prospector] 🚨 KILL-SWITCH activado tras seguimientos: {motivo2} — no se cosechan leads nuevos hoy")
+            nuevos_max = 0
+        else:
+            nuevos_max = max(0, min(nuevos_ramp, brevo_remaining - estado["seguimientos"]))
+    else:
+        nuevos_max = max(0, min(nuevos_ramp, brevo_remaining - estado["seguimientos"]))
+
+    estado["nuevos_max"] = nuevos_max
+    print(f"[prospector] Objetivo de leads nuevos hoy: {nuevos_max}")
 
     sent_domains = {e.split("@")[-1] for e in sent}
 
@@ -948,81 +1245,85 @@ def main():
     # manda sobre la marcha — para en cuanto llega al objetivo del día, pero
     # si una ciudad no da suficientes candidatos sigue probando con la
     # siguiente en vez de rendirse, hasta agotar las 20 si hace falta.
-    estado = {"enviados": 0, "rechazados_dns": 0, "emails_reales": 0, "max_per_run": max_per_run, "europages_candidatos": 0}
     seen_domains    = set()
     ciudades_usadas = []
 
     try:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=LEAD_WORKERS) as executor:
+        if nuevos_max > 0:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=LEAD_WORKERS) as executor:
 
-            def procesar_lote(leads_lote):
-                # Dedup por dominio en serie antes de paralelizar — así dos
-                # leads del mismo dominio nunca se procesan a la vez.
-                pendientes = []
-                for lead in leads_lote:
-                    domain = lead["domain"]
-                    if domain in seen_domains or domain in sent_domains:
-                        continue
-                    seen_domains.add(domain)
-                    pendientes.append(lead)
+                def procesar_lote(leads_lote):
+                    # Dedup por dominio en serie antes de paralelizar — así dos
+                    # leads del mismo dominio nunca se procesan a la vez.
+                    pendientes = []
+                    for lead in leads_lote:
+                        domain = lead["domain"]
+                        if domain in seen_domains or domain in sent_domains:
+                            continue
+                        seen_domains.add(domain)
+                        pendientes.append(lead)
 
-                for i in range(0, len(pendientes), BATCH_SIZE):
-                    if estado["enviados"] >= max_per_run:
+                    for i in range(0, len(pendientes), BATCH_SIZE):
+                        if estado["nuevos"] >= nuevos_max:
+                            break
+                        lote = pendientes[i:i + BATCH_SIZE]
+                        futures = [
+                            executor.submit(procesar_lead, lead, dia, sent, sent_domains, crm, crm_ids, suppression, estado)
+                            for lead in lote
+                        ]
+                        concurrent.futures.wait(futures)
+
+                # Europages es una fuente nacional (no por ciudad, a diferencia
+                # de OSM) — se consulta una sola vez por oficio, antes del bucle
+                # de ciudades, no 20 veces.
+                if estado["nuevos"] < nuevos_max:
+                    leads_nacionales = []
+                    for target in TARGETS:
+                        print(f"[prospector] Buscando en Europages: {target} (nacional)")
+                        leads_nacionales.extend(buscar_europages(target))
+                    estado["europages_candidatos"] = len(leads_nacionales)
+                    procesar_lote(leads_nacionales)
+
+                for ciudad in ciudades_orden:
+                    if estado["nuevos"] >= nuevos_max:
                         break
-                    lote = pendientes[i:i + BATCH_SIZE]
-                    futures = [
-                        executor.submit(procesar_lead, lead, dia, sent, sent_domains, crm, crm_ids, estado)
-                        for lead in lote
-                    ]
-                    concurrent.futures.wait(futures)
+                    ciudades_usadas.append(ciudad)
 
-            # Europages es una fuente nacional (no por ciudad, a diferencia
-            # de OSM) — se consulta una sola vez por oficio, antes del bucle
-            # de ciudades, no 20 veces.
-            if estado["enviados"] < max_per_run:
-                leads_nacionales = []
-                for target in TARGETS:
-                    print(f"[prospector] Buscando en Europages: {target} (nacional)")
-                    leads_nacionales.extend(buscar_europages(target))
-                estado["europages_candidatos"] = len(leads_nacionales)
-                procesar_lote(leads_nacionales)
+                    leads_ciudad = []
+                    for target in TARGETS:
+                        print(f"[prospector] Buscando: {target} en {ciudad}")
+                        leads_ciudad.extend(search_osm(target, ciudad))
+                        time.sleep(1)
 
-            for ciudad in ciudades_orden:
-                if estado["enviados"] >= max_per_run:
-                    break
-                ciudades_usadas.append(ciudad)
-
-                leads_ciudad = []
-                for target in TARGETS:
-                    print(f"[prospector] Buscando: {target} en {ciudad}")
-                    leads_ciudad.extend(search_osm(target, ciudad))
-                    time.sleep(1)
-
-                procesar_lote(leads_ciudad)
+                    procesar_lote(leads_ciudad)
     finally:
         save_sent(sent)
         save_crm(crm)
 
-    enviados       = estado["enviados"]
-    rechazados_dns = estado["rechazados_dns"]
-    emails_reales  = estado["emails_reales"]
-    europages_cand = estado["europages_candidatos"]
+    enviados        = estado["enviados"]
+    rechazados_dns  = estado["rechazados_dns"]
+    emails_reales   = estado["emails_reales"]
+    europages_cand  = estado["europages_candidatos"]
+    nuevos_enviados = estado["nuevos"]
+    seguimientos_enviados = estado["seguimientos"]
 
-    print(f"\n[prospector] Fin — {enviados} enviados | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)} | Europages: {europages_cand} candidatos")
+    print(f"\n[prospector] Fin — {enviados} enviados ({nuevos_enviados} nuevos + {seguimientos_enviados} seguimientos) | {emails_reales} emails reales | {rechazados_dns} descartados por DNS | ciudades usadas: {len(ciudades_usadas)}/{len(ciudades_orden)} | Europages: {europages_cand} candidatos")
 
-    ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_usadas)
-    objetivo_cumplido = enviados >= max_per_run
-    aviso_corto = "" if objetivo_cumplido else "<p style='color:#b45309'>⚠️ No se llegó al objetivo — se agotaron las 20 ciudades sin encontrar más candidatos válidos.</p>"
+    ciudad_str = ", ".join(c.split(",")[0] for c in ciudades_usadas) or "—"
+    objetivo_cumplido = nuevos_enviados >= nuevos_max
+    aviso_corto = "" if objetivo_cumplido or nuevos_max == 0 else "<p style='color:#b45309'>⚠️ No se llegó al objetivo de nuevos — se agotaron las ciudades/fuentes sin encontrar más candidatos válidos.</p>"
     resumen_html = f"""
-    <p>Hoy el prospector buscó en <b>{ciudad_str}</b> ({len(ciudades_usadas)} de {len(ciudades_orden)} ciudades), más Europages a nivel nacional.</p>
+    <p>Hoy el prospector mandó <b>{seguimientos_enviados} seguimientos</b> (toque 2/3) y buscó leads nuevos en <b>{ciudad_str}</b> ({len(ciudades_usadas)} de {len(ciudades_orden)} ciudades), más Europages a nivel nacional.</p>
     {aviso_corto}
     <ul>
-      <li>🎯 Objetivo del día (rampa/override): <b>{max_per_run}</b></li>
-      <li>✅ Enviados: <b>{enviados}</b></li>
+      <li>✅ Enviados totales: <b>{enviados}</b></li>
+      <li>🔁 Seguimientos (toque 2/3): <b>{seguimientos_enviados}</b> / tope {seguimientos_tope}</li>
+      <li>🆕 Leads nuevos: <b>{nuevos_enviados}</b> / objetivo {nuevos_max}</li>
       <li>📧 Emails reales encontrados en web: <b>{emails_reales}</b></li>
       <li>⛔ Descartados por DNS/SMTP: <b>{rechazados_dns}</b></li>
       <li>📇 Candidatos de Europages (con contacto real): <b>{europages_cand}</b></li>
       <li>📬 Total acumulado contactados: <b>{len(sent)}</b></li>
+      <li>🚫 En lista de supresión: <b>{len(suppression)}</b></li>
     </ul>
     """
     requests.post(
@@ -1032,7 +1333,7 @@ def main():
             "sender":      {"name": SENDER_NAME, "email": "hola@leadforge.es"},
             "replyTo":     {"email": MY_EMAIL},
             "to":          [{"email": MY_EMAIL}],
-            "subject":     f"[Prospector] {enviados} emails enviados — {ciudad_str}",
+            "subject":     f"[Prospector] {enviados} emails ({nuevos_enviados} nuevos + {seguimientos_enviados} seguimientos)",
             "htmlContent": resumen_html,
         },
         timeout=10,

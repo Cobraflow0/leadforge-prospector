@@ -3964,7 +3964,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080928.41934002483@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "info@clinicadentalb.com",
@@ -4125,7 +4126,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080931.92954470337@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "grupoarcre@outlook.com",
@@ -4136,7 +4138,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080931.56244873500@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "info@clinicadentalcarlosrodriguez.com",
@@ -4157,7 +4160,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080932.63525544429@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "info@clinicadentalar.es",
@@ -4198,7 +4202,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080932.32814677731@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "centrojavaloyes@gmail.com",
@@ -4239,7 +4244,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080932.43786525411@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "recepcion@clinicaraizarequena.es",
@@ -4340,7 +4346,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080934.92916599846@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "ventas@castillobalduz.es",
@@ -4381,7 +4388,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080934.83810209261@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "info@espaziozg.com",
@@ -4562,7 +4570,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080936.91183820082@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "fisioholistik@gmail.com",
@@ -4633,7 +4642,8 @@
     "fecha": "2026-07-08",
     "messageId": "<202607080938.55871846341@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-15"
+    "toque2_fecha": "2026-07-15",
+    "toque3_fecha": "2026-07-17"
   },
   {
     "email": "info@meta360.es",
@@ -5050,7 +5060,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131004.13136333675@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@manitascordoba.com",
@@ -5060,7 +5071,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131008.44113179368@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@electricidadtifema.com",
@@ -5070,7 +5082,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131012.32257032269@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@instalaciones-martinez.com",
@@ -5080,7 +5093,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131014.84932263764@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@repuestoscalefaccion.com",
@@ -5090,7 +5104,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131655.30728214021@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@intergas.es",
@@ -5100,7 +5115,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131655.94239866678@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@costachamartin.com",
@@ -5110,7 +5126,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131655.10062393209@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info.andalucia@ofisat.net",
@@ -5120,7 +5137,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131703.94410282697@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "anfecantabria@yahoo.es",
@@ -5130,7 +5148,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131709.51330761810@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "barcenasantander@hotmail.com",
@@ -5140,7 +5159,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131709.83781152105@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@autossardinero.com",
@@ -5150,7 +5170,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131709.15177867517@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "organizacion@electroclisa.es",
@@ -5160,7 +5181,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131710.69251227768@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "burgos@ofisat.net",
@@ -5170,7 +5192,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131713.47499667769@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@salvadorescoda.com",
@@ -5180,7 +5203,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131713.18605056927@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@segatur.com",
@@ -5190,7 +5214,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131715.82244873346@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "climelectricvalencia@gmail.com",
@@ -5200,7 +5225,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131717.51840541446@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@venter.es",
@@ -5210,7 +5236,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131720.10028996462@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "adriel674@hotmail.com",
@@ -5220,7 +5247,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.75891731085@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "2025lacabanha@gmail.com",
@@ -5230,7 +5258,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.95251732423@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "certifix@certifix.es",
@@ -5240,7 +5269,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.88147564209@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "comercial@pralingenieria.com",
@@ -5250,7 +5280,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.67494088834@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "contacto@claridad.tech",
@@ -5260,7 +5291,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.76444880566@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "bertnavalon@gmail.com",
@@ -5270,7 +5302,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.28263328978@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "reformas@reformas-benidorm.eu",
@@ -5280,7 +5313,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.62786773901@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "hola@homologacion-vehiculos.com",
@@ -5290,7 +5324,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.77633193240@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "integralesreformas.es@gmail.com",
@@ -5300,7 +5335,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.19859470612@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "obras@simfer.es",
@@ -5310,7 +5346,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.74220359578@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "irureform@irureformasmalaga.es",
@@ -5320,7 +5357,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.61057828293@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@renuevahogar.com",
@@ -5330,7 +5368,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.45784412954@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@mokarainteriorismo.com",
@@ -5340,7 +5379,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.98422599715@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@babilon.es",
@@ -5350,7 +5390,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.90825890814@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "arpajoaquin@gmail.com",
@@ -5360,7 +5401,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.67929331096@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@rexconstrucciones.com",
@@ -5370,7 +5412,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.88538172814@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reformasmadridintegrales.es",
@@ -5380,7 +5423,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.57501732165@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@360reforma.com",
@@ -5390,7 +5434,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.23855319270@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reformasintegrales.pro",
@@ -5400,7 +5445,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.23876740237@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reformasfecit.com",
@@ -5410,7 +5456,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.49067971183@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reformasmikal.com",
@@ -5420,7 +5467,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.72878878535@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reformasbilboka.com",
@@ -5430,7 +5478,8 @@
     "sector": "empresas de reformas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.17716884472@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "daysalimp@gmail.com",
@@ -5440,7 +5489,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.82073161101@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "infon@canaletas.es",
@@ -5450,7 +5500,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.59308408895@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "panaderialaparra@gmail.com",
@@ -5460,7 +5511,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.57987998572@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@repuestoselsur.com",
@@ -5470,7 +5522,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.85980280117@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@msemultiservices.com",
@@ -5480,7 +5533,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.23244454152@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "comercial@hods.eu",
@@ -5490,7 +5544,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.92079755722@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@martinmena.es",
@@ -5500,7 +5555,8 @@
     "sector": "fontaneros",
     "fecha": "2026-07-13",
     "messageId": "<202607131946.29055631646@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@electricidadballesteros.com",
@@ -5510,7 +5566,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.47496036699@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "carconga90confecciones@hotmail.com",
@@ -5520,7 +5577,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.12829084566@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@magnovent.eu",
@@ -5530,7 +5588,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.65040312258@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "comercial@dyserco.es",
@@ -5540,7 +5599,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.11673059871@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "linguavox@linguavox.net",
@@ -5550,7 +5610,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.38028917425@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@keysman.es",
@@ -5560,7 +5621,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.63789214138@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerosbarcelona24horas.barcelona",
@@ -5570,7 +5632,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.36367920288@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "urgencia@cerrajerovalenciaopentot.com",
@@ -5580,7 +5643,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.68174503561@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerosoviedo.net",
@@ -5590,7 +5654,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.36692055338@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@pavanaservices.com",
@@ -5600,7 +5665,8 @@
     "sector": "electricistas",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.42653798657@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@hortaguinardo.es",
@@ -5610,7 +5676,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.41510539543@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerospoblenou.es",
@@ -5620,7 +5687,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.32781112674@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@pany10pobles.es",
@@ -5630,7 +5698,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.81787094010@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerosesplugues.com",
@@ -5640,7 +5709,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.35555946166@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerocastellon24horas.com",
@@ -5650,7 +5720,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.27013193869@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "gonagu26@hotmail.com",
@@ -5660,7 +5731,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.37547378678@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "serrallersaragoeixample@gmail.com",
@@ -5670,7 +5742,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.90740778588@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajeroslas24h.es",
@@ -5680,7 +5753,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.94616295372@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@ambienteexclusivo.es",
@@ -5690,7 +5764,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.35253256984@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@pintorbadalonamrc.com",
@@ -5700,7 +5775,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.69627885000@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@cerrajerosblindanex.es",
@@ -5710,7 +5786,8 @@
     "sector": "cerrajeros",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.17069518043@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "flomarsar@yahoo.es",
@@ -5720,7 +5797,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.91124854208@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "garvelsc@gmail.com",
@@ -5730,7 +5808,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.44034484539@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "soporte@webador.es",
@@ -5740,7 +5819,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.83843902464@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "todoimpermeables1@gmail.com",
@@ -5750,7 +5830,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.88698621694@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "vivelo.juan@gmail.com",
@@ -5760,7 +5841,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.57272678673@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@lupintoresbarcelona.com",
@@ -5770,7 +5852,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.49615638037@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "hello@artwstudio.com",
@@ -5780,7 +5863,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.75018476979@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@julunggul.com",
@@ -5790,7 +5874,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.71416870027@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@pintoreseconomicosbarcelona.es",
@@ -5800,7 +5885,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.29376647817@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@microcementec.com",
@@ -5810,7 +5896,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.43320281959@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "bdpintores@activemail.es",
@@ -5820,7 +5907,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.55302344299@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "prodecor@gmx.es",
@@ -5830,7 +5918,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.55761782966@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "clientes@joyeriamargamira.com",
@@ -5840,7 +5929,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.64449467149@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "pintores_boadilla@yahoo.es",
@@ -5850,7 +5940,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.86491585898@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "margoeder@gmail.com",
@@ -5860,7 +5951,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.81878984009@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "serviciovaciados@gmail.com",
@@ -5870,7 +5962,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.18229024096@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "comercial@avalumitran.com",
@@ -5880,7 +5973,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131947.28023187679@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "unistroymarbella@gmail.com",
@@ -5890,7 +5984,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.34223242713@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "atencionalcliente@pinturaslanieve.com",
@@ -5900,7 +5995,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.87245739225@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "ventas@pologrup.com",
@@ -5910,7 +6006,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.45713600752@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@pintoresvalencia.eu",
@@ -5920,7 +6017,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.45331165205@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "soy@soyandsoy.com",
@@ -5930,7 +6028,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.16318933985@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "decolor@decolor.com",
@@ -5940,7 +6039,8 @@
     "sector": "pintores",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.78793560595@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@fontaneriaantoniovarela.es",
@@ -5950,7 +6050,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.12544317529@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "contacto@vichomeshop.com",
@@ -5960,7 +6061,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.10586454019@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "madefoncooperativa@gmail.com",
@@ -5970,7 +6072,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.38843131721@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "jvs@solteco.es",
@@ -5980,7 +6083,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.66980542222@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "contabilidad@maderasaguirre.com",
@@ -5990,7 +6094,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.38151886349@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@ferrerdesign.es",
@@ -6000,7 +6105,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.73722721011@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "hola@miempresa.es",
@@ -6010,7 +6116,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.45238829782@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@blackgarlicking.com",
@@ -6020,7 +6127,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.14082296532@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "hola@littlebox-shop.com",
@@ -6030,7 +6138,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.48535549095@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@vitrum.es",
@@ -6040,7 +6149,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.83273082423@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@puraire.es",
@@ -6050,7 +6160,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.22983192068@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "ingenieria@otaycoindustrial.com",
@@ -6060,7 +6171,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.31224065686@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@monigots.com",
@@ -6070,7 +6182,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.47117616199@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@magclima.com",
@@ -6080,7 +6193,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.39502086145@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@climart-valencia.com",
@@ -6090,7 +6204,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.79452603638@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "mecalia@mecalia.com",
@@ -6100,7 +6215,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.68366693650@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@evoconfort.com",
@@ -6110,7 +6226,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.81692530161@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "serviciotecnico@geointegral.es",
@@ -6120,7 +6237,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.40108678478@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "metmann@metmann.com",
@@ -6130,7 +6248,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.44242001997@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@reparacionaireacondicionadozaragoza.es",
@@ -6140,7 +6259,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.43273537402@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "tecnico@helioclima.es",
@@ -6150,7 +6270,8 @@
     "sector": "empresas de climatización",
     "fecha": "2026-07-13",
     "messageId": "<202607131948.78622349940@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "s.mendozacarrasco@gmail.com",
@@ -6160,7 +6281,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131951.44769414239@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "beatriz@okikotalents.com",
@@ -6170,7 +6292,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131951.65144405983@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@ebanisteriajoseprieto.com",
@@ -6180,7 +6303,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131951.45813498337@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "vidrieroartistico@gmail.com",
@@ -6190,7 +6314,8 @@
     "sector": "cristaleros",
     "fecha": "2026-07-13",
     "messageId": "<202607131953.25375088430@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "m.torrero1991@gmail.com",
@@ -6200,7 +6325,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131956.32747464359@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "latermitazaragoza@gmail.com",
@@ -6210,7 +6336,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131956.90902082638@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@ebanisterialasierra.com",
@@ -6220,7 +6347,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607131956.67447393443@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "info@armariosgaral.com",
@@ -6230,7 +6358,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607132012.83116140715@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "estudio-iterron@santos.es",
@@ -6240,7 +6369,8 @@
     "sector": "carpinteros",
     "fecha": "2026-07-13",
     "messageId": "<202607132012.97776796898@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-17"
   },
   {
     "email": "homevac@gmail.com",
@@ -6859,6 +6989,39 @@
     "fecha": "2026-07-16",
     "asunto": "YoReparo, hay contactos en Valencia esperándote",
     "messageId": "<202607160941.96504331626@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@apalconstrucciones.com",
+    "nombre": "Apal Construcciones",
+    "web": "https://apalconstrucciones.com/",
+    "ciudad": "Las Rozas de Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-17",
+    "asunto": "Cómo conseguir clientes en Las Rozas de Madrid sin llamadas en frío",
+    "messageId": "<202607170903.78984810210@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "pintoresmadrid.com@gmail.com",
+    "nombre": "PINTORES MARIO MADRID",
+    "web": "http://www.pinto-resmadrid.com",
+    "ciudad": "Madrid",
+    "sector": "pintores",
+    "fecha": "2026-07-17",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202607170904.89547931822@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "telepedido@juno.es",
+    "nombre": "PINTURAS JUNO",
+    "web": "https://www.juno.es/",
+    "ciudad": "Erandio (Bizkaia)",
+    "sector": "pintores",
+    "fecha": "2026-07-17",
+    "asunto": "Cómo conseguir clientes en Erandio (Bizkaia) sin llamadas en frío",
+    "messageId": "<202607170904.55163178649@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

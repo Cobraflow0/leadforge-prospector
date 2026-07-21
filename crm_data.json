@@ -5026,7 +5026,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120856.27914052594@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "info@pintoresmadrid.online",
@@ -5037,7 +5038,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120856.53030154550@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "tienda@santaclotilde.es",
@@ -5048,7 +5050,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120901.56942378490@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "palomera@palomeraobras.com",
@@ -5059,7 +5062,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120904.59911651260@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "info@voltia.es",
@@ -5070,7 +5074,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120906.74732453752@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "info@elvan.es",
@@ -5081,7 +5086,8 @@
     "fecha": "2026-07-12",
     "messageId": "<202607120907.36891239864@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-16"
+    "toque2_fecha": "2026-07-16",
+    "toque3_fecha": "2026-07-21"
   },
   {
     "email": "info@robertocerrajero.es",
@@ -7092,7 +7098,8 @@
     "fecha": "2026-07-17",
     "asunto": "Cómo conseguir clientes en Las Rozas de Madrid sin llamadas en frío",
     "messageId": "<202607170903.78984810210@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-21"
   },
   {
     "email": "pintoresmadrid.com@gmail.com",
@@ -7103,7 +7110,8 @@
     "fecha": "2026-07-17",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202607170904.89547931822@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-21"
   },
   {
     "email": "telepedido@juno.es",
@@ -7114,7 +7122,8 @@
     "fecha": "2026-07-17",
     "asunto": "Cómo conseguir clientes en Erandio (Bizkaia) sin llamadas en frío",
     "messageId": "<202607170904.55163178649@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-21"
   },
   {
     "email": "info@microce.es",

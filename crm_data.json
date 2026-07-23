@@ -6658,7 +6658,8 @@
     "fecha": "2026-07-13",
     "messageId": "<202607132029.22985006334@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@isabellepradas.com",
@@ -6669,7 +6670,8 @@
     "fecha": "2026-07-13",
     "messageId": "<202607132034.21355900803@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@nervion.net",
@@ -6680,7 +6682,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140857.66872515289@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@adnconstruccion.es",
@@ -6691,7 +6694,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140857.76832083637@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@brimervallesconstruccion.com",
@@ -6702,7 +6706,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140857.68804660936@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@jmrreformas.com",
@@ -6713,7 +6718,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.23211484946@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@serviciossosa.com",
@@ -6724,7 +6730,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.70759962568@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@progesolcanarias.com",
@@ -6735,7 +6742,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.26036630763@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@hiblab.com",
@@ -6746,7 +6754,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.80749734403@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@25grados.com",
@@ -6757,7 +6766,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.36176458105@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "shop@promoshark.eu",
@@ -6768,7 +6778,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.21575649021@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@alvier.es",
@@ -6779,7 +6790,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.54174439845@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "hola@alicanteelectricista.com",
@@ -6790,7 +6802,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.38740116019@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "boro@boro.es",
@@ -6801,7 +6814,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.91240087663@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@ormeinstalaciones.com",
@@ -6812,7 +6826,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.56924734084@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@induplast.es",
@@ -6823,7 +6838,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.30305449461@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "cycling@relber.com",
@@ -6834,7 +6850,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.92677057674@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "solicitud@llavexpert.com",
@@ -6845,7 +6862,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.77181430756@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "marcoscerrajeros.es@gmail.com",
@@ -6856,7 +6874,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.18436065386@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@daevi.net",
@@ -6867,7 +6886,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.52814360872@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "mercapinturas@mercapinturas.es",
@@ -6878,7 +6898,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.10766108774@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@aga.es",
@@ -6889,7 +6910,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.58433481697@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "email@pintserceba.com",
@@ -6900,7 +6922,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.84362458453@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "judoma@judoma.com",
@@ -6911,7 +6934,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.89789044130@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "miguel@representacionesangellopez.com",
@@ -6922,7 +6946,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.66106571372@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "ecemis@ecemis.es",
@@ -6933,7 +6958,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140858.75344373169@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "alberto@medva.es",
@@ -6944,7 +6970,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.24263441711@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@venprodin.com",
@@ -6955,7 +6982,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.32587424679@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "comercial@casapastor.es",
@@ -6966,7 +6994,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.98988845077@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "productos@codina.es",
@@ -6977,7 +7006,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.59645121302@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@marmorama.es",
@@ -6988,7 +7018,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.57871184106@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@barnacork.com",
@@ -6999,7 +7030,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.87413140965@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "ecotec@ecotecinstaladors.com",
@@ -7010,7 +7042,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.44793005225@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@fourclima-gasnatural.com",
@@ -7021,7 +7054,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.52373955139@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "charmex@charmex.info",
@@ -7032,7 +7066,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.65204218371@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "airnou@airnou.com",
@@ -7043,7 +7078,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140859.16644641962@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@gaselecsl.es",
@@ -7054,7 +7090,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140904.10530320949@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "humiclima@humiclima.com",
@@ -7065,7 +7102,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140908.68677675266@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "infrica@infrica.com",
@@ -7076,7 +7114,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140924.42607305105@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@saunierduval.es",
@@ -7087,7 +7126,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140926.56019228904@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "remica@remica.es",
@@ -7098,7 +7138,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140926.23141731631@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "info@proinco.es",
@@ -7109,7 +7150,8 @@
     "fecha": "2026-07-14",
     "messageId": "<202607140945.61125507322@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-18"
+    "toque2_fecha": "2026-07-18",
+    "toque3_fecha": "2026-07-23"
   },
   {
     "email": "multiserviciosgalicia2018@gmail.com",
@@ -7264,7 +7306,8 @@
     "fecha": "2026-07-18",
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202607180830.92339723218@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "pavitecnic@pavitecnic.com",
@@ -7275,7 +7318,8 @@
     "fecha": "2026-07-18",
     "asunto": "20 empresas en Idiazabal que podrían contratarte",
     "messageId": "<202607180830.33914649741@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@algarix.com",
@@ -7286,7 +7330,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en Elche — sin publicidad",
     "messageId": "<202607190901.78730490123@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "comercial@euroquimica.com",
@@ -7297,7 +7342,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en DOSRIUS — sin publicidad",
     "messageId": "<202607190901.23490813623@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@instalacioneselectron.net",
@@ -7308,7 +7354,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202607190901.20695516579@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@elcarpinterovalencia.es",
@@ -7319,7 +7366,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en València — sin publicidad",
     "messageId": "<202607190901.58687540429@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@vidriosanjumarpa.com",
@@ -7330,7 +7378,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en Mancha Real-Jaén — sin publicidad",
     "messageId": "<202607190901.42508583758@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@estudioiterron.es",
@@ -7341,7 +7390,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202607190910.63124734659@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "hola@cefiba.com",
@@ -7352,7 +7402,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en Valencia — sin publicidad",
     "messageId": "<202607190928.33407790883@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@joseluiscamacho.es",
@@ -7363,7 +7414,8 @@
     "fecha": "2026-07-19",
     "asunto": "Clientes nuevos en Málaga — sin publicidad",
     "messageId": "<202607190935.27040643874@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-23"
   },
   {
     "email": "info@fontanero-granada.es",
@@ -7473,6 +7525,17 @@
     "fecha": "2026-07-20",
     "asunto": "Cerrajería, hay contactos en Málaga esperándote",
     "messageId": "<202607201026.87997537675@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajerooviedo24horas.com",
+    "nombre": "Cerrajeros Oviedo 24H",
+    "web": "https://cerrajerooviedo24horas.com/",
+    "ciudad": "Oviedo",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-23",
+    "asunto": "Clientes nuevos en Oviedo — sin publicidad",
+    "messageId": "<202607230917.98245223509@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

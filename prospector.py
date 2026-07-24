@@ -688,11 +688,26 @@ def get_ciudades_orden(dia):
 # ══════════════════════════════════════════════════════════
 # PERSISTENCIA
 # ══════════════════════════════════════════════════════════
+GMAIL_BLAST_SENT_FILE = "../gmail-blast/sent_log.csv"
+
+
 def load_sent():
+    sent = set()
     if os.path.exists(SENT_FILE):
         with open(SENT_FILE) as f:
-            return set(json.load(f))
-    return set()
+            sent |= set(json.load(f))
+    # No volver a contactar a quien ya recibio un email desde el Gmail
+    # personal (gmail-blast/) — remitente distinto, pero es el mismo
+    # destinatario, y contarselo dos veces desde dos sitios distintos
+    # es justo el problema que se detecto el 2026-07-24.
+    if os.path.exists(GMAIL_BLAST_SENT_FILE):
+        with open(GMAIL_BLAST_SENT_FILE, encoding="utf-8") as f:
+            next(f, None)
+            for line in f:
+                email = line.split(",", 1)[0].strip().lower()
+                if email:
+                    sent.add(email)
+    return sent
 
 
 def save_sent(sent):

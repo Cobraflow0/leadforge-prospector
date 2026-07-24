@@ -840,6 +840,8 @@ def verify_email(email):
 # ══════════════════════════════════════════════════════════
 def build_email(nombre_empresa, ciudad, sector_label, lead_email="", target=""):
     ciudad_corta = ciudad.split(",")[0]
+    nombre_corto = nombre_empresa.split()[0] if nombre_empresa else ""
+    saludo = f"Hola {nombre_corto}," if nombre_corto else "Hola,"
     sector_id, cat_id = TARGET_SECTOR_CAT.get(target, DEFAULT_SECTOR_CAT)
     # Tracking de conversión — sin esto no había forma de saber si el
     # prospector convierte en algo real (clics, registros), solo si Brevo
@@ -849,7 +851,7 @@ def build_email(nombre_empresa, ciudad, sector_label, lead_email="", target=""):
         f"?demo=true&sector={sector_id}&cat={cat_id}&ciudad={quote_plus(ciudad_corta)}"
         f"&utm_source=prospector&lead={quote_plus(lead_email)}"
     )
-    return f"""Hola,
+    return f"""{saludo}
 
 Genero automáticamente listas de clientes potenciales para {sector_label} en {ciudad_corta} — nombre, email, teléfono y web, listas en 30 segundos, sin buscarlos uno a uno.
 

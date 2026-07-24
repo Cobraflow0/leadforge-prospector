@@ -237,6 +237,22 @@ TARGET_LABEL = {
     "climatización":             "empresas de climatización",
 }
 
+# Mapea cada target del prospector al (sector, categoria) que usa app.html
+# (ver SECTORES en leadforge-app/app.html) — esto es lo que permite que el
+# link de demo del email cargue leads ya filtrados por el oficio real del
+# lead, en vez de un formulario vacío que hay que rellenar a mano.
+TARGET_SECTOR_CAT = {
+    "empresa de reformas": ("construccion", "reformistas"),
+    "fontanería":          ("servicios_hogar", "fontaneria"),
+    "electricista":        ("servicios_hogar", "electricidad"),
+    "cerrajería":          ("servicios_hogar", "cerrajeria"),
+    "pintor profesional":  ("servicios_hogar", "pintura"),
+    "carpintería":         ("construccion", "reformistas"),
+    "cristalería":         ("construccion", "reformistas"),
+    "climatización":       ("energia", "climatizacion"),
+}
+DEFAULT_SECTOR_CAT = ("construccion", "reformistas")
+
 # ══════════════════════════════════════════════════════════
 # OPENSTREETMAP (Overpass API) — reemplaza a Google Maps
 # ══════════════════════════════════════════════════════════
@@ -813,98 +829,47 @@ def verify_email(email):
 
 
 # ══════════════════════════════════════════════════════════
-# EMAIL HTML
+# EMAIL — texto plano, sin diseño de marketing. Cambio 2026-07-24: el HTML
+# con cabecera/gradiente/boton se leia como "campana" antes de que nadie
+# leyera una palabra. Un email que parece escrito a mano por una persona
+# genera mas confianza en frio. El link de demo ahora lleva sector+categoria+
+# ciudad reales del lead (via TARGET_SECTOR_CAT) para que app.html cargue
+# los leads ya filtrados, en vez de un formulario vacio — antes el email
+# decia "aqui tienes tus leads" y la persona llegaba a una pantalla en
+# blanco que tenia que rellenar ella misma.
 # ══════════════════════════════════════════════════════════
-def build_email(nombre_empresa, ciudad, sector_label, lead_email=""):
+def build_email(nombre_empresa, ciudad, sector_label, lead_email="", target=""):
     ciudad_corta = ciudad.split(",")[0]
+    sector_id, cat_id = TARGET_SECTOR_CAT.get(target, DEFAULT_SECTOR_CAT)
     # Tracking de conversión — sin esto no había forma de saber si el
     # prospector convierte en algo real (clics, registros), solo si Brevo
     # decía que se abrió el email.
     demo_url = (
         "https://cobraflow0.github.io/leadforge-app/app.html"
-        f"?demo=true&utm_source=prospector&lead={quote_plus(lead_email)}"
+        f"?demo=true&sector={sector_id}&cat={cat_id}&ciudad={quote_plus(ciudad_corta)}"
+        f"&utm_source=prospector&lead={quote_plus(lead_email)}"
     )
-    return f"""<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f4f6f9;font-family:'Helvetica Neue',Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f9;padding:40px 16px;">
-<tr><td align="center">
-<table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
+    return f"""Hola,
 
-  <!-- CABECERA -->
-  <tr><td style="background:linear-gradient(135deg,#0D1420,#1a2540);padding:24px 40px;">
-    <h1 style="margin:0;color:#fff;font-size:19px;font-weight:700;letter-spacing:-0.3px;">⚡ LeadForge</h1>
-    <p style="margin:4px 0 0;color:rgba(255,255,255,0.5);font-size:12px;">Generación automática de leads B2B</p>
-  </td></tr>
+Genero automáticamente listas de clientes potenciales para {sector_label} en {ciudad_corta} — nombre, email, teléfono y web, listas en 30 segundos, sin buscarlos uno a uno.
 
-  <!-- CUERPO -->
-  <tr><td style="padding:36px 40px 28px;">
+A una empresa de reformas le encontramos 1.309 leads de su sector y consiguió 3 clientes nuevos el primer día de campaña, sin llamadas en frío ni publicidad.
 
-    <p style="margin:0 0 22px;font-size:15px;color:#111827;line-height:1.7;">
-      Hola,
-    </p>
+Aquí tienes 20 leads reales de {ciudad_corta} ya cargados, gratis, sin registrarte:
+{demo_url}
 
-    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      La mayoría de empresas de reformas y construcción en <strong>{ciudad_corta}</strong>
-      dependen del boca a boca o de plataformas que se quedan con parte del margen —
-      y pierden clientes potenciales cada semana porque no tienen tiempo de buscarlos uno a uno.
-    </p>
+Planes desde 19€/mes si te sirve, sin permanencia.
 
-    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      LeadForge los encuentra automáticamente — nombre, email, teléfono y web
-      de cada empresa que podría contratarte — y los tiene listos en 30 segundos.
-    </p>
+Si no es para ti, responde a este email y no te vuelvo a escribir.
 
-    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      Si quieres verlo funcionar, aquí tienes una prueba gratuita con 20 leads reales de {ciudad_corta}:
-      <a href="{demo_url}" style="color:#0066FF;font-weight:600;">prueba LeadForge gratis</a>
-    </p>
-
-    <!-- CTA -->
-    <table cellpadding="0" cellspacing="0" style="margin:0 0 28px;">
-      <tr><td style="background:linear-gradient(135deg,#0066FF,#0052cc);border-radius:8px;box-shadow:0 4px 16px rgba(0,102,255,0.3);">
-        <a href="{demo_url}"
-           style="display:inline-block;padding:15px 36px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.2px;">
-          Ver mis leads gratis →
-        </a>
-      </td></tr>
-    </table>
-
-    <p style="margin:0 0 18px;font-size:15px;color:#374151;line-height:1.8;">
-      A una empresa de reformas (paneles de revestimiento) le conseguimos 1.309 leads cualificados
-      de su sector y 3 clientes nuevos el primer día de campaña, sin llamadas en frío ni publicidad.
-    </p>
-
-    <p style="margin:0 0 6px;font-size:14px;color:#6b7280;line-height:1.7;">
-      Planes desde <strong>19€/mes</strong>. Sin permanencia.
-    </p>
-
-    <p style="margin:24px 0 0;font-size:14px;color:#374151;line-height:1.8;">
-      Un saludo,<br>
-      <strong>Aquiles</strong><br>
-      <span style="color:#9ca3af;font-size:13px;">Fundador · LeadForge · hola@leadforge.es</span>
-    </p>
-
-  </td></tr>
-
-  <!-- PIE -->
-  <tr><td style="background:#f9fafb;padding:14px 40px;border-top:1px solid #e5e7eb;text-align:center;">
-    <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
-      ¿No es para ti? Responde a este email y no volvemos a escribirte.
-    </p>
-  </td></tr>
-
-</table>
-</td></tr>
-</table>
-</body></html>"""
+Aquiles
+LeadForge — hola@leadforge.es"""
 
 
 # ══════════════════════════════════════════════════════════
 # ENVÍO
 # ══════════════════════════════════════════════════════════
-def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
+def send_email(to_email, nombre_empresa, ciudad, sector_label, dia, target=""):
     nombre_corto = nombre_empresa.split()[0] if nombre_empresa else "equipo"
     ciudad_corta = ciudad.split(",")[0]
     subject_tpl  = SUBJECTS[dia % len(SUBJECTS)]
@@ -918,7 +883,7 @@ def send_email(to_email, nombre_empresa, ciudad, sector_label, dia):
         "replyTo":     {"email": MY_EMAIL},
         "to":          [{"email": to_email}],
         "subject":     subject,
-        "htmlContent": build_email(nombre_empresa, ciudad, sector_label, to_email),
+        "textContent": build_email(nombre_empresa, ciudad, sector_label, to_email, target),
         "tags":        ["prospector", "toque1"],
     }
     r = requests.post(
@@ -1076,8 +1041,9 @@ def procesar_lead(lead, dia, sent, sent_domains, crm, crm_ids, suppression, esta
         if email in sent or estado["nuevos"] >= estado["nuevos_max"]:
             return
 
-    sector_label = TARGET_LABEL.get(lead.get("target", ""), "empresas")
-    ok, message_id, asunto = send_email(email, nombre, ciudad, sector_label, dia)
+    target = lead.get("target", "")
+    sector_label = TARGET_LABEL.get(target, "empresas")
+    ok, message_id, asunto = send_email(email, nombre, ciudad, sector_label, dia, target)
     if not ok:
         print(f"  ❌ {email} — error Brevo")
         return

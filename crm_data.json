@@ -7163,7 +7163,8 @@
     "asunto": "Clientes nuevos en Puerto Del Son — sin publicidad",
     "messageId": "<202607150904.77678639617@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-19"
+    "toque2_fecha": "2026-07-19",
+    "toque3_fecha": "2026-07-24"
   },
   {
     "email": "globalia.ag@globalia-artesgraficas.com",
@@ -7175,7 +7176,8 @@
     "asunto": "Clientes nuevos en VILLARES DE LA REINA — sin publicidad",
     "messageId": "<202607150904.87659148247@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-19"
+    "toque2_fecha": "2026-07-19",
+    "toque3_fecha": "2026-07-24"
   },
   {
     "email": "pedidos@elcortemaderero.es",
@@ -7426,7 +7428,8 @@
     "fecha": "2026-07-20",
     "asunto": "Fontanero, hay contactos en Granada esperándote",
     "messageId": "<202607200948.24216485430@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "2025lacabanhaweb@gmail.com",
@@ -7437,7 +7440,8 @@
     "fecha": "2026-07-20",
     "asunto": "Reformas, hay contactos en Fuente Álamo de Murcia esperándote",
     "messageId": "<202607200949.31678332645@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "reformasintegraleslpa@gmail.com",
@@ -7448,7 +7452,8 @@
     "fecha": "2026-07-20",
     "asunto": "REFORMAS, hay contactos en Las Palmas esperándote",
     "messageId": "<202607200949.67891756620@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@reformassyr.es",
@@ -7459,7 +7464,8 @@
     "fecha": "2026-07-20",
     "asunto": "REFORMAS, hay contactos en Zaragoza esperándote",
     "messageId": "<202607200949.49569547355@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "admin@pintores-en-madrid.es",
@@ -7470,7 +7476,8 @@
     "fecha": "2026-07-20",
     "asunto": "PINTORES, hay contactos en Cerceda esperándote",
     "messageId": "<202607200949.11002824433@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@tecnososgalicia.com",
@@ -7481,7 +7488,8 @@
     "fecha": "2026-07-20",
     "asunto": "Tecnosos, hay contactos en A Coruña esperándote",
     "messageId": "<202607200959.68031282712@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@auto10automoviles.com",
@@ -7492,7 +7500,8 @@
     "fecha": "2026-07-20",
     "asunto": "Luzyma, hay contactos en Santander esperándote",
     "messageId": "<202607201004.23593667538@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@cerrajerianovoa.es",
@@ -7503,7 +7512,8 @@
     "fecha": "2026-07-20",
     "asunto": "Cerrajería, hay contactos en Vigo esperándote",
     "messageId": "<202607201013.53158818798@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@segatur.es",
@@ -7514,7 +7524,8 @@
     "fecha": "2026-07-20",
     "asunto": "SEGATUR, hay contactos en Vigo esperándote",
     "messageId": "<202607201014.37817607703@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "cerrajerialaestrella2014@gmail.com",
@@ -7525,7 +7536,8 @@
     "fecha": "2026-07-20",
     "asunto": "Cerrajería, hay contactos en Málaga esperándote",
     "messageId": "<202607201026.87997537675@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-24"
   },
   {
     "email": "info@cerrajerooviedo24horas.com",
@@ -7536,6 +7548,61 @@
     "fecha": "2026-07-23",
     "asunto": "Clientes nuevos en Oviedo — sin publicidad",
     "messageId": "<202607230917.98245223509@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@styloreformas.es",
+    "nombre": "GRUPO STYLO REFORMAS Y DECORACIÓN S.L.",
+    "web": "http://www.styloreformas.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-24",
+    "asunto": "GRUPO, hay contactos en Madrid esperándote",
+    "messageId": "<202607240913.11359540965@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "atrio.reformasintegrales@gmail.com",
+    "nombre": "ATRIO REFORMAS INTEGRALES",
+    "web": "http://atrioreformasmajadahonda.es/",
+    "ciudad": "Majadahonda",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-24",
+    "asunto": "ATRIO, hay contactos en Majadahonda esperándote",
+    "messageId": "<202607240913.12179982495@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasburgos.net",
+    "nombre": "REFORMASBURGOS.NET EMPRESA DE REFORMAS INTEGRALES",
+    "web": "https://reformasburgos.net",
+    "ciudad": "Burgos",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-24",
+    "asunto": "REFORMASBURGOS.NET, hay contactos en Burgos esperándote",
+    "messageId": "<202607240913.41219678193@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "masimomsm@gmail.com",
+    "nombre": "ELISEEV BROTHERS",
+    "web": "http://eliseevbrothers.com",
+    "ciudad": "Malaga",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-24",
+    "asunto": "ELISEEV, hay contactos en Malaga esperándote",
+    "messageId": "<202607240913.36020319432@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "txerrafernandez@gmail.com",
+    "nombre": "REFORMAS JR FERNÁNDEZ",
+    "web": "http://www.reformasjrfernandez.com/",
+    "ciudad": "Santurtzi",
+    "sector": "empresas de reformas",
+    "fecha": "2026-07-24",
+    "asunto": "REFORMAS, hay contactos en Santurtzi esperándote",
+    "messageId": "<202607240913.53706867476@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

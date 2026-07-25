@@ -7189,7 +7189,8 @@
     "asunto": "El, hay contactos en Madrid esperándote",
     "messageId": "<202607160907.15544348676@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "cautosl@cautosl.com",
@@ -7201,7 +7202,8 @@
     "asunto": "Calefacción, hay contactos en Valladolid esperándote",
     "messageId": "<202607160917.75592112828@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "platinodiseno@platinodiseno.com",
@@ -7213,7 +7215,8 @@
     "asunto": "Platino, hay contactos en Valladolid esperándote",
     "messageId": "<202607160917.65603148065@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "tecnososcoruna@tecnososgalicia.es",
@@ -7225,7 +7228,8 @@
     "asunto": "Tecnosos, hay contactos en A Coruña esperándote",
     "messageId": "<202607160919.57214699200@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "info@thisan.es",
@@ -7237,7 +7241,8 @@
     "asunto": "Thisan, hay contactos en Santander esperándote",
     "messageId": "<202607160924.86134548895@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "info@creativeresinseurope.com",
@@ -7249,7 +7254,8 @@
     "asunto": "Creative, hay contactos en Burgos esperándote",
     "messageId": "<202607160933.95590539644@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "info@yo-reparo.com",
@@ -7261,7 +7267,8 @@
     "asunto": "YoReparo, hay contactos en Valencia esperándote",
     "messageId": "<202607160941.96504331626@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-20"
+    "toque2_fecha": "2026-07-20",
+    "toque3_fecha": "2026-07-25"
   },
   {
     "email": "info@apalconstrucciones.com",

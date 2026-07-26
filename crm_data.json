@@ -7280,7 +7280,8 @@
     "asunto": "Cómo conseguir clientes en Las Rozas de Madrid sin llamadas en frío",
     "messageId": "<202607170903.78984810210@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-21"
+    "toque2_fecha": "2026-07-21",
+    "toque3_fecha": "2026-07-26"
   },
   {
     "email": "pintoresmadrid.com@gmail.com",
@@ -7292,7 +7293,8 @@
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202607170904.89547931822@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-21"
+    "toque2_fecha": "2026-07-21",
+    "toque3_fecha": "2026-07-26"
   },
   {
     "email": "telepedido@juno.es",
@@ -7304,7 +7306,8 @@
     "asunto": "Cómo conseguir clientes en Erandio (Bizkaia) sin llamadas en frío",
     "messageId": "<202607170904.55163178649@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-21"
+    "toque2_fecha": "2026-07-21",
+    "toque3_fecha": "2026-07-26"
   },
   {
     "email": "info@microce.es",
@@ -7610,6 +7613,39 @@
     "fecha": "2026-07-24",
     "asunto": "REFORMAS, hay contactos en Santurtzi esperándote",
     "messageId": "<202607240913.53706867476@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajerolaredo.es",
+    "nombre": "Cerrajero Laredo",
+    "web": "https://cerrajerolaredo.es/",
+    "ciudad": "Laredo",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-26",
+    "asunto": "20 empresas en Laredo que podrían contratarte",
+    "messageId": "<202607260905.58118655159@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "pj@plasticosjuarez.com",
+    "nombre": "PLASTICOS JUAREZ SA",
+    "web": "http://www.plasticosjuarez.com",
+    "ciudad": "Badalona-Barcelona",
+    "sector": "pintores",
+    "fecha": "2026-07-26",
+    "asunto": "20 empresas en Badalona-Barcelona que podrían contratarte",
+    "messageId": "<202607260905.31676116010@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@keylaseguridad.es",
+    "nombre": "Keyla Seguridad Cerrajeros",
+    "web": "http://www.keylaseguridad.es",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-26",
+    "asunto": "20 empresas en Barcelona que podrían contratarte",
+    "messageId": "<202607260915.91190945967@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

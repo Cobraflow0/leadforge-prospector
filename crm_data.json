@@ -7319,7 +7319,8 @@
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202607180830.92339723218@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-27"
   },
   {
     "email": "pavitecnic@pavitecnic.com",
@@ -7331,7 +7332,8 @@
     "asunto": "20 empresas en Idiazabal que podrían contratarte",
     "messageId": "<202607180830.33914649741@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-27"
   },
   {
     "email": "info@algarix.com",
@@ -7558,7 +7560,8 @@
     "fecha": "2026-07-23",
     "asunto": "Clientes nuevos en Oviedo — sin publicidad",
     "messageId": "<202607230917.98245223509@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-27"
   },
   {
     "email": "info@styloreformas.es",
@@ -7646,6 +7649,17 @@
     "fecha": "2026-07-26",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202607260915.91190945967@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sergiosuarezmecanizados.es",
+    "nombre": "Sergio Suárez Mecanizados",
+    "web": "https://sergiosuarezmecanizados.es/",
+    "ciudad": "Santa Comba",
+    "sector": "carpinteros",
+    "fecha": "2026-07-27",
+    "asunto": "Clientes nuevos en Santa Comba — sin publicidad",
+    "messageId": "<202607271032.89077976097@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

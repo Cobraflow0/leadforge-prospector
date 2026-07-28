@@ -7345,7 +7345,8 @@
     "asunto": "Clientes nuevos en Elche — sin publicidad",
     "messageId": "<202607190901.78730490123@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "comercial@euroquimica.com",
@@ -7357,7 +7358,8 @@
     "asunto": "Clientes nuevos en DOSRIUS — sin publicidad",
     "messageId": "<202607190901.23490813623@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@instalacioneselectron.net",
@@ -7369,7 +7371,8 @@
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202607190901.20695516579@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@elcarpinterovalencia.es",
@@ -7381,7 +7384,8 @@
     "asunto": "Clientes nuevos en València — sin publicidad",
     "messageId": "<202607190901.58687540429@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@vidriosanjumarpa.com",
@@ -7393,7 +7397,8 @@
     "asunto": "Clientes nuevos en Mancha Real-Jaén — sin publicidad",
     "messageId": "<202607190901.42508583758@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@estudioiterron.es",
@@ -7405,7 +7410,8 @@
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202607190910.63124734659@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "hola@cefiba.com",
@@ -7417,7 +7423,8 @@
     "asunto": "Clientes nuevos en Valencia — sin publicidad",
     "messageId": "<202607190928.33407790883@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@joseluiscamacho.es",
@@ -7429,7 +7436,8 @@
     "asunto": "Clientes nuevos en Málaga — sin publicidad",
     "messageId": "<202607190935.27040643874@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-23"
+    "toque2_fecha": "2026-07-23",
+    "toque3_fecha": "2026-07-28"
   },
   {
     "email": "info@fontanero-granada.es",
@@ -7572,7 +7580,8 @@
     "fecha": "2026-07-24",
     "asunto": "GRUPO, hay contactos en Madrid esperándote",
     "messageId": "<202607240913.11359540965@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-28"
   },
   {
     "email": "atrio.reformasintegrales@gmail.com",
@@ -7583,7 +7592,8 @@
     "fecha": "2026-07-24",
     "asunto": "ATRIO, hay contactos en Majadahonda esperándote",
     "messageId": "<202607240913.12179982495@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-28"
   },
   {
     "email": "info@reformasburgos.net",
@@ -7594,7 +7604,8 @@
     "fecha": "2026-07-24",
     "asunto": "REFORMASBURGOS.NET, hay contactos en Burgos esperándote",
     "messageId": "<202607240913.41219678193@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-28"
   },
   {
     "email": "masimomsm@gmail.com",
@@ -7605,7 +7616,8 @@
     "fecha": "2026-07-24",
     "asunto": "ELISEEV, hay contactos en Malaga esperándote",
     "messageId": "<202607240913.36020319432@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-28"
   },
   {
     "email": "txerrafernandez@gmail.com",
@@ -7616,7 +7628,8 @@
     "fecha": "2026-07-24",
     "asunto": "REFORMAS, hay contactos en Santurtzi esperándote",
     "messageId": "<202607240913.53706867476@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-28"
   },
   {
     "email": "info@cerrajerolaredo.es",
@@ -7660,6 +7673,17 @@
     "fecha": "2026-07-27",
     "asunto": "Clientes nuevos en Santa Comba — sin publicidad",
     "messageId": "<202607271032.89077976097@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "marketing.cerrajeros24h@gmail.com",
+    "nombre": "Cerrajeros Barcelona - ABCcerrajeros 24 Horas",
+    "web": "https://abccerrajeros.es/",
+    "ciudad": "Barcelona",
+    "sector": "cerrajeros",
+    "fecha": "2026-07-28",
+    "asunto": "Cerrajeros, hay contactos en Barcelona esperándote",
+    "messageId": "<202607280933.32685787259@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

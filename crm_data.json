@@ -7650,7 +7650,8 @@
     "fecha": "2026-07-26",
     "asunto": "20 empresas en Laredo que podrían contratarte",
     "messageId": "<202607260905.58118655159@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-30"
   },
   {
     "email": "pj@plasticosjuarez.com",
@@ -7661,7 +7662,8 @@
     "fecha": "2026-07-26",
     "asunto": "20 empresas en Badalona-Barcelona que podrían contratarte",
     "messageId": "<202607260905.31676116010@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-30"
   },
   {
     "email": "info@keylaseguridad.es",
@@ -7672,7 +7674,8 @@
     "fecha": "2026-07-26",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202607260915.91190945967@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-07-30"
   },
   {
     "email": "info@sergiosuarezmecanizados.es",

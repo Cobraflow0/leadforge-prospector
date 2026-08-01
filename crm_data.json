@@ -7579,7 +7579,8 @@
     "asunto": "Clientes nuevos en Oviedo — sin publicidad",
     "messageId": "<202607230917.98245223509@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-27"
+    "toque2_fecha": "2026-07-27",
+    "toque3_fecha": "2026-08-01"
   },
   {
     "email": "info@styloreformas.es",
@@ -7698,7 +7699,8 @@
     "fecha": "2026-07-28",
     "asunto": "Cerrajeros, hay contactos en Barcelona esperándote",
     "messageId": "<202607280933.32685787259@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-01"
   },
   {
     "email": "sergonpintores@hotmail.es",

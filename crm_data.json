@@ -7592,7 +7592,8 @@
     "asunto": "GRUPO, hay contactos en Madrid esperándote",
     "messageId": "<202607240913.11359540965@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-28"
+    "toque2_fecha": "2026-07-28",
+    "toque3_fecha": "2026-08-02"
   },
   {
     "email": "atrio.reformasintegrales@gmail.com",
@@ -7604,7 +7605,8 @@
     "asunto": "ATRIO, hay contactos en Majadahonda esperándote",
     "messageId": "<202607240913.12179982495@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-28"
+    "toque2_fecha": "2026-07-28",
+    "toque3_fecha": "2026-08-02"
   },
   {
     "email": "info@reformasburgos.net",
@@ -7616,7 +7618,8 @@
     "asunto": "REFORMASBURGOS.NET, hay contactos en Burgos esperándote",
     "messageId": "<202607240913.41219678193@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-28"
+    "toque2_fecha": "2026-07-28",
+    "toque3_fecha": "2026-08-02"
   },
   {
     "email": "masimomsm@gmail.com",
@@ -7628,7 +7631,8 @@
     "asunto": "ELISEEV, hay contactos en Malaga esperándote",
     "messageId": "<202607240913.36020319432@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-28"
+    "toque2_fecha": "2026-07-28",
+    "toque3_fecha": "2026-08-02"
   },
   {
     "email": "txerrafernandez@gmail.com",
@@ -7640,7 +7644,8 @@
     "asunto": "REFORMAS, hay contactos en Santurtzi esperándote",
     "messageId": "<202607240913.53706867476@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-28"
+    "toque2_fecha": "2026-07-28",
+    "toque3_fecha": "2026-08-02"
   },
   {
     "email": "info@cerrajerolaredo.es",
@@ -7722,6 +7727,28 @@
     "fecha": "2026-07-31",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202607311016.47606593131@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cementec.es",
+    "nombre": "CEMENTEC",
+    "web": "https://www.cementec.es",
+    "ciudad": "Elda",
+    "sector": "pintores",
+    "fecha": "2026-08-02",
+    "asunto": "Cómo conseguir clientes en Elda sin llamadas en frío",
+    "messageId": "<202608020904.55409318166@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "javiersanchez-300@hotmail.com",
+    "nombre": "Javier Medina Carpintería",
+    "web": "http://www.javiersmedina.com/",
+    "ciudad": "Madrid",
+    "sector": "carpinteros",
+    "fecha": "2026-08-02",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202608020906.34740689865@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

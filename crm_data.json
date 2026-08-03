@@ -7750,5 +7750,16 @@
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202608020906.34740689865@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "gruposybombas@geneluz.com",
+    "nombre": "Geneluz",
+    "web": "https://geneluz.com",
+    "ciudad": "Córdoba",
+    "sector": "electricistas",
+    "fecha": "2026-08-03",
+    "asunto": "20 empresas en Córdoba que podrían contratarte",
+    "messageId": "<202608031044.76384354872@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

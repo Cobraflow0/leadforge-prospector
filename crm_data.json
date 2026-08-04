@@ -7657,7 +7657,8 @@
     "asunto": "20 empresas en Laredo que podrían contratarte",
     "messageId": "<202607260905.58118655159@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-30"
+    "toque2_fecha": "2026-07-30",
+    "toque3_fecha": "2026-08-04"
   },
   {
     "email": "pj@plasticosjuarez.com",
@@ -7669,7 +7670,8 @@
     "asunto": "20 empresas en Badalona-Barcelona que podrían contratarte",
     "messageId": "<202607260905.31676116010@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-30"
+    "toque2_fecha": "2026-07-30",
+    "toque3_fecha": "2026-08-04"
   },
   {
     "email": "info@keylaseguridad.es",
@@ -7681,7 +7683,8 @@
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202607260915.91190945967@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-07-30"
+    "toque2_fecha": "2026-07-30",
+    "toque3_fecha": "2026-08-04"
   },
   {
     "email": "info@sergiosuarezmecanizados.es",
@@ -7716,7 +7719,8 @@
     "fecha": "2026-07-31",
     "asunto": "Clientes nuevos en Valencia — sin publicidad",
     "messageId": "<202607310936.66494683680@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-04"
   },
   {
     "email": "info@cicliks.com",
@@ -7727,7 +7731,8 @@
     "fecha": "2026-07-31",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202607311016.47606593131@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-04"
   },
   {
     "email": "info@cementec.es",

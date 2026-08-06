@@ -7709,7 +7709,8 @@
     "asunto": "Cerrajeros, hay contactos en Barcelona esperándote",
     "messageId": "<202607280933.32685787259@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-08-01"
+    "toque2_fecha": "2026-08-01",
+    "toque3_fecha": "2026-08-06"
   },
   {
     "email": "sergonpintores@hotmail.es",
@@ -7744,7 +7745,8 @@
     "fecha": "2026-08-02",
     "asunto": "Cómo conseguir clientes en Elda sin llamadas en frío",
     "messageId": "<202608020904.55409318166@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-06"
   },
   {
     "email": "javiersanchez-300@hotmail.com",
@@ -7755,7 +7757,8 @@
     "fecha": "2026-08-02",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202608020906.34740689865@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-06"
   },
   {
     "email": "gruposybombas@geneluz.com",

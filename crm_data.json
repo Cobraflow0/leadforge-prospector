@@ -7771,5 +7771,16 @@
     "messageId": "<202608031044.76384354872@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-08-07"
+  },
+  {
+    "email": "info@vesmer.es",
+    "nombre": "VESMER",
+    "web": "http://www.vesmer.es",
+    "ciudad": "Barcelona",
+    "sector": "cristaleros",
+    "fecha": "2026-08-08",
+    "asunto": "Clientes nuevos en Barcelona — sin publicidad",
+    "messageId": "<202608080738.72371827604@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

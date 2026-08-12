@@ -7774,7 +7774,8 @@
     "asunto": "20 empresas en Córdoba que podrían contratarte",
     "messageId": "<202608031044.76384354872@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-08-07"
+    "toque2_fecha": "2026-08-07",
+    "toque3_fecha": "2026-08-12"
   },
   {
     "email": "info@vesmer.es",
@@ -7785,6 +7786,7 @@
     "fecha": "2026-08-08",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202608080738.72371827604@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-12"
   }
 ]

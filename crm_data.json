@@ -7788,5 +7788,82 @@
     "messageId": "<202608080738.72371827604@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-08-12"
+  },
+  {
+    "email": "info@promitec.es",
+    "nombre": "PROMITEC",
+    "web": "https://promitec.es",
+    "ciudad": "San Juan De Aznalfarache",
+    "sector": "fontaneros",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en San Juan De Aznalfarache sin llamadas en frío",
+    "messageId": "<202608140804.32102921660@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@integralesreformas.es",
+    "nombre": "INTEGRALES REFORMAS",
+    "web": "https://www.integralesreformas.es",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202608140805.84416020111@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformaslacabanha.com",
+    "nombre": "Reformas La Cabaña SL",
+    "web": "https://reformaslacabanha.com",
+    "ciudad": "Fuente Álamo de Murcia",
+    "sector": "empresas de reformas",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Fuente Álamo de Murcia sin llamadas en frío",
+    "messageId": "<202608140805.41903320884@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@prodecorvalencia.es",
+    "nombre": "PRODECOR",
+    "web": "https://prodecorvalencia.es/",
+    "ciudad": "Valencia",
+    "sector": "pintores",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Valencia sin llamadas en frío",
+    "messageId": "<202608140805.72048435367@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bd-pintoresmadrid.com",
+    "nombre": "BD PINTORES",
+    "web": "http://bd-pintoresmadrid.com/",
+    "ciudad": "Madrid",
+    "sector": "pintores",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202608140805.83955433170@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pintoreseconomicosmadrid.es",
+    "nombre": "PINTURA FLORENCIO",
+    "web": "http://www.pintoreseconomicosmadrid.es",
+    "ciudad": "Madrid",
+    "sector": "pintores",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202608140805.31793484638@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@solteco.org",
+    "nombre": "Solteco Madera Plastica SL",
+    "web": "https://solteco.org",
+    "ciudad": "Alfaro",
+    "sector": "carpinteros",
+    "fecha": "2026-08-14",
+    "asunto": "Cómo conseguir clientes en Alfaro sin llamadas en frío",
+    "messageId": "<202608140805.66013691028@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

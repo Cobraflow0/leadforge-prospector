@@ -7865,5 +7865,16 @@
     "asunto": "Cómo conseguir clientes en Alfaro sin llamadas en frío",
     "messageId": "<202608140805.66013691028@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@confeccionescarconga.com",
+    "nombre": "Confecciones Carconga s.l",
+    "web": "https://Confeccionescarconga.com",
+    "ciudad": "Torrenueva",
+    "sector": "electricistas",
+    "fecha": "2026-08-15",
+    "asunto": "20 empresas en Torrenueva que podrían contratarte",
+    "messageId": "<202608150719.57404650412@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

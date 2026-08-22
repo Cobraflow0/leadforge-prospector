@@ -7895,7 +7895,8 @@
     "fecha": "2026-08-18",
     "asunto": "Cómo conseguir clientes en Tarragona sin llamadas en frío",
     "messageId": "<202608180726.23944493774@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-22"
   },
   {
     "email": "info@eliseevbrothers.com",
@@ -7906,6 +7907,40 @@
     "fecha": "2026-08-18",
     "asunto": "Cómo conseguir clientes en Malaga sin llamadas en frío",
     "messageId": "<202608180727.45031836341@smtp-relay.mailin.fr>",
+    "status": "sent",
+    "toque2_fecha": "2026-08-22"
+  },
+  {
+    "email": "info@reformasintegralesenalicante.com",
+    "nombre": "Reformas integrales en Alicante",
+    "web": "https://reformasintegralesenalicante.com",
+    "ciudad": "Alicante",
+    "sector": "empresas de reformas",
+    "fecha": "2026-08-22",
+    "asunto": "Cómo conseguir clientes en Alicante sin llamadas en frío",
+    "messageId": "<202608220721.66658540441@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@marcoscerrajeros.es",
+    "nombre": "Marcos Cerrajeros Alcorcón",
+    "web": "https://www.marcoscerrajeros.es/",
+    "ciudad": "Alcorcón",
+    "sector": "cerrajeros",
+    "fecha": "2026-08-22",
+    "asunto": "Cómo conseguir clientes en Alcorcón sin llamadas en frío",
+    "messageId": "<202608220722.42319648500@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@saneamientosaluche.com",
+    "nombre": "Saneamientos Aluche",
+    "web": "https://www.saneamientosaluche.com/",
+    "ciudad": "Madrid",
+    "sector": "fontaneros",
+    "fecha": "2026-08-22",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202608220724.71929434757@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

@@ -7927,7 +7927,8 @@
     "fecha": "2026-08-22",
     "asunto": "Cómo conseguir clientes en Alicante sin llamadas en frío",
     "messageId": "<202608220721.66658540441@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-26"
   },
   {
     "email": "info@marcoscerrajeros.es",
@@ -7938,7 +7939,8 @@
     "fecha": "2026-08-22",
     "asunto": "Cómo conseguir clientes en Alcorcón sin llamadas en frío",
     "messageId": "<202608220722.42319648500@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-26"
   },
   {
     "email": "info@saneamientosaluche.com",
@@ -7949,7 +7951,8 @@
     "fecha": "2026-08-22",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202608220724.71929434757@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-26"
   },
   {
     "email": "info@taller3.com",

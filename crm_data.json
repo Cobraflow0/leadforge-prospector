@@ -7977,5 +7977,16 @@
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202608250837.29242486101@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@cerrajerosvalencia.com",
+    "nombre": "Cerrajeros Valencia | Origin-Go | Baratos",
+    "web": "https://cerrajerosvalencia.com",
+    "ciudad": "Valencia",
+    "sector": "cerrajeros",
+    "fecha": "2026-08-28",
+    "asunto": "Clientes nuevos en Valencia — sin publicidad",
+    "messageId": "<202608281913.52696033885@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

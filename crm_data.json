@@ -7965,7 +7965,8 @@
     "fecha": "2026-08-25",
     "asunto": "Taller, hay contactos en Barcelona esperándote",
     "messageId": "<202608250830.92702846750@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-29"
   },
   {
     "email": "info@cerrajerosvalenciaclau.com",
@@ -7976,7 +7977,8 @@
     "fecha": "2026-08-25",
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202608250837.29242486101@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-08-29"
   },
   {
     "email": "info@cerrajerosvalencia.com",

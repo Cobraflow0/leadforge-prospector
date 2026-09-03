@@ -7969,7 +7969,8 @@
     "asunto": "Taller, hay contactos en Barcelona esperándote",
     "messageId": "<202608250830.92702846750@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-08-29"
+    "toque2_fecha": "2026-08-29",
+    "toque3_fecha": "2026-09-03"
   },
   {
     "email": "info@cerrajerosvalenciaclau.com",
@@ -7981,7 +7982,8 @@
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202608250837.29242486101@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-08-29"
+    "toque2_fecha": "2026-08-29",
+    "toque3_fecha": "2026-09-03"
   },
   {
     "email": "info@cerrajerosvalencia.com",
@@ -7992,7 +7994,8 @@
     "fecha": "2026-08-28",
     "asunto": "Clientes nuevos en Valencia — sin publicidad",
     "messageId": "<202608281913.52696033885@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-03"
   },
   {
     "email": "napercentersl@napercenter.es",

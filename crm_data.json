@@ -8009,5 +8009,192 @@
     "messageId": "<202608311503.47465813206@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-09-05"
+  },
+  {
+    "email": "info@secbarcelona.com",
+    "nombre": "SOCIEDAD EUROPEA DE CONSTRUCCIÓN",
+    "web": "http://secbarcelona.com/",
+    "ciudad": "Barcelona",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Barcelona que podrían contratarte",
+    "messageId": "<202609081146.48061372790@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@envivir.com",
+    "nombre": "ENVIVIR PROYECTOS Y OBRAS S.L.",
+    "web": "http://www.envivir.com",
+    "ciudad": "Palma De Mallorca",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Palma De Mallorca que podrían contratarte",
+    "messageId": "<202609081146.37456212540@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "admin@cuorepilates.com",
+    "nombre": "CUORE PILATES & FITNESS",
+    "web": "https://www.cuorepilates.com/",
+    "ciudad": "San Vicente del Raspeig (Alicante)",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en San Vicente del Raspeig (Alicante) que podrían contratarte",
+    "messageId": "<202609081146.49440493180@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@vrvalenciareformas.com",
+    "nombre": "VR REFORMAS INTEGRALES BIEN HECHAS SL",
+    "web": "https://vrvalenciareformas.com",
+    "ciudad": "Valencia",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Valencia que podrían contratarte",
+    "messageId": "<202609081146.48005703920@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "cymento@cymento.es",
+    "nombre": "CYMENTO LEVANTE S.L.",
+    "web": "https://cymento.es/",
+    "ciudad": "Murcia",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Murcia que podrían contratarte",
+    "messageId": "<202609081146.70917915216@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "reformascastro@gmail.com",
+    "nombre": "REFORMAS MADRID CASTRO BERBEN",
+    "web": "http://reformascastro.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Madrid que podrían contratarte",
+    "messageId": "<202609081146.13523367690@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@trendingfit.com",
+    "nombre": "ELINA PILATES",
+    "web": "https://www.trendingfit.com",
+    "ciudad": "Beriain-Navarra",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Beriain-Navarra que podrían contratarte",
+    "messageId": "<202609081146.20283498233@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralespozuelo.com",
+    "nombre": "REFORMAS INTEGRALES POZUELO",
+    "web": "https://reformasintegralespozuelo.com",
+    "ciudad": "Pozuelo De Alarcon",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
+    "messageId": "<202609081147.23468038482@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasjrfernandez.com",
+    "nombre": "REFORMAS JR FERNÁNDEZ",
+    "web": "http://www.reformasjrfernandez.com/",
+    "ciudad": "Santurtzi",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Santurtzi que podrían contratarte",
+    "messageId": "<202609081147.84701721326@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clientes@neagoe.es",
+    "nombre": "REFORMAS INTEGRALES MAJADAHONDA",
+    "web": "https://reformasintegralesenmajadahonda.com",
+    "ciudad": "Majadahonda",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Majadahonda que podrían contratarte",
+    "messageId": "<202609081147.38631562304@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "clientes@gruponovohogar.com",
+    "nombre": "REFORMAS INTEGRALES NOVOHOGAR",
+    "web": "http://tusreformasintegralesmadrid.com/",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Madrid que podrían contratarte",
+    "messageId": "<202609081147.41961544708@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesenmostoles.com",
+    "nombre": "REFORMAS INTEGRALES MOSTOLES",
+    "web": "https://reformasintegralesenmostoles.com",
+    "ciudad": "Mostoles",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Mostoles que podrían contratarte",
+    "messageId": "<202609081147.31791701794@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesjav.com",
+    "nombre": "REFORMAS INTEGRALES JAV",
+    "web": "https://reformasintegralesjav.com",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Madrid que podrían contratarte",
+    "messageId": "<202609081147.80224766554@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesmadridcentro.com",
+    "nombre": "REFORMAS INTEGRALES MADRID CENTRO",
+    "web": "https://reformasintegralesmadridcentro.com",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Madrid que podrían contratarte",
+    "messageId": "<202609081147.35830661799@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesfuenlabrada.com",
+    "nombre": "REFORMAS INTEGRALES DE OFICINAS FUENLABRADA",
+    "web": "https://reformasintegralesfuenlabrada.com",
+    "ciudad": "Fuenlabrada",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Fuenlabrada que podrían contratarte",
+    "messageId": "<202609081147.65324376737@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesengetafe.com",
+    "nombre": "REFORMAS INTEGRALES GETAFE",
+    "web": "https://reformasintegralesengetafe.com",
+    "ciudad": "Getafe",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Getafe que podrían contratarte",
+    "messageId": "<202609081147.41820957864@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegralesenalcorcon.com",
+    "nombre": "REFORMAS INTEGRALES ALCORCON",
+    "web": "https://reformasintegralesenalcorcon.com",
+    "ciudad": "Alcorcon",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-08",
+    "asunto": "20 empresas en Alcorcon que podrían contratarte",
+    "messageId": "<202609081147.88105152487@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

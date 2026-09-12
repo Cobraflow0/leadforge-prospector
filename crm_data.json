@@ -8020,7 +8020,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609081146.48061372790@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@envivir.com",
@@ -8031,7 +8032,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Palma De Mallorca que podrían contratarte",
     "messageId": "<202609081146.37456212540@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "admin@cuorepilates.com",
@@ -8042,7 +8044,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en San Vicente del Raspeig (Alicante) que podrían contratarte",
     "messageId": "<202609081146.49440493180@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@vrvalenciareformas.com",
@@ -8053,7 +8056,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Valencia que podrían contratarte",
     "messageId": "<202609081146.48005703920@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "cymento@cymento.es",
@@ -8064,7 +8068,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Murcia que podrían contratarte",
     "messageId": "<202609081146.70917915216@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "reformascastro@gmail.com",
@@ -8075,7 +8080,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202609081146.13523367690@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@trendingfit.com",
@@ -8086,7 +8092,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Beriain-Navarra que podrían contratarte",
     "messageId": "<202609081146.20283498233@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralespozuelo.com",
@@ -8097,7 +8104,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
     "messageId": "<202609081147.23468038482@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasjrfernandez.com",
@@ -8108,7 +8116,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Santurtzi que podrían contratarte",
     "messageId": "<202609081147.84701721326@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "clientes@neagoe.es",
@@ -8119,7 +8128,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Majadahonda que podrían contratarte",
     "messageId": "<202609081147.38631562304@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "clientes@gruponovohogar.com",
@@ -8130,7 +8140,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202609081147.41961544708@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesenmostoles.com",
@@ -8141,7 +8152,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Mostoles que podrían contratarte",
     "messageId": "<202609081147.31791701794@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesjav.com",
@@ -8152,7 +8164,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202609081147.80224766554@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesmadridcentro.com",
@@ -8163,7 +8176,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Madrid que podrían contratarte",
     "messageId": "<202609081147.35830661799@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesfuenlabrada.com",
@@ -8174,7 +8188,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Fuenlabrada que podrían contratarte",
     "messageId": "<202609081147.65324376737@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesengetafe.com",
@@ -8185,7 +8200,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Getafe que podrían contratarte",
     "messageId": "<202609081147.41820957864@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@reformasintegralesenalcorcon.com",
@@ -8196,7 +8212,8 @@
     "fecha": "2026-09-08",
     "asunto": "20 empresas en Alcorcon que podrían contratarte",
     "messageId": "<202609081147.88105152487@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-12"
   },
   {
     "email": "info@decorman.es",
@@ -8218,6 +8235,28 @@
     "fecha": "2026-09-09",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202609091157.68573578588@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@barecagroup.com",
+    "nombre": "BARECA GROUP",
+    "web": "http://www.barecagroup.com/",
+    "ciudad": "Barcelona",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-12",
+    "asunto": "20 empresas en Barcelona que podrían contratarte",
+    "messageId": "<202609121118.31986991832@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@calefacciolluch.com",
+    "nombre": "Calefacció Lluch",
+    "web": "http://calefacciolluch.com/",
+    "ciudad": "Barcelona",
+    "sector": "electricistas",
+    "fecha": "2026-09-12",
+    "asunto": "20 empresas en Barcelona que podrían contratarte",
+    "messageId": "<202609121212.37132556932@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

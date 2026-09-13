@@ -8224,7 +8224,8 @@
     "fecha": "2026-09-09",
     "asunto": "Clientes nuevos en Madrid — sin publicidad",
     "messageId": "<202609091156.42937188760@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-13"
   },
   {
     "email": "info@1reformas.com",
@@ -8235,7 +8236,8 @@
     "fecha": "2026-09-09",
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202609091157.68573578588@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-13"
   },
   {
     "email": "info@barecagroup.com",
@@ -8257,6 +8259,17 @@
     "fecha": "2026-09-12",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609121212.37132556932@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "contacto@reformasmcv.com",
+    "nombre": "HESED MCV GRUP, S.L.",
+    "web": "http://www.reformasmcv.com",
+    "ciudad": "Alcala De Henares",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-13",
+    "asunto": "Clientes nuevos en Alcala De Henares — sin publicidad",
+    "messageId": "<202609131220.79219610301@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

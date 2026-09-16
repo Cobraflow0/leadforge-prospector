@@ -8248,7 +8248,8 @@
     "fecha": "2026-09-12",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609121118.31986991832@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-16"
   },
   {
     "email": "info@calefacciolluch.com",
@@ -8259,7 +8260,8 @@
     "fecha": "2026-09-12",
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609121212.37132556932@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-16"
   },
   {
     "email": "contacto@reformasmcv.com",
@@ -8270,6 +8272,17 @@
     "fecha": "2026-09-13",
     "asunto": "Clientes nuevos en Alcala De Henares — sin publicidad",
     "messageId": "<202609131220.79219610301@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ordonoelectric.com",
+    "nombre": "S.I.O. INSTAL-LACIONS I REFORMES SL",
+    "web": "https://ordonoelectric.com/",
+    "ciudad": "Les Franqueses del Vallès (Barcelona)",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-16",
+    "asunto": "20 empresas en Les Franqueses del Vallès (Barcelona) que podrían contratarte",
+    "messageId": "<202609161210.37612723733@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

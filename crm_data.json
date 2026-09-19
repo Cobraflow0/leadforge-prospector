@@ -8304,5 +8304,16 @@
     "asunto": "20 empresas en Les Franqueses del Vallès (Barcelona) que podrían contratarte",
     "messageId": "<202609161210.37612723733@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@cerrajerosmadridgroup.com",
+    "nombre": "Cerrajeros Madrid Group 24H",
+    "web": "https://cerrajerosmadridgroup.com/",
+    "ciudad": "Madrid",
+    "sector": "cerrajeros",
+    "fecha": "2026-09-19",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202609191139.41535083312@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

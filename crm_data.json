@@ -8303,7 +8303,8 @@
     "fecha": "2026-09-16",
     "asunto": "20 empresas en Les Franqueses del Vallès (Barcelona) que podrían contratarte",
     "messageId": "<202609161210.37612723733@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-20"
   },
   {
     "email": "info@cerrajerosmadridgroup.com",
@@ -8314,6 +8315,17 @@
     "fecha": "2026-09-19",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202609191139.41535083312@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "mpmh@nostrumcorp.com",
+    "nombre": "NOSTRUMCORP",
+    "web": "https://www.nostrumcorp.com",
+    "ciudad": "Pozuelo De Alarcon",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-20",
+    "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
+    "messageId": "<202609201151.26904062646@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

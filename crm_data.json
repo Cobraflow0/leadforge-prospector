@@ -8268,7 +8268,8 @@
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609121118.31986991832@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-16"
+    "toque2_fecha": "2026-09-16",
+    "toque3_fecha": "2026-09-21"
   },
   {
     "email": "info@calefacciolluch.com",
@@ -8280,7 +8281,8 @@
     "asunto": "20 empresas en Barcelona que podrían contratarte",
     "messageId": "<202609121212.37132556932@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-16"
+    "toque2_fecha": "2026-09-16",
+    "toque3_fecha": "2026-09-21"
   },
   {
     "email": "contacto@reformasmcv.com",

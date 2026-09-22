@@ -8294,7 +8294,8 @@
     "asunto": "Clientes nuevos en Alcala De Henares — sin publicidad",
     "messageId": "<202609131220.79219610301@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-18"
+    "toque2_fecha": "2026-09-18",
+    "toque3_fecha": "2026-09-22"
   },
   {
     "email": "info@ordonoelectric.com",
@@ -8328,6 +8329,28 @@
     "fecha": "2026-09-20",
     "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
     "messageId": "<202609201151.26904062646@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformaenergeticamalaga.es",
+    "nombre": "REFORNOVALIA REFORMAS EN MÁLAGA",
+    "web": "https://reformaenergeticamalaga.es/",
+    "ciudad": "Malaga",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-22",
+    "asunto": "REFORNOVALIA, hay contactos en Malaga esperándote",
+    "messageId": "<202609221204.94515803270@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@serviciosintegralescarreno.es",
+    "nombre": "SERVICIOS INTEGRALES CARREÑO",
+    "web": "https://www.serviciosintegralescarreno.es/",
+    "ciudad": "Boecillo",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-22",
+    "asunto": "SERVICIOS, hay contactos en Boecillo esperándote",
+    "messageId": "<202609221204.28193649385@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

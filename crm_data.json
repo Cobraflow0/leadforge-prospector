@@ -8318,7 +8318,8 @@
     "fecha": "2026-09-19",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202609191139.41535083312@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-23"
   },
   {
     "email": "mpmh@nostrumcorp.com",
@@ -8351,6 +8352,72 @@
     "fecha": "2026-09-22",
     "asunto": "SERVICIOS, hay contactos en Boecillo esperándote",
     "messageId": "<202609221204.28193649385@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "harnatur@harnatur.com",
+    "nombre": "HARNATUR – HARINAS NATURALES",
+    "web": "https://harnatur.com/",
+    "ciudad": "Minglanilla – Cuenca",
+    "sector": "fontaneros",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en Minglanilla – Cuenca sin llamadas en frío",
+    "messageId": "<202609231218.26447155250@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hermanoscebrian@hermanos-cebrian.es",
+    "nombre": "Hermanos Cebrián",
+    "web": "https://hermanos-cebrian.es/",
+    "ciudad": "QUART DE POBLET - VALENCIA",
+    "sector": "fontaneros",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en QUART DE POBLET - VALENCIA sin llamadas en frío",
+    "messageId": "<202609231218.19040851934@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@sunwenergy.com",
+    "nombre": "SUN WORLD ENERGY",
+    "web": "https://www.sunwenergy.com",
+    "ciudad": "Leganes",
+    "sector": "electricistas",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en Leganes sin llamadas en frío",
+    "messageId": "<202609231218.18822044532@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrapid.com",
+    "nombre": "CERRAJEROS RAPIDOS",
+    "web": "https://cerrapid.com",
+    "ciudad": "Madrid",
+    "sector": "cerrajeros",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
+    "messageId": "<202609231218.18972805546@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@ugarte-zestoa.com",
+    "nombre": "UGARTE BURDINDEGIA S. L.",
+    "web": "https://ugarte-zestoa.com",
+    "ciudad": "Cestona",
+    "sector": "cerrajeros",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en Cestona sin llamadas en frío",
+    "messageId": "<202609231218.14548276132@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@azcatec.com",
+    "nombre": "AZCATEC TECNOLOGÍA E INGENIERÍA",
+    "web": "https://azcatec.com/",
+    "ciudad": "Sevilla",
+    "sector": "electricistas",
+    "fecha": "2026-09-23",
+    "asunto": "Cómo conseguir clientes en Sevilla sin llamadas en frío",
+    "messageId": "<202609231218.25690037350@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

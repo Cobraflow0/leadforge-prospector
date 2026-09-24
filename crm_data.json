@@ -8330,7 +8330,8 @@
     "fecha": "2026-09-20",
     "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
     "messageId": "<202609201151.26904062646@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-24"
   },
   {
     "email": "info@reformaenergeticamalaga.es",
@@ -8418,6 +8419,138 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Sevilla sin llamadas en frío",
     "messageId": "<202609231218.25690037350@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@bfmedificatoria.com",
+    "nombre": "BFM AEDIFICATORIA",
+    "web": "https://www.bfmedificatoria.com",
+    "ciudad": "Valencia",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Valencia que podrían contratarte",
+    "messageId": "<202609241220.11428228874@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajeroslallavemaestra.com",
+    "nombre": "Cerrajeros La llave Maestra",
+    "web": "https://www.cerrajeroslallavemaestra.com/",
+    "ciudad": "Zaragoza",
+    "sector": "cerrajeros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Zaragoza que podrían contratarte",
+    "messageId": "<202609241220.77679138897@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "codesal@tallerescodesal.com",
+    "nombre": "CODESAL S.L.",
+    "web": "https://www.tallerescodesal.es/",
+    "ciudad": "Cabanas-A Coruña",
+    "sector": "carpinteros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Cabanas-A Coruña que podrían contratarte",
+    "messageId": "<202609241220.12252524486@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@inbodas.com",
+    "nombre": "INBODAS GROUP",
+    "web": "https://www.inbodas.com/",
+    "ciudad": "Aranjuez",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Aranjuez que podrían contratarte",
+    "messageId": "<202609241220.73150015235@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "pedidos@productoshosteleros.com",
+    "nombre": "Suministros Hostelería | Productos Hosteleros",
+    "web": "https://productoshosteleros.com/",
+    "ciudad": "Alfafar",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Alfafar que podrían contratarte",
+    "messageId": "<202609241220.42267116801@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@importcompany.es",
+    "nombre": "IMPORTCOMPANY",
+    "web": "https://importcompany.es/en/",
+    "ciudad": "Pedreguer (Alicante)",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Pedreguer (Alicante) que podrían contratarte",
+    "messageId": "<202609241220.47522087519@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@extruplesa.com",
+    "nombre": "EXTRUPLESA",
+    "web": "https://extruplesa.com/",
+    "ciudad": "La Muela-Zaragoza",
+    "sector": "carpinteros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en La Muela-Zaragoza que podrían contratarte",
+    "messageId": "<202609241220.28137806749@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@vintagewholesalespain.com",
+    "nombre": "Vintage Wholesale Spain SL",
+    "web": "https://www.vintagewholesalespain.com",
+    "ciudad": "Manises",
+    "sector": "carpinteros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Manises que podrían contratarte",
+    "messageId": "<202609241220.48178058028@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@vephome.com",
+    "nombre": "Venprodin Sociedad Limitada.",
+    "web": "http://www.vephome.com/",
+    "ciudad": "VALENCIA",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en VALENCIA que podrían contratarte",
+    "messageId": "<202609241220.63285735449@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "awartisan.fr+40f6bfffc2@invite.trustpilot.com",
+    "nombre": "AW ARTISAN FRANCE",
+    "web": "https://www.awartisan.fr/",
+    "ciudad": "Malaga",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Malaga que podrían contratarte",
+    "messageId": "<202609241221.16671065206@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@acusticaintegral.com",
+    "nombre": "ACÚSTICA INTEGRAL, S.L.",
+    "web": "http://www.acusticaintegral.com",
+    "ciudad": "Barberà Del Vallès-Barcelona",
+    "sector": "empresas de climatización",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en Barberà Del Vallès-Barcelona que podrían contratarte",
+    "messageId": "<202609241221.35499670622@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "hola@greenly.es",
+    "nombre": "Almor Ventures S.L.",
+    "web": "https://greenly.es",
+    "ciudad": "TORREMANZANAS",
+    "sector": "cristaleros",
+    "fecha": "2026-09-24",
+    "asunto": "20 empresas en TORREMANZANAS que podrían contratarte",
+    "messageId": "<202609241221.16329210631@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

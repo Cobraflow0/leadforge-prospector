@@ -8307,7 +8307,8 @@
     "asunto": "20 empresas en Les Franqueses del Vallès (Barcelona) que podrían contratarte",
     "messageId": "<202609161210.37612723733@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-20"
+    "toque2_fecha": "2026-09-20",
+    "toque3_fecha": "2026-09-25"
   },
   {
     "email": "info@cerrajerosmadridgroup.com",
@@ -8551,6 +8552,17 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en TORREMANZANAS que podrían contratarte",
     "messageId": "<202609241221.16329210631@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@pralingenieria.es",
+    "nombre": "PRAL Ingeniería y Obra Civil",
+    "web": "https://pralingenieria.es/",
+    "ciudad": "Madrid",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-25",
+    "asunto": "Clientes nuevos en Madrid — sin publicidad",
+    "messageId": "<202609251221.54123433515@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

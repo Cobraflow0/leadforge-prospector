@@ -8343,7 +8343,8 @@
     "fecha": "2026-09-22",
     "asunto": "REFORNOVALIA, hay contactos en Malaga esperándote",
     "messageId": "<202609221204.94515803270@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-26"
   },
   {
     "email": "info@serviciosintegralescarreno.es",
@@ -8354,7 +8355,8 @@
     "fecha": "2026-09-22",
     "asunto": "SERVICIOS, hay contactos en Boecillo esperándote",
     "messageId": "<202609221204.28193649385@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-26"
   },
   {
     "email": "harnatur@harnatur.com",

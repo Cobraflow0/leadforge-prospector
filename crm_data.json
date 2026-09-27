@@ -8367,7 +8367,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Minglanilla – Cuenca sin llamadas en frío",
     "messageId": "<202609231218.26447155250@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "hermanoscebrian@hermanos-cebrian.es",
@@ -8378,7 +8379,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en QUART DE POBLET - VALENCIA sin llamadas en frío",
     "messageId": "<202609231218.19040851934@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "info@sunwenergy.com",
@@ -8389,7 +8391,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Leganes sin llamadas en frío",
     "messageId": "<202609231218.18822044532@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "info@cerrapid.com",
@@ -8400,7 +8403,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202609231218.18972805546@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "info@ugarte-zestoa.com",
@@ -8411,7 +8415,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Cestona sin llamadas en frío",
     "messageId": "<202609231218.14548276132@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "info@azcatec.com",
@@ -8422,7 +8427,8 @@
     "fecha": "2026-09-23",
     "asunto": "Cómo conseguir clientes en Sevilla sin llamadas en frío",
     "messageId": "<202609231218.25690037350@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-27"
   },
   {
     "email": "info@bfmedificatoria.com",
@@ -8565,6 +8571,17 @@
     "fecha": "2026-09-25",
     "asunto": "Clientes nuevos en Madrid — sin publicidad",
     "messageId": "<202609251221.54123433515@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "restauracionespalisandro@gmail.com",
+    "nombre": "Palisandro Restauración y conservación",
+    "web": "https://www.palisandro.es/",
+    "ciudad": "A Coruña",
+    "sector": "carpinteros",
+    "fecha": "2026-09-27",
+    "asunto": "Cómo conseguir clientes en A Coruña sin llamadas en frío",
+    "messageId": "<202609271313.22455236027@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

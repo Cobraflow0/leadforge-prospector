@@ -8320,7 +8320,8 @@
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202609191139.41535083312@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-23"
+    "toque2_fecha": "2026-09-23",
+    "toque3_fecha": "2026-09-28"
   },
   {
     "email": "mpmh@nostrumcorp.com",
@@ -8439,7 +8440,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Valencia que podrían contratarte",
     "messageId": "<202609241220.11428228874@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@cerrajeroslallavemaestra.com",
@@ -8450,7 +8452,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Zaragoza que podrían contratarte",
     "messageId": "<202609241220.77679138897@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "codesal@tallerescodesal.com",
@@ -8461,7 +8464,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Cabanas-A Coruña que podrían contratarte",
     "messageId": "<202609241220.12252524486@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@inbodas.com",
@@ -8472,7 +8476,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Aranjuez que podrían contratarte",
     "messageId": "<202609241220.73150015235@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "pedidos@productoshosteleros.com",
@@ -8483,7 +8488,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Alfafar que podrían contratarte",
     "messageId": "<202609241220.42267116801@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@importcompany.es",
@@ -8494,7 +8500,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Pedreguer (Alicante) que podrían contratarte",
     "messageId": "<202609241220.47522087519@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@extruplesa.com",
@@ -8505,7 +8512,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en La Muela-Zaragoza que podrían contratarte",
     "messageId": "<202609241220.28137806749@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@vintagewholesalespain.com",
@@ -8516,7 +8524,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Manises que podrían contratarte",
     "messageId": "<202609241220.48178058028@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@vephome.com",
@@ -8527,7 +8536,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en VALENCIA que podrían contratarte",
     "messageId": "<202609241220.63285735449@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "awartisan.fr+40f6bfffc2@invite.trustpilot.com",
@@ -8538,7 +8548,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Malaga que podrían contratarte",
     "messageId": "<202609241221.16671065206@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@acusticaintegral.com",
@@ -8549,7 +8560,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en Barberà Del Vallès-Barcelona que podrían contratarte",
     "messageId": "<202609241221.35499670622@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "hola@greenly.es",
@@ -8560,7 +8572,8 @@
     "fecha": "2026-09-24",
     "asunto": "20 empresas en TORREMANZANAS que podrían contratarte",
     "messageId": "<202609241221.16329210631@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-28"
   },
   {
     "email": "info@pralingenieria.es",
@@ -8582,6 +8595,17 @@
     "fecha": "2026-09-27",
     "asunto": "Cómo conseguir clientes en A Coruña sin llamadas en frío",
     "messageId": "<202609271313.22455236027@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "vidrio@vidriostudio.com",
+    "nombre": "Vidrio Studio",
+    "web": "http://vidriostudio.com/",
+    "ciudad": "A Coruña",
+    "sector": "cristaleros",
+    "fecha": "2026-09-28",
+    "asunto": "20 empresas en A Coruña que podrían contratarte",
+    "messageId": "<202609281502.72696953444@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

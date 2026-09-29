@@ -8333,7 +8333,8 @@
     "asunto": "20 empresas en Pozuelo De Alarcon que podrían contratarte",
     "messageId": "<202609201151.26904062646@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-24"
+    "toque2_fecha": "2026-09-24",
+    "toque3_fecha": "2026-09-29"
   },
   {
     "email": "info@reformaenergeticamalaga.es",
@@ -8584,7 +8585,8 @@
     "fecha": "2026-09-25",
     "asunto": "Clientes nuevos en Madrid — sin publicidad",
     "messageId": "<202609251221.54123433515@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-09-29"
   },
   {
     "email": "restauracionespalisandro@gmail.com",
@@ -8606,6 +8608,39 @@
     "fecha": "2026-09-28",
     "asunto": "20 empresas en A Coruña que podrían contratarte",
     "messageId": "<202609281502.72696953444@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformasintegraleslaspalmas.com",
+    "nombre": "REFORMAS LAS PALMAS INTEGRALES",
+    "web": "http://www.reformasintegraleslaspalmas.com",
+    "ciudad": "Las Palmas",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-29",
+    "asunto": "Clientes nuevos en Las Palmas — sin publicidad",
+    "messageId": "<202609291323.93317882662@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@paulinocanosa.com",
+    "nombre": "Reformas Paulino Canosa",
+    "web": "https://www.paulinocanosa.com/",
+    "ciudad": "A Coruña",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-29",
+    "asunto": "Clientes nuevos en A Coruña — sin publicidad",
+    "messageId": "<202609291343.33714175294@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "reformas@jaereformas.com",
+    "nombre": "JAE Reformas",
+    "web": "https://jaereformas.com/",
+    "ciudad": "A Coruña",
+    "sector": "empresas de reformas",
+    "fecha": "2026-09-29",
+    "asunto": "Clientes nuevos en A Coruña — sin publicidad",
+    "messageId": "<202609291343.18821913665@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

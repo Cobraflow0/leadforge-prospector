@@ -8346,7 +8346,8 @@
     "asunto": "REFORNOVALIA, hay contactos en Malaga esperándote",
     "messageId": "<202609221204.94515803270@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-26"
+    "toque2_fecha": "2026-09-26",
+    "toque3_fecha": "2026-10-01"
   },
   {
     "email": "info@serviciosintegralescarreno.es",
@@ -8358,7 +8359,8 @@
     "asunto": "SERVICIOS, hay contactos en Boecillo esperándote",
     "messageId": "<202609221204.28193649385@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-26"
+    "toque2_fecha": "2026-09-26",
+    "toque3_fecha": "2026-10-01"
   },
   {
     "email": "harnatur@harnatur.com",
@@ -8597,7 +8599,8 @@
     "fecha": "2026-09-27",
     "asunto": "Cómo conseguir clientes en A Coruña sin llamadas en frío",
     "messageId": "<202609271313.22455236027@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-01"
   },
   {
     "email": "vidrio@vidriostudio.com",

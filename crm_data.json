@@ -8372,7 +8372,8 @@
     "asunto": "Cómo conseguir clientes en Minglanilla – Cuenca sin llamadas en frío",
     "messageId": "<202609231218.26447155250@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "hermanoscebrian@hermanos-cebrian.es",
@@ -8384,7 +8385,8 @@
     "asunto": "Cómo conseguir clientes en QUART DE POBLET - VALENCIA sin llamadas en frío",
     "messageId": "<202609231218.19040851934@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "info@sunwenergy.com",
@@ -8396,7 +8398,8 @@
     "asunto": "Cómo conseguir clientes en Leganes sin llamadas en frío",
     "messageId": "<202609231218.18822044532@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "info@cerrapid.com",
@@ -8408,7 +8411,8 @@
     "asunto": "Cómo conseguir clientes en Madrid sin llamadas en frío",
     "messageId": "<202609231218.18972805546@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "info@ugarte-zestoa.com",
@@ -8420,7 +8424,8 @@
     "asunto": "Cómo conseguir clientes en Cestona sin llamadas en frío",
     "messageId": "<202609231218.14548276132@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "info@azcatec.com",
@@ -8432,7 +8437,8 @@
     "asunto": "Cómo conseguir clientes en Sevilla sin llamadas en frío",
     "messageId": "<202609231218.25690037350@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-27"
+    "toque2_fecha": "2026-09-27",
+    "toque3_fecha": "2026-10-02"
   },
   {
     "email": "info@bfmedificatoria.com",
@@ -8611,7 +8617,8 @@
     "fecha": "2026-09-28",
     "asunto": "20 empresas en A Coruña que podrían contratarte",
     "messageId": "<202609281502.72696953444@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-02"
   },
   {
     "email": "info@reformasintegraleslaspalmas.com",

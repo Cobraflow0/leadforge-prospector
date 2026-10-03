@@ -8450,7 +8450,8 @@
     "asunto": "20 empresas en Valencia que podrían contratarte",
     "messageId": "<202609241220.11428228874@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@cerrajeroslallavemaestra.com",
@@ -8462,7 +8463,8 @@
     "asunto": "20 empresas en Zaragoza que podrían contratarte",
     "messageId": "<202609241220.77679138897@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "codesal@tallerescodesal.com",
@@ -8474,7 +8476,8 @@
     "asunto": "20 empresas en Cabanas-A Coruña que podrían contratarte",
     "messageId": "<202609241220.12252524486@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@inbodas.com",
@@ -8486,7 +8489,8 @@
     "asunto": "20 empresas en Aranjuez que podrían contratarte",
     "messageId": "<202609241220.73150015235@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "pedidos@productoshosteleros.com",
@@ -8498,7 +8502,8 @@
     "asunto": "20 empresas en Alfafar que podrían contratarte",
     "messageId": "<202609241220.42267116801@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@importcompany.es",
@@ -8510,7 +8515,8 @@
     "asunto": "20 empresas en Pedreguer (Alicante) que podrían contratarte",
     "messageId": "<202609241220.47522087519@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@extruplesa.com",
@@ -8522,7 +8528,8 @@
     "asunto": "20 empresas en La Muela-Zaragoza que podrían contratarte",
     "messageId": "<202609241220.28137806749@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@vintagewholesalespain.com",
@@ -8534,7 +8541,8 @@
     "asunto": "20 empresas en Manises que podrían contratarte",
     "messageId": "<202609241220.48178058028@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@vephome.com",
@@ -8546,7 +8554,8 @@
     "asunto": "20 empresas en VALENCIA que podrían contratarte",
     "messageId": "<202609241220.63285735449@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "awartisan.fr+40f6bfffc2@invite.trustpilot.com",
@@ -8558,7 +8567,8 @@
     "asunto": "20 empresas en Malaga que podrían contratarte",
     "messageId": "<202609241221.16671065206@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@acusticaintegral.com",
@@ -8570,7 +8580,8 @@
     "asunto": "20 empresas en Barberà Del Vallès-Barcelona que podrían contratarte",
     "messageId": "<202609241221.35499670622@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "hola@greenly.es",
@@ -8582,7 +8593,8 @@
     "asunto": "20 empresas en TORREMANZANAS que podrían contratarte",
     "messageId": "<202609241221.16329210631@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-28"
+    "toque2_fecha": "2026-09-28",
+    "toque3_fecha": "2026-10-03"
   },
   {
     "email": "info@pralingenieria.es",
@@ -8629,7 +8641,8 @@
     "fecha": "2026-09-29",
     "asunto": "Clientes nuevos en Las Palmas — sin publicidad",
     "messageId": "<202609291323.93317882662@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-03"
   },
   {
     "email": "info@paulinocanosa.com",
@@ -8640,7 +8653,8 @@
     "fecha": "2026-09-29",
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202609291343.33714175294@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-03"
   },
   {
     "email": "reformas@jaereformas.com",
@@ -8651,6 +8665,7 @@
     "fecha": "2026-09-29",
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202609291343.18821913665@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-03"
   }
 ]

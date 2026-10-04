@@ -8606,7 +8606,8 @@
     "asunto": "Clientes nuevos en Madrid — sin publicidad",
     "messageId": "<202609251221.54123433515@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-09-29"
+    "toque2_fecha": "2026-09-29",
+    "toque3_fecha": "2026-10-04"
   },
   {
     "email": "restauracionespalisandro@gmail.com",
@@ -8667,5 +8668,16 @@
     "messageId": "<202609291343.18821913665@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-10-03"
+  },
+  {
+    "email": "info@instalmanser.es",
+    "nombre": "Instalmanser S.L.U",
+    "web": "https://www.instalmanser.es",
+    "ciudad": "San Cristóbal de La Laguna",
+    "sector": "empresas de reformas",
+    "fecha": "2026-10-04",
+    "asunto": "Instalmanser, hay contactos en San Cristóbal de La Laguna esperándote",
+    "messageId": "<202610041253.39674784342@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

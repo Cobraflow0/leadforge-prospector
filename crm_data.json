@@ -8632,7 +8632,8 @@
     "asunto": "20 empresas en A Coruña que podrían contratarte",
     "messageId": "<202609281502.72696953444@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-10-02"
+    "toque2_fecha": "2026-10-02",
+    "toque3_fecha": "2026-10-07"
   },
   {
     "email": "info@reformasintegraleslaspalmas.com",
@@ -8679,6 +8680,17 @@
     "fecha": "2026-10-04",
     "asunto": "Instalmanser, hay contactos en San Cristóbal de La Laguna esperándote",
     "messageId": "<202610041253.39674784342@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "carpinteria@anibalsanjose.com",
+    "nombre": "Anibal San José",
+    "web": "https://www.carpinteriaebanisteriaanibal.com",
+    "ciudad": "Salamanca",
+    "sector": "carpinteros",
+    "fecha": "2026-10-07",
+    "asunto": "Clientes nuevos en Salamanca — sin publicidad",
+    "messageId": "<202610071408.18855083440@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

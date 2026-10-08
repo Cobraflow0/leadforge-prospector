@@ -8645,7 +8645,8 @@
     "asunto": "Clientes nuevos en Las Palmas — sin publicidad",
     "messageId": "<202609291323.93317882662@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-10-03"
+    "toque2_fecha": "2026-10-03",
+    "toque3_fecha": "2026-10-08"
   },
   {
     "email": "info@paulinocanosa.com",
@@ -8657,7 +8658,8 @@
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202609291343.33714175294@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-10-03"
+    "toque2_fecha": "2026-10-03",
+    "toque3_fecha": "2026-10-08"
   },
   {
     "email": "reformas@jaereformas.com",
@@ -8669,7 +8671,8 @@
     "asunto": "Clientes nuevos en A Coruña — sin publicidad",
     "messageId": "<202609291343.18821913665@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-10-03"
+    "toque2_fecha": "2026-10-03",
+    "toque3_fecha": "2026-10-08"
   },
   {
     "email": "info@instalmanser.es",
@@ -8680,7 +8683,8 @@
     "fecha": "2026-10-04",
     "asunto": "Instalmanser, hay contactos en San Cristóbal de La Laguna esperándote",
     "messageId": "<202610041253.39674784342@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-08"
   },
   {
     "email": "carpinteria@anibalsanjose.com",

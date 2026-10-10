@@ -8696,5 +8696,16 @@
     "asunto": "Clientes nuevos en Salamanca — sin publicidad",
     "messageId": "<202610071408.18855083440@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@aquaidam.com",
+    "nombre": "AQUAIDAM ( AGUASINKMS SPAIN, S.L.)",
+    "web": "https://aquaidam.com/",
+    "ciudad": "Valencia",
+    "sector": "fontaneros",
+    "fecha": "2026-10-10",
+    "asunto": "20 empresas en Valencia que podrían contratarte",
+    "messageId": "<202610101306.58594180626@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

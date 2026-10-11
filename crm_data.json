@@ -8695,7 +8695,8 @@
     "fecha": "2026-10-07",
     "asunto": "Clientes nuevos en Salamanca — sin publicidad",
     "messageId": "<202610071408.18855083440@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-11"
   },
   {
     "email": "info@aquaidam.com",

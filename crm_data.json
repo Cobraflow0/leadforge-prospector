@@ -8712,5 +8712,16 @@
     "status": "sent",
     "toque2_fecha": "2026-10-14",
     "toque3_fecha": "2026-10-19"
+  },
+  {
+    "email": "turiakey@gmail.com",
+    "nombre": "Cerrajeros TuriaKey Valencia 24 Horas",
+    "web": "https://turiakey.es/",
+    "ciudad": "Valencia",
+    "sector": "cerrajeros",
+    "fecha": "2026-10-20",
+    "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
+    "messageId": "<202610201308.36163411566@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

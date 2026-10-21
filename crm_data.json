@@ -8723,5 +8723,104 @@
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202610201308.36163411566@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@naturquinoa.com",
+    "nombre": "NATURQUINOA",
+    "web": "https://naturquinoa.com/",
+    "ciudad": "San Fernando de Henares",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en San Fernando de Henares sin llamadas en frío",
+    "messageId": "<202610211228.90110887687@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@collingwood.es",
+    "nombre": "COLLINGWOOD PACKAGING MACHINERY, S.L.",
+    "web": "http://cllwood.com",
+    "ciudad": "Terrassa",
+    "sector": "empresas de reformas",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en Terrassa sin llamadas en frío",
+    "messageId": "<202610211228.46083859892@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "mmg@mmgmaquinaria.com",
+    "nombre": "Mmg maquinaria",
+    "web": "https://mmgmaquinaria.com",
+    "ciudad": "Murcia",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en Murcia sin llamadas en frío",
+    "messageId": "<202610211228.75134276889@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "sipem@sipem.es",
+    "nombre": "SIPEM SA",
+    "web": "http://www.sipem.es",
+    "ciudad": "ALCASSER (VALENCIA).",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en ALCASSER (VALENCIA). sin llamadas en frío",
+    "messageId": "<202610211228.84370045451@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@garrampa.es",
+    "nombre": "GARRAMPA",
+    "web": "https://garrampa.es/",
+    "ciudad": "Zaragoza",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en Zaragoza sin llamadas en frío",
+    "messageId": "<202610211228.26272184461@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "anzapack@anzapack.com",
+    "nombre": "ANZAPACK SL",
+    "web": "https://www.anzapack.com/",
+    "ciudad": "La Muela",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en La Muela sin llamadas en frío",
+    "messageId": "<202610211228.90642376921@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@stockspiscinas.com",
+    "nombre": "Stocks Piscinas Sl",
+    "web": "https://stockspiscinas.com/",
+    "ciudad": "BARCELONA",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en BARCELONA sin llamadas en frío",
+    "messageId": "<202610211228.56783547170@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@reformas-ciudadreal.com",
+    "nombre": "Reformas Ciudad Real",
+    "web": "https://reformas-ciudadreal.com/",
+    "ciudad": "CIUDAD REAL",
+    "sector": "empresas de reformas",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en CIUDAD REAL sin llamadas en frío",
+    "messageId": "<202610211228.10875730371@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "llavesallen@llavesallen.es",
+    "nombre": "LLAVES ALLEN FÉLIX LANAS",
+    "web": "https://www.llavesallen.es",
+    "ciudad": "Logroño",
+    "sector": "fontaneros",
+    "fecha": "2026-10-21",
+    "asunto": "Cómo conseguir clientes en Logroño sin llamadas en frío",
+    "messageId": "<202610211228.79147572604@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

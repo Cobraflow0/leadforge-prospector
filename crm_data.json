@@ -8722,7 +8722,8 @@
     "fecha": "2026-10-20",
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202610201308.36163411566@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-10-24"
   },
   {
     "email": "info@naturquinoa.com",

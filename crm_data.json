@@ -8723,7 +8723,8 @@
     "asunto": "Cerrajeros, hay contactos en Valencia esperándote",
     "messageId": "<202610201308.36163411566@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-10-24"
+    "toque2_fecha": "2026-10-24",
+    "toque3_fecha": "2026-10-29"
   },
   {
     "email": "info@naturquinoa.com",
@@ -8832,5 +8833,16 @@
     "messageId": "<202610211228.79147572604@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-10-25"
+  },
+  {
+    "email": "tuemail@email.com",
+    "nombre": "Euskadicharge",
+    "web": "https://euskadicharge.com/",
+    "ciudad": "Bilbao",
+    "sector": "electricistas",
+    "fecha": "2026-10-29",
+    "asunto": "Cómo conseguir clientes en Bilbao sin llamadas en frío",
+    "messageId": "<202610291408.24464448604@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

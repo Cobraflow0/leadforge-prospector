@@ -8853,5 +8853,16 @@
     "asunto": "Cómo conseguir clientes en Bilbao sin llamadas en frío",
     "messageId": "<202610291408.24464448604@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@reformasdurbaca.com",
+    "nombre": "Reformas Durbaca",
+    "web": "https://reformasdurbaca.com/",
+    "ciudad": "Zaragoza",
+    "sector": "empresas de reformas",
+    "fecha": "2026-10-31",
+    "asunto": "Clientes nuevos en Zaragoza — sin publicidad",
+    "messageId": "<202610311307.55760755616@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

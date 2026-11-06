@@ -8866,5 +8866,16 @@
     "messageId": "<202610311307.55760755616@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-11-04"
+  },
+  {
+    "email": "info@deantecerrajeria.com",
+    "nombre": "Deante",
+    "web": "https://www.deantecerrajeria.com/",
+    "ciudad": "Valladolid",
+    "sector": "cerrajeros",
+    "fecha": "2026-11-06",
+    "asunto": "Cómo conseguir clientes en Valladolid sin llamadas en frío",
+    "messageId": "<202611061505.91590118429@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

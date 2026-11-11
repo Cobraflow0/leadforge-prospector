@@ -8880,5 +8880,16 @@
     "messageId": "<202611061505.91590118429@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-11-10"
+  },
+  {
+    "email": "info@nirtec.com",
+    "nombre": "Nirtec Studio S.L.",
+    "web": "https://www.nirtec.com/",
+    "ciudad": "VALENCIA",
+    "sector": "electricistas",
+    "fecha": "2026-11-11",
+    "asunto": "20 empresas en VALENCIA que podrían contratarte",
+    "messageId": "<202611111444.38986694293@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

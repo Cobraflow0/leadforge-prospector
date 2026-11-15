@@ -8879,7 +8879,8 @@
     "asunto": "Cómo conseguir clientes en Valladolid sin llamadas en frío",
     "messageId": "<202611061505.91590118429@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-10"
+    "toque2_fecha": "2026-11-10",
+    "toque3_fecha": "2026-11-15"
   },
   {
     "email": "info@nirtec.com",
@@ -8890,6 +8891,40 @@
     "fecha": "2026-11-11",
     "asunto": "20 empresas en VALENCIA que podrían contratarte",
     "messageId": "<202611111444.38986694293@smtp-relay.mailin.fr>",
+    "status": "sent",
+    "toque2_fecha": "2026-11-15"
+  },
+  {
+    "email": "info@elbargueniotoledano.com",
+    "nombre": "El Bargueño Toledano",
+    "web": "https://www.elbargueniotoledano.com/",
+    "ciudad": "Toledo",
+    "sector": "carpinteros",
+    "fecha": "2026-11-15",
+    "asunto": "20 empresas en Toledo que podrían contratarte",
+    "messageId": "<202611151431.73798540470@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "izbilbao@euskalnet.net",
+    "nombre": "I.Z. Calefacción",
+    "web": "https://www.izcalefaccion.com/",
+    "ciudad": "Bilbao",
+    "sector": "empresas de climatización",
+    "fecha": "2026-11-15",
+    "asunto": "20 empresas en Bilbao que podrían contratarte",
+    "messageId": "<202611151448.81987667313@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@cerrajerosdegranada.es",
+    "nombre": "Cerrajeros Granada",
+    "web": "https://www.cerrajerosdegranada.es",
+    "ciudad": "Granada",
+    "sector": "cerrajeros",
+    "fecha": "2026-11-15",
+    "asunto": "20 empresas en Granada que podrían contratarte",
+    "messageId": "<202611151508.83391313692@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

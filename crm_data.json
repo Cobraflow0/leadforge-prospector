@@ -8903,7 +8903,8 @@
     "fecha": "2026-11-15",
     "asunto": "20 empresas en Toledo que podrían contratarte",
     "messageId": "<202611151431.73798540470@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-11-19"
   },
   {
     "email": "izbilbao@euskalnet.net",
@@ -8914,7 +8915,8 @@
     "fecha": "2026-11-15",
     "asunto": "20 empresas en Bilbao que podrían contratarte",
     "messageId": "<202611151448.81987667313@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-11-19"
   },
   {
     "email": "info@cerrajerosdegranada.es",
@@ -8925,7 +8927,8 @@
     "fecha": "2026-11-15",
     "asunto": "20 empresas en Granada que podrían contratarte",
     "messageId": "<202611151508.83391313692@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-11-19"
   },
   {
     "email": "info@llap.es",
@@ -8947,6 +8950,28 @@
     "fecha": "2026-11-16",
     "asunto": "Clientes nuevos en Málaga — sin publicidad",
     "messageId": "<202611161652.79736646794@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "info@insoltecbalear.com",
+    "nombre": "Insoltec Balear S.L.",
+    "web": "https://insoltecbalear.com",
+    "ciudad": "Palma de Mallorca",
+    "sector": "empresas de reformas",
+    "fecha": "2026-11-19",
+    "asunto": "20 empresas en Palma de Mallorca que podrían contratarte",
+    "messageId": "<202611191633.11070260724@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "presupuestos@tufontanerocoruna.es",
+    "nombre": "Tu Fontanero Coruña",
+    "web": "https://tufontanerocoruna.es/",
+    "ciudad": "A Coruña",
+    "sector": "fontaneros",
+    "fecha": "2026-11-19",
+    "asunto": "20 empresas en A Coruña que podrían contratarte",
+    "messageId": "<202611191650.61920559072@smtp-relay.mailin.fr>",
     "status": "sent"
   }
 ]

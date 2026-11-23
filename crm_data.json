@@ -8964,7 +8964,8 @@
     "fecha": "2026-11-19",
     "asunto": "20 empresas en Palma de Mallorca que podrían contratarte",
     "messageId": "<202611191633.11070260724@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-11-23"
   },
   {
     "email": "presupuestos@tufontanerocoruna.es",
@@ -8975,6 +8976,7 @@
     "fecha": "2026-11-19",
     "asunto": "20 empresas en A Coruña que podrían contratarte",
     "messageId": "<202611191650.61920559072@smtp-relay.mailin.fr>",
-    "status": "sent"
+    "status": "sent",
+    "toque2_fecha": "2026-11-23"
   }
 ]

@@ -8905,7 +8905,8 @@
     "asunto": "20 empresas en Toledo que podrían contratarte",
     "messageId": "<202611151431.73798540470@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-19"
+    "toque2_fecha": "2026-11-19",
+    "toque3_fecha": "2026-11-24"
   },
   {
     "email": "izbilbao@euskalnet.net",
@@ -8917,7 +8918,8 @@
     "asunto": "20 empresas en Bilbao que podrían contratarte",
     "messageId": "<202611151448.81987667313@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-19"
+    "toque2_fecha": "2026-11-19",
+    "toque3_fecha": "2026-11-24"
   },
   {
     "email": "info@cerrajerosdegranada.es",
@@ -8929,7 +8931,8 @@
     "asunto": "20 empresas en Granada que podrían contratarte",
     "messageId": "<202611151508.83391313692@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-19"
+    "toque2_fecha": "2026-11-19",
+    "toque3_fecha": "2026-11-24"
   },
   {
     "email": "info@llap.es",

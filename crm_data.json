@@ -8944,7 +8944,8 @@
     "asunto": "Clientes nuevos en Barcelona — sin publicidad",
     "messageId": "<202611161629.36256231233@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-20"
+    "toque2_fecha": "2026-11-20",
+    "toque3_fecha": "2026-11-25"
   },
   {
     "email": "info@seguridadjimenez.com",
@@ -8956,7 +8957,8 @@
     "asunto": "Clientes nuevos en Málaga — sin publicidad",
     "messageId": "<202611161652.79736646794@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-20"
+    "toque2_fecha": "2026-11-20",
+    "toque3_fecha": "2026-11-25"
   },
   {
     "email": "info@insoltecbalear.com",
@@ -8981,5 +8983,16 @@
     "messageId": "<202611191650.61920559072@smtp-relay.mailin.fr>",
     "status": "sent",
     "toque2_fecha": "2026-11-23"
+  },
+  {
+    "email": "info@entrecanalesdomecq.com",
+    "nombre": "ENTRECANALES DOMECQ E HIJOS SA",
+    "web": "https://entrecanalesdomecq.com/",
+    "ciudad": "Madrid",
+    "sector": "electricistas",
+    "fecha": "2026-11-25",
+    "asunto": "ENTRECANALES, hay contactos en Madrid esperándote",
+    "messageId": "<202611251739.73360065953@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

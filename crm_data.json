@@ -8994,5 +8994,27 @@
     "asunto": "ENTRECANALES, hay contactos en Madrid esperándote",
     "messageId": "<202611251739.73360065953@smtp-relay.mailin.fr>",
     "status": "sent"
+  },
+  {
+    "email": "info@adnconstruccion.com",
+    "nombre": "ADN CONSTRUCCION GROUP",
+    "web": "https://www.adnconstruccion.com/",
+    "ciudad": "Molins de Rei",
+    "sector": "empresas de reformas",
+    "fecha": "2026-11-26",
+    "asunto": "Cómo conseguir clientes en Molins de Rei sin llamadas en frío",
+    "messageId": "<202611261721.40302354556@smtp-relay.mailin.fr>",
+    "status": "sent"
+  },
+  {
+    "email": "comercial@distrai.es",
+    "nombre": "Distrai Tecnología",
+    "web": "https://fontaneriasinobrasdistrai.com/",
+    "ciudad": "Valladolid",
+    "sector": "fontaneros",
+    "fecha": "2026-11-26",
+    "asunto": "Cómo conseguir clientes en Valladolid sin llamadas en frío",
+    "messageId": "<202611261739.99549682794@smtp-relay.mailin.fr>",
+    "status": "sent"
   }
 ]

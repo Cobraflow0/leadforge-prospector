@@ -8970,7 +8970,8 @@
     "asunto": "20 empresas en Palma de Mallorca que podrían contratarte",
     "messageId": "<202611191633.11070260724@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-23"
+    "toque2_fecha": "2026-11-23",
+    "toque3_fecha": "2026-11-28"
   },
   {
     "email": "presupuestos@tufontanerocoruna.es",
@@ -8982,7 +8983,8 @@
     "asunto": "20 empresas en A Coruña que podrían contratarte",
     "messageId": "<202611191650.61920559072@smtp-relay.mailin.fr>",
     "status": "sent",
-    "toque2_fecha": "2026-11-23"
+    "toque2_fecha": "2026-11-23",
+    "toque3_fecha": "2026-11-28"
   },
   {
     "email": "info@entrecanalesdomecq.com",
